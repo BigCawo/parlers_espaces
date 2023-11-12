@@ -1,0 +1,686 @@
+/* ~~~~ variables ~~~~ */
+
+:root {
+
+    /* général */
+
+    --w-sidebar:50px;
+    --h-sidebar: 50px;
+    --spaces: 20px;
+    --ff-t:Gabarito;
+    --ff-st:Roboto;
+    --ff-p:Roboto;
+    --fs-t:1.5em;
+    --fs-st : 1.25em;
+    --fs-p : 0.75em;
+    --w-main: 60vw;
+    --test: calc((100vw - var(--w-main))/ -2);
+
+    /* projets */
+    
+    --w-carton:250px;
+}
+
+
+/*html{
+    scroll-snap-type: y mandatory;
+}*/
+
+img{background-color: rgba(0, 0, 255, 0);
+    /* padding: 1%; */
+    width: 100%; height: 100%;
+    
+
+}
+
+.imgpx{
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+/* ~~~~  général  ~~~~ */
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+ul{list-style-type: none;}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body {background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 100%;
+    margin: auto;
+}
+
+
+
+p{  
+    padding-top: var(--spaces) ;
+    padding-bottom: var(--spaces);
+    background-color: rgba(137, 43, 226, 0);
+    font-size: var(--fs-p);
+    font-family: var(--ff-p);
+}
+
+
+
+h1{
+    font-family: var(--ff-t);
+    font-size: var(--fs-t);
+}
+
+h2{
+    font-family: var(--ff-t);
+    font-size: var(--fs-st);
+}
+
+i{
+    font-style: italic;
+}
+
+b{font-weight: 800;}
+
+a:link { text-decoration: none;}
+  
+a:visited {text-decoration: none; color: black;}
+
+a:hover {color: white;}
+
+a:active {color: rgb(0, 0, 0);}
+
+/* ~~~~  sidebar  ~~~~ */
+
+#sidebar {background-color: rgb(228, 54, 54);
+
+    width: var(--w-sidebar);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+#sidebar ul{background-color: rgba(0, 255, 255, 0);
+    display: inline-block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    flex-basis: content;
+}
+
+
+
+#sidebar h1{background-color: rgba(0, 255, 255, 0);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+
+    font-family: var(--ff-t); 
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    padding: 8px 0px;
+    text-align: center;
+    
+}
+
+#sidebar li{background-color: rgba(0, 255, 255, 0);
+    
+    font-family: var(--ff-t);
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 500;
+   
+    padding: 8px 0px;
+    text-align: center;
+ 
+}
+
+
+
+#sidebar li:hover{color: white;}
+#sidebar h1:hover{color: white;}
+
+/* ~~~~  main  ~~~~ */
+
+#main{background-color: rgba(0, 255, 255, 0);
+
+    position: relative;
+    min-height: 100vh;
+    width: var(--w-main);
+    margin: auto;
+    margin-bottom: 0;
+    left: calc( var(--w-sidebar) /2) ;
+}
+
+
+
+/* projet */
+
+.espaceImg{position: relative;
+    background-color: rgba(5, 10, 10, 0);
+    max-width: var(--spaces);
+    min-width: var(--spaces);
+    min-height: var(--spaces);
+    max-height: var(--spaces);
+}
+
+.triptique .espaceImg{
+    max-width: calc( var(--spaces) / 2 );
+    min-width: calc( var(--spaces)  / 2 );
+}
+
+.imgmobile{display: none;}
+
+.triptique img{
+    width: 33%;
+}
+
+.diptique img{
+    height: calc( var(--w-main) *0.45 );
+    width: auto;
+    object-fit : contain
+}
+
+.diptique{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.video{
+    width: 100%;
+    height: calc( var(--w-main) * 0.7 ) ;
+    max-height: 90vh;
+}
+
+/*(intro)*/
+
+#intro{background-color: rgba(137, 43, 226, 0);
+    min-height: 100vh;
+
+}
+
+
+.flexcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carton{background-color: rgba(0, 255, 255, 0);
+    max-width: var(--w-carton) ; 
+    padding-top: 25px;
+    padding-bottom: 25px;  
+    padding-right: 25px;
+}
+
+
+.carton h2{padding-bottom: 25px; display: inline-block;}
+
+.carton h1{padding-bottom: 5px;}
+
+.carton .typeProjet{font-size: var(--fs-p); display: inline-block;}
+
+.espace{background-color: rgba(0, 255, 255, 0);
+    height: 100px;}
+
+.espaceIntro{background-color: rgba(255, 217, 0, 0);
+    height: 100px;}
+
+.copyright{
+    text-align: center; 
+    display: block;
+}
+/*(chmup)*/
+
+.chmupImg{
+    width: 50%;
+}
+
+
+/*(lamperessort)*/
+
+.texta{
+    
+    display: block; 
+    width:  var(--w-carton); 
+    /*padding-right: 25px ;*/
+}
+
+/*(mobilier grillage)*/
+
+.background{
+    z-index: -10;
+    position: relative;
+    width: 100vw;
+    height: 38vh;
+    background-image: url(assets/mobiliergrillage-motif.jpg);
+    background-repeat: repeat-x;
+    background-size: 70vh;
+    left: var(--test); 
+
+}
+
+
+.img50pc{
+    max-width: 50%;
+}
+
+.illusfin{
+    height: 100%;
+    z-index: -10;
+    position: relative;
+    width: calc( 100vw - var(--w-sidebar) );
+    
+    left: calc( var(--test) + (var(--w-sidebar)) /2 ) ; 
+
+
+    background-color: rgba(6, 6, 204, 0);
+
+}
+
+.textfin{
+    
+    position: absolute; 
+    text-align: end; 
+    right: 0;}
+
+
+
+
+/* corps */
+
+.superflex{
+    scroll-snap-type: y mandatory;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+/* accueil */
+
+
+
+#descriptions{ 
+    overflow: hidden;
+    max-height: calc( 50vh - var(--h-sidebar) );
+    width: 50%;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+
+
+
+.desc{    
+    overflow: hidden;
+    height: calc( 50vh - var(--h-sidebar) ) ;
+    max-height: 0;
+    max-width: 100%;
+    transition: max-height 0.25s ease;
+    display: flex; align-items: center; position: relative;
+
+}
+
+.desc p{
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 35px ;
+    padding-top: 0;
+}
+
+#categories {
+    height: var(--h-sidebar);
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto ;
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+#categories::-webkit-scrollbar {
+    display: none;
+  }
+
+
+#categories > li {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+button{
+        text-transform: uppercase;
+    font-weight: 300;
+    font-size: 10px;
+    
+    line-height: 0;
+    padding: 15px 12px;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+
+}
+
+#categories > li:last-child > button {margin-right: 0;}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+#projets{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icons{
+    position: relative;
+    max-width: 100%;
+    width: 32%;
+    transition: max-width 0.25s ease;
+    margin-bottom: 2%;
+    transition-delay: 1s;
+    transition-property: margin-right;
+    
+}
+
+.icons img{
+
+ 
+    height: 100%;
+    padding: 0;
+}
+.icons p{
+    z-index: -5;
+    background-color: rgba(0, 0, 255, 0);
+
+    line-height: 0;
+    position: absolute;
+    padding: 50% 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.icons img:hover{
+    opacity: 20%;
+}
+
+/* apropos */
+
+#apropos p{
+    
+    padding: 8px 0;
+}
+
+#apropos img{
+    
+    padding: 40px 0;
+}
+
+#apropos b{
+    
+    font-size: 105%;
+}
+
+#apropos h2{
+    padding: 5px 0;
+}
+
+#cvEntete{
+    width: 47.5%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: start;
+}
+
+#cvCorps{
+
+    display: flex; 
+    align-items: baseline; 
+    justify-content: space-between;
+}
+
+#cvCorps > div{
+    width: 47.5%;
+}
+
+/* ~~~~ mediaqueries ~~~~ */
+
+
+/* écran */
+
+@media screen and (max-width: 1300px) {
+
+:root{
+    --w-main: 70vw;
+
+}
+
+/* petit écran */
+
+}
+
+  @media screen and (max-width: 900px) {
+
+
+
+
+/* (projets) */
+
+p{
+    padding-top: var(--spaces) ;
+    padding-bottom: var(--spaces);
+}
+
+.intro{
+    flex-direction: column;
+    height:auto;
+}
+
+html{
+    scroll-snap-type:none;
+}
+
+.triptique img{
+    width: 100%;
+}
+
+.diptique img{
+    height: 100%;
+    width: 100%;
+    
+}
+
+/* projets*/
+
+.carton{  
+    padding-right: 0px;
+}
+
+.espace{
+    height: var(--spaces);
+}
+
+.texta{width: 100%;}
+.carton{max-width: 100%;}
+
+.flexcontainer{
+    flex-direction: column;
+}
+
+.imgscreen{display: none;}
+
+.imgmobile{display: inline-block;}
+
+/*chmup*/
+
+.chmupImg{
+    width: 100%;
+}
+
+/*(mobilier grillage*/
+
+.img50pc{
+    max-width: 100%;
+}
+
+.textfin{
+    max-width: 50%; 
+    }
+
+/*accueil*/
+
+.icons {
+    width: 47.5%;
+    margin-bottom: 5%;
+}
+
+.desc{
+    width: 50%;
+}
+
+/* apropos */
+
+#cvCorps{
+    flex-direction: column;
+}
+
+#cvCorps > div{
+    width: 100%;
+}
+
+
+
+}
+
+/* téléphone */
+
+@media screen and (max-width: 480px) {
+
+    :root{
+        --w-main: 90vw;
+        --fs-t:1.25em;
+        --fs-st : 1em;
+        --fs-p : 0.75em;
+    }
+
+body{
+    text-align: start;
+}
+
+/* ~~~~  main  ~~~~ */
+
+#main{
+    left: 0 ;
+}
+
+
+#sidebar{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#sidebar ul > li{ writing-mode:horizontal-tb;height: 100%; padding: 22.5px 0; line-height: 0;}
+
+#sidebar h1{ writing-mode:horizontal-tb;height: 100%; padding: 22.5px 0; line-height: 0;}
+
+/*accueil*/
+
+.icons {
+    width: 100%;
+}
+
+#descriptions{
+    min-height: calc( 80vh - 2 * var(--h-sidebar) );
+}
+
+.desc{
+    width: 100%;
+}
+
+#categories{
+    position: sticky;
+    justify-content: space-between;
+    top: 0;
+}
+
+#categories > li > button{
+    margin: 0;
+    padding: 12px 10px ;
+}
+
+
+
+/* projets*/
+
+
+
+
+
+.flexcontainer{
+    flex-direction: column;
+}
+
+
+
+.imgscreen{display: none;}
+
+.imgmobile{display: inline-block;}
+
+/*(mobilier grillage*/
+.background{left: -5vw;}
+
+
+.illusfin{ left:-5vw ;
+width: 100vw;
+
+}
+
+.textfin{
+    position: relative;
+    max-width: 100%;
+    text-align: start; 
+}
+
+}
+
+
+
+
