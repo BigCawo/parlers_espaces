@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lightbox.css">
+<script src="lightbox.js"></script>
+</head>
+<body>
+<div id="illustrations">
+    <div class="gallery">
+        <div class="row">
+
+            <div class="column">
+                <div class="imgGallery">
+                    <img src="01.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="02.png"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="03.png"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+
+
+            </div>
+
+            <div class="column">
+
+                <div class="imgGallery">
+                    <img src="04.png"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="05.png"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="06.png"  onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+
+            </div>
+            <div class="column">
+
+                <div class="imgGallery">
+                    <img src="04.png"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="05.png"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="imgGallery">
+                    <img src="06.png"  onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+
+            </div>
+            </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+
+          <img src="01.png" >
+        </div>
+    
+        <div class="mySlides">
+
+          <img src="02.png" >
+        </div>
+    
+        <div class="mySlides">
+
+          <img src="03.png" >
+        </div>
+        
+        <div class="mySlides">
+
+          <img src="04.png" >
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+
+    </div>
+
+</div>
+</div>
+</body>
+</html> 
