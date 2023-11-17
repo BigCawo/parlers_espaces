@@ -601,10 +601,11 @@ button:hover {
     padding: 0;
 }
 .icons p{
+    display: block;
     z-index: -5;
     background-color: rgba(0, 0, 255, 0);
 
-    line-height: 0;
+    
     position: absolute;
     padding: 50% 0;
     width: 100%;
