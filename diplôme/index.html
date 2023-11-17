@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .fullscreen{
+            scroll-snap-align: center;
+        }
+
+        .mobileContainer{ 
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .screenContainer{ 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 900px) {
+        body{
+            scroll-snap-type: none;
+        }
+
+        .mobileContainer{ 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .screenContainer{ 
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="../assets/course.gif">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div id = sidebar>
+
+        <h1> <a href="../../">ELIOT&nbsp;BERNAUD</a> </h1>
+
+        <ul>
+            <li><a href="../../a-propos/">À&nbsp;Propos</a></li>        
+        </ul>
+    </div>
+
+    <div id = main>
+
+        <div id="intro" class="flexcontainer fullscreen">
+            <div class="carton">
+                <h1>La Fabrique à Brac</h1>
+                <h2>2022 - ?</h2> <p class="typeProjet"> <i>- Projet de diplôme </i></p>
+                <p><b>Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités. 
+                <br>grâce à leur forme, leur matière, leur abondance, ils peuvent devenir d’excellentes ressources pour créer d’autres objets, pour répondre à certains de nos besoins.</b></p>
+                <p>A travers la Fabrique à Brac, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité  <!-- pour les comprendre et se les réapproprier. <br><br>Pourrions nous imaginer un autre rapport à ces objets ?  <br>Pourrions-nous ne plus les voir comme de simples objets de consommation mais comme matière à créer ? --></p>
+            </div>
+            <img    style="border: solid; border-color: black; border-radius: 20px; border-width: 2px;"  src="../../assets/lafabriqueabrac.gif" alt="e">
+            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div>
+        
+        <div class="espaceIntro"></div>
+
+        <div class="flexcontainer fullscreen">
+
+            <p class="carton"> <b>Pourquoi les objets industriels sont une excellente matière à créer ?</b> <br><br><br>
+            
+
+                - De par leur nature sérielle et leur abondance, ils font souvent partie d'un langage commun. Tout le monde connait la boîte de conserve, ou la bouteille en plastique par exemple. 
+                <br><br>
+                - Ils sont fabriqués à partir de procédés de fabrication génériques qui leur confèrent des formes et des matières particulières, que l'on peut facilement retrouver d'objets en objets. &lpar; une forme tubulaire ; des nervures ; des trous... &rpar;
+                <br><br>Cela facilite l'apparition de potentiels d'usage et améliore la capacité de ces objets à devenir les pièces d'un jeu de construction.
+
+            </p>
+            
+            <img   src="../assets/lafabriqueabrac-boite_de_conserve.png" alt="e">
+            <img   src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
+            <img   src="../assets/lafabriqueabrac-souris_effaceur.png" alt="e">   
+
+
+       
+        </div>
+
+        <div class="espace"></div>
+
+        <div class="screenContainer fullscreen" style="padding: 0 50px;">
+
+ 
+
+            <div style="flex: 25%; max-width: 25%;">
+                <img style="display: block;"  src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
+                <img  style="display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">  
+            </div>
+
+            <div class="carton" > 
+                
+ 
+                
+            
+
+                <p style="text-align: left; padding-right: 10px;">
+                &lt;--- <br>
+                Partir d'un objet industriel dont les qualités semblent intéressantes &lpar;&nbsp;une pince à linge, un crayon, une boîte de conserve...&nbsp;&rpar; et explorer les usages potentiels qu'on peut lui donner.
+                </p>
+
+                <p style="text-align: center;"><b>/\ <br>Pour rechercher et exploiter ces potentiels, deux voies possibles s'imposent<br> \/</b></p>
+
+                <p style="text-align: right; padding-left: 10px;">
+                    ---&gt; <br>
+                Partir d'un besoin, d'une envie, &lpar;&nbsp;quelque chose pour s'asseoir, pour attacher des affaires...&nbsp;&rpar; cibler les contraintes requises à son élaboration, et chercher les objets ou les combinaisons d'objets qui pourraient les satisfaire.
+                </p>
+
+            </div>
+
+            <div style="flex: 25%; max-width: 25%;">
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">
+                <img  style="  -moz-transform: scale(-1, -1);
+                -o-transform: scale(-1, -1);
+                -webkit-transform: scale(-1, -1);
+                transform: scale(-1, -1); display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img style="display: block;"  src="../assets/lafabriqueabrac-assise.png" alt="e">  
+                <!--<p style="text-align: center; line-height: 0;" >A quoi j'arrive ?</p>-->
+            </div>
+        </div>
+   
+        <div class="mobileContainer fullscreen" >
+
+            <div>
+                <p><b>Pour rechercher et exploiter ces potentiels, deux voies possibles s'imposent</b></p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Partir d'un objet industriel dont les qualités semblent intéressantes &lpar;&nbsp;une pince à linge, un crayon, une boîte de conserve...&nbsp;&rpar; et explorer les usages potentiels qu'on peut lui donner.
+                </p>
+            </div>
+
+            <div style="max-width: 75%; margin: auto;">
+                <img style="display: block;"  src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
+                <img  style="display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">  
+            </div>
+
+            <div> 
+
+                <p>
+                Partir d'un besoin, d'une envie, &lpar;&nbsp;quelque chose pour s'asseoir, pour attacher des affaires...&nbsp;&rpar; cibler les contraintes requises à son élaboration, et chercher les objets ou les combinaisons d'objets qui pourraient les satisfaire.
+                </p>
+
+            </div>
+
+            <div style="max-width: 75%; margin: auto;">
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">
+                <img  style="  -moz-transform: scale(-1, -1);
+                -o-transform: scale(-1, -1);
+                -webkit-transform: scale(-1, -1);
+                transform: scale(-1, -1); display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img style="display: block;"  src="../assets/lafabriqueabrac-assise.png" alt="e">  
+                <!--<p style="text-align: center; line-height: 0;" >A quoi j'arrive ?</p>-->
+            </div>
+        </div>   
+        
+        <!---->
+        <div class="espace"></div>
+
+        <div class="screenContainer fullscreen illusfin" style="padding: 0 50px;">
+
+
+
+            <div style="flex: 33%; max-width: 33%;">
+                <img style="display: block;"  src="../assets/lafabriqueabrac-pince_contraintes.png" alt="e">
+            </div>
+
+            <div class="carton" > 
+                
+    
+
+                <p style="text-align: center;"><b>Pour cerner ces qualités, ces usages potentiels et ces contraintes, il faut affuter son regard sur les objets.</b></p>
+
+
+
+            </div>
+
+            <div style="flex: 33%; max-width: 33%;">
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-assise_contraintes.png" alt="e">
+                
+                <!--<p style="text-align: center; line-height: 0;" >A quoi j'arrive ?</p>-->
+            </div>
+            
+        
+
+
+
+    
+        </div>
+
+        <div class="mobileContainer fullscreen" >
+
+            <div class="carton" > 
+                
+    
+
+                <p style="text-align: center;"><b>Pour cerner ces qualités, ces usages potentiels et ces contraintes, il faut affuter son regard sur les objets.</b></p>
+
+
+
+            </div>
+
+            <div>
+                <img style="display: block;"  src="../assets/lafabriqueabrac-pince_contraintes.png" alt="e">
+            </div>
+
+
+
+            <div>
+                <img  style="display: block;"    src="../assets/lafabriqueabrac-assise_contraintes.png" alt="e">
+                
+                <!--<p style="text-align: center; line-height: 0;" >A quoi j'arrive ?</p>-->
+            </div>
+            
+        
+
+
+
+    
+        </div>
+
+        <!---->
+
+        <div class="flexcontainer fullscreen">
+            <div class="carton">
+                <h1>La série vidéo</h1>
+                <p class="typeProjet"> <i>- première piste </i></p>
+                <p> <b> Je propose une série vidéo à destination d'un public jeune pour aborder ce décorticage d'objets de manière ludique. Les épisodes proposent tour à tour d'explorer l'une ou l'autre des voies soulevées plus tôt.</b> </p>
+                <p>Le spectateur y est invité à regarder différemment les objets de son quotidien, à les détourner, à se les réapproprier.
+                <br><br>    
+                Il est également familiarisé à des notions techniques et physiques, très utiles pour être autonome dans cette recherche de potentiels. </p>
+            </div>
+
+            <div >
+               <iframe style=" position: relative; max-width: 100%; max-height: 60vh;" src="https://player.vimeo.com/video/885244920?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="La fabrique à brac - la toupie"></iframe>
+            </div>
+            
+            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div>
+
+        <div class="flexcontainer fullscreen">
+            <div class="carton">
+                <h1>Le bestiaire</h1>
+                <p class="typeProjet">  <i>- deuxième piste </i></p>
+                <p> <b> Cette exploration des potentiels, ce décorticage des objets génère beaucoup d'informations et soulève des notions intéressantes qui souvent s'interconnectent.</b> </p>
+                <p>Dans cette deuxième piste, plus prospective, j'explore la diversité des données générées. Je tente, à la manière d'un zoologue des objets, de cataloguer ces notions. </p>
+            </div>
+
+            <div >
+               <img style="border: solid; border-color: black; border-radius: 20px; border-width: 2px;" src="../assets/lafabriqueabrac-bestiaire.png" alt="">
+            </div>
+            
+            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div>
+        
+
+        
+        <div  class="espace"> </div>
+        
+
+        <p class="copyright">@ All right reserved @</p>
+
+
+
+
+
+    </div>
+</body>
+</html>
