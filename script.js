@@ -2,7 +2,7 @@ function shutDownBaaaa() {
     let aa = buttonValue = document.getElementById("buttonDessin").value;
     let bb = buttonValue = document.getElementById("buttonObjet").value;
     let cc = buttonValue = document.getElementById("buttonFiction").value;
-    let dd = buttonValue = document.getElementById("buttonMemoire").value;
+  /*  let dd = buttonValue = document.getElementById("buttonMemoire").value; */
 
     if ( aa == "on" ){
         y = "dessin"
@@ -25,14 +25,14 @@ function shutDownBaaaa() {
         a = "descFiction"
         
     }
-    
+ /*   
     if ( dd == "on"){
         y = "memoire"
         z = "buttonMemoire"
         a = "descMemoire"
         
     }
-
+*/
     document.getElementById(z).value = "off"
 
     document.getElementById(z).style.fontSize = "var(--fs-c)"

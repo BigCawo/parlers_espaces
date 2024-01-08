@@ -20,7 +20,7 @@
 
     /* projets */
     
-    --w-carton:250px;
+    --w-carton:20vw;
 }
 
 
@@ -30,7 +30,7 @@
 
 img{background-color: rgba(0, 0, 255, 0);
     /* padding: 1%; */
-    width: 100%; height: 100%;
+    width: 100%;
     
     
 
@@ -71,6 +71,13 @@ p{
     background-color: rgba(137, 43, 226, 0);
     font-size: var(--fs-p);
     font-family: var(--ff-p);
+    line-height: 150%;
+}
+
+.pLeg{
+    text-align: center;
+    font-weight: 200;
+
 }
 
 
@@ -181,6 +188,8 @@ a:active {color: rgb(0, 0, 0);}
 
 
 /* projet */
+
+
 
 .pageLink:hover{
     color: red;
@@ -432,7 +441,7 @@ background-color: rgba(0, 0, 0, 0.8);
 /*(lamperessort)*/
 
 .texta{
-    
+    padding-right: 25px;
     display: block; 
     width:  var(--w-carton); 
     /*padding-right: 25px ;*/
@@ -655,15 +664,45 @@ button:hover {
 #cvCorps{
 
     display: flex; 
-    align-items: baseline; 
+    align-items :flex-start; 
     justify-content: space-between;
 }
+
+
 
 #cvCorps > div{
     width: 47.5%;
 }
 
+.aproposTxt{
+
+    display: flex; 
+    align-items :center; 
+    justify-content: space-between;
+}
+
+
+
+.aproposTxt > div{
+    width: 47.5%;
+}
+
 /* ~~~~ mediaqueries ~~~~ */
+
+
+/* grand écran test */
+
+@media screen and (min-width: 1300px) {
+
+
+    
+    
+    p{
+        font-size: 100%;
+    }
+
+}
+
 
 
 /* écran */
@@ -673,6 +712,10 @@ button:hover {
 :root{
     --w-main: 70vw;
 
+}
+
+p{
+    font-size: 100%;
 }
 
 /* petit écran */
@@ -720,7 +763,7 @@ html{
     height: var(--spaces);
 }
 
-.texta{width: 100%;}
+.texta{width: 100%; padding-right: 0px;}
 .carton{max-width: 100%;}
 
 .flexcontainer{
@@ -902,6 +945,22 @@ width: 100vw;
     position: relative;
     max-width: 100%;
     text-align: start; 
+}
+
+/*quisuisje*/
+
+.aproposTxt{
+
+
+   flex-direction: column;
+}
+
+.aproposTxt > div{
+    width: 100%;
+}
+
+#hiddenSpace{
+    display: none;
 }
 
 }
