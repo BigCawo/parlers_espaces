@@ -102,7 +102,7 @@ a:link { text-decoration: none; color: black;}
   
 a:visited {text-decoration: none; color: black;}
 
-a:hover {color: white;}
+a:hover {color: rgb(228, 54, 54);}
 
 a:active {color: rgb(0, 0, 0);}
 
@@ -166,8 +166,11 @@ a:active {color: rgb(0, 0, 0);}
 
 
 
-#sidebar li:hover{color: white;}
-#sidebar h1:hover{color: white;}
+#sidebar li a:hover{color: white !important;}
+#sidebar h1 a:hover{color: white !important;}
+
+#sidebar li:hover{color: white !important;}
+#sidebar h1:hover{color: white !important;}
 
 /* ~~~~  main  ~~~~ */
 
@@ -635,6 +638,15 @@ button:hover {
 
 /* apropos */
 
+#aproposPp{
+    margin: 0; 
+    padding-top: 25px !important; 
+    padding-bottom: 25px !important; 
+    padding-right: 25px !important;
+    width: 150px; 
+
+}
+
 #apropos p{
     
     padding: 8px 0;
@@ -655,7 +667,6 @@ button:hover {
 }
 
 #cvEntete{
-    width: 47.5%; 
     display: flex; 
     align-items: center; 
     justify-content: start;
@@ -703,7 +714,7 @@ button:hover {
 
 }
 
-
+ 
 
 /* écran */
 
@@ -858,6 +869,9 @@ body{
 
 #sidebar h1{ writing-mode:horizontal-tb;height: 100%; padding: 22.5px 0; line-height: 0;}
 
+
+
+
 /*accueil*/
 
 .icons {
@@ -948,6 +962,13 @@ width: 100vw;
 }
 
 /*quisuisje*/
+
+#aproposPp{
+ 
+    padding-top: 5vw !important; 
+    padding-bottom: 5vw !important; 
+
+}
 
 .aproposTxt{
 
