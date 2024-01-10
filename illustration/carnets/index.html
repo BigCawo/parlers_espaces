@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        body{
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .fullscreen{
+            scroll-snap-align: center;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <link rel="shortcut icon" href="../../assets/course.gif">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="caroussel-carnet-A4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div id = sidebar>
+
+        <h1> <a href="../../">ELIOT&nbsp;BERNAUD</a> </h1>
+
+        <ul>
+            <li><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></li>        
+        </ul>
+    </div>
+
+    <div id = main>
+
+        <div id="intro" class="fullscreen flexcontainer">
+            <div class="carton">
+                <h1>Carnets</h1>
+                <p>Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis... 
+                <br><br>    
+                J'y dessine et j'y écrit se que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi. </p>
+            </div>
+                <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div>
+        
+
+        
+        <!--carousel1-->
+        <div class="fullscreen">
+ 
+ 
+            <div style="position: relative; height: 10vh; display: flex; justify-content: space-between; align-items: center;">
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="l">
+
+                <h1>~~~~&nbsp; Et la couleur fut &nbsp; ~~~~</h1>
+
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="r">
+            </div>
+
+
+            <div id="carnetContainer" >
+                <div  id="carousel">
+                    <div id="carouselContainer">
+                    </div>                   
+                </div>
+            </div>
+
+
+            <div style="height: 80vh; background-color: rgba(0, 243, 243, 0);">
+
+
+            </div>
+
+            <div style="height: 10vh; display: flex ;" class="slidecontainer">
+                <input type="range" min="1" max="55" value="0" class="slider" id="myRange">
+                
+            </div>
+
+        </div>
+
+
+
+          <script>
+
+
+
+            var SliderDetector = document.getElementById("myRange");
+            var output = document.getElementById("demo")
+            var output2 = document.getElementById("demo2")
+            var carnetWidth = document.getElementById("carnetContainer")
+    
+            SliderDetector.oninput = function() {
+                p = this.value
+                if (n<p){
+                        if(p<nbr+1)
+                        carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                        carouselContainer.style.transition="all 0.5s ease";
+                        affichermasquer();
+                        }
+                else {
+                    if(p>0)
+                        
+                        carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                        carouselContainer.style.transition="all 0.5s ease";
+                        affichermasquer();
+                        
+                }
+                n =this.value
+
+            }
+    
+            document.body.onload=function(){
+                
+
+                
+                
+                
+                resize();
+                nbr = 55;
+                SliderDetector.value = 1
+                p = SliderDetector.value;
+                
+                n = SliderDetector.value;
+                
+    
+    
+                carouselContainer = document.getElementById("carouselContainer")
+                l = document.getElementById("l")
+                r = document.getElementById("r")
+                carouselContainer.style.width = (1920*nbr)+"px";
+                for( i = 1 ; i <= nbr; i++){
+                    div = document.createElement("div");
+                    div.className="carouselPhoto"
+                    div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+i+".jpg')";
+                    carouselContainer.appendChild(div);
+                }
+                affichermasquer();
+                }
+            
+            function resize(){
+            
+                carousselScale = document.getElementById("carousel")
+            carnetMargin = document.getElementById("carnetContainer")
+            mainW = document.getElementById("main").offsetWidth
+            sh = window.innerHeight
+            sw = window.innerWidth
+
+            t = (mainW - ((1920/1396)*0.8*sh))/2
+
+            
+
+            
+
+    
+            if (t>=0){
+            
+                factor = sh/1396
+                carousselScale.style.transform = "scale("+0.8*factor+")"   
+                carnetMargin.style.marginLeft = t+"px"
+
+            }
+            else{
+
+                factor = mainW/1920
+                carousselScale.style.transform = "scale("+factor+")"
+                carnetMargin.style.marginLeft = 0
+            }
+
+            
+            
+            
+
+    
+    
+            }
+    
+            resize();
+    
+            window.onresize=function(){
+                
+                resize();
+    
+            }
+    
+    
+        
+        
+                r.onclick=function(){
+                    if(p<nbr+1)
+                        p++;
+                        SliderDetector.value = p
+                    carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                    carouselContainer.style.transition="all 0.5s ease";
+    
+                   affichermasquer();
+        
+                }
+        
+                l.onclick=function(){
+                    if(p>1)
+                        p--;
+                        SliderDetector.value = p
+                        
+                    carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                    carouselContainer.style.transition="all 0.5s ease";
+                    affichermasquer();
+                }
+    
+    
+              function affichermasquer(){
+                    if(p>=nbr)
+                        r.style.visibility = "hidden";
+                    else
+                        r.style.visibility = "visible";
+        
+                    if(p<=1)
+                        l.style.visibility = "hidden";
+                    else
+                        l.style.visibility = "visible";
+        
+                }
+                
+            </script>   
+        
+        <!--carousel1-->
+
+
+
+
+
+
+    
+
+
+        <p class="copyright">@ All right reserved @</p>
+
+
+
+
+    </div>
+</body>
+</html>
