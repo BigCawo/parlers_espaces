@@ -12,6 +12,8 @@
         .fullscreen{
             scroll-snap-align: center;
         }
+
+
     </style>
 
     <meta charset="UTF-8">
@@ -52,30 +54,30 @@
         <div class="fullscreen">
  
  
-            <div style="position: relative; height: 10vh; display: flex; justify-content: space-between; align-items: center;">
-                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="l">
+            <div style="position: relative; height: 10dvh; display: flex; justify-content: space-between; align-items: center;">
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="lA">
 
-                <h1>~~~~&nbsp; Et la couleur fut &nbsp; ~~~~</h1>
+                <p>~~~~&nbsp; 2023-10 / 2024-01 - <b>Et la couleur fut</b> &nbsp; ~~~~</p>
 
-                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="r">
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="rA">
             </div>
 
 
-            <div id="carnetContainer" >
-                <div  id="carousel">
-                    <div id="carouselContainer">
+            <div id="carnetContainerA" >
+                <div  id="carouselA">
+                    <div id="carouselContainerA">
                     </div>                   
                 </div>
             </div>
 
 
-            <div style="height: 80vh; background-color: rgba(0, 243, 243, 0);">
+            <div style="height: 80dvh; background-color: rgba(0, 243, 243, 0);">
 
 
             </div>
 
-            <div style="height: 10vh; display: flex ;" class="slidecontainer">
-                <input type="range" min="1" max="55" value="0" class="slider" id="myRange">
+            <div style="height: 10dvh; display: flex ;" class="slidecontainer">
+                <input type="range" min="1" max="55" value="0" class="slider" id="myRangeA">
                 
             </div>
 
@@ -87,10 +89,8 @@
 
 
 
-            var SliderDetector = document.getElementById("myRange");
-            var output = document.getElementById("demo")
-            var output2 = document.getElementById("demo2")
-            var carnetWidth = document.getElementById("carnetContainer")
+            var SliderDetector = document.getElementById("myRangeA");
+            var carnetWidth = document.getElementById("carnetContainerA")
     
             SliderDetector.oninput = function() {
                 p = this.value
@@ -127,13 +127,13 @@
                 
     
     
-                carouselContainer = document.getElementById("carouselContainer")
-                l = document.getElementById("l")
-                r = document.getElementById("r")
+                carouselContainer = document.getElementById("carouselContainerA")
+                l = document.getElementById("lA")
+                r = document.getElementById("rA")
                 carouselContainer.style.width = (1920*nbr)+"px";
                 for( i = 1 ; i <= nbr; i++){
                     div = document.createElement("div");
-                    div.className="carouselPhoto"
+                    div.className="carouselPhotoA"
                     div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+i+".jpg')";
                     carouselContainer.appendChild(div);
                 }
@@ -142,8 +142,8 @@
             
             function resize(){
             
-                carousselScale = document.getElementById("carousel")
-            carnetMargin = document.getElementById("carnetContainer")
+                carousselScale = document.getElementById("carouselA")
+            carnetMargin = document.getElementById("carnetContainerA")
             mainW = document.getElementById("main").offsetWidth
             sh = window.innerHeight
             sw = window.innerWidth
@@ -162,6 +162,14 @@
                 carnetMargin.style.marginLeft = t+"px"
 
             }
+            /*
+            else{
+
+                factor = mainW/1920
+                carousselScale.style.transform = "scale("+factor+")"
+                carnetMargin.style.marginLeft = 0
+            }
+            */
             else{
 
                 factor = mainW/1920

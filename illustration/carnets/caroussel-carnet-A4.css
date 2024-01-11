@@ -1,27 +1,10 @@
 
-:root{
-    --w-carousel:1920px;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-/*
-#main{
-    background-color: rgba(0, 255, 255, 0);
-    margin: auto;
-    width: 90vw;
-    z-index: 10;
-}
-*/
+/*carnet A*/
 
-
-
-#carousel{
+#carouselA{
     position: absolute;
-    width: var(--w-carousel);
+    width: 1920px;
 
     /*border: solid 1px black;*/
     overflow-x: hidden;
@@ -30,7 +13,7 @@
     
 }
 
-#carouselContainer{
+#carouselContainerA{
     z-index: -10;
     position: relative;
     width: 1920px;
@@ -45,31 +28,31 @@
     top : 10px
 }
 
-#l{
+#lA{
     left : 0;
     transform: rotate(0deg);
     transition: all 0.3s ease;
 }
 
-#r{
+#rA{
     right: 0;
     transform: rotate(180deg);
     transition: all 0.3s ease;
 }
 
-#l:hover{
+#lA:hover{
     transform: rotate(0deg) scale(1.1);
     opacity: 1;
     transition: all 0.3s ease;
 }
 
-#r:hover{
+#rA:hover{
     transform: rotate(180deg) scale(1.1);
     opacity: 1; 
     transition: all 0.3s ease;
 }
 
-.carouselPhoto{
+.carouselPhotoA{
     display: inline-block;
     width: 1920px;
     height: 1396px;
@@ -81,6 +64,8 @@
 .slider{
     min-width: 100%;
 }
+
+
 
 
 /* téléphone */
