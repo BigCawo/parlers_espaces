@@ -5,18 +5,21 @@
 #carouselA{
     position: absolute;
     width: 1920px;
+    height: 1920px;
 
     /*border: solid 1px black;*/
     overflow-x: hidden;
     margin: 0;
-    transform-origin: top left;
+    transform-origin: top left ;
+    
+    
     
 }
 
 #carouselContainerA{
     z-index: -10;
     position: relative;
-    width: 1920px;
+
     min-height: 1396px;
 }
 
@@ -53,9 +56,15 @@
 }
 
 .carouselPhotoA{
+    /* display: block; */
     display: inline-block;
+    /* transform: rotate(-90deg); */
     width: 1920px;
     height: 1396px;
+
+
+    
+
 
     
 }
@@ -74,6 +83,32 @@
 
     :root{
         --w-carousel:1920px;
+    }
+
+    #carnetContainerA{
+        
+        transform-origin: top left; 
+        transform: translateY(80dvh)  rotate(-90deg)  scale(calc(1920/1396));
+    }
+
+    #lA{
+
+        transform: rotate(-90deg);
+
+    }
+    
+    #rA{
+
+        transform: rotate(90deg);
+
+    }
+
+    #lA:hover{
+        transform: rotate(-90deg) scale(1.1);
+    }
+    
+    #rA:hover{
+        transform: rotate(90deg) scale(1.1);
     }
 
 }

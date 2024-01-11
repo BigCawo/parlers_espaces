@@ -63,7 +63,7 @@
             </div>
 
 
-            <div id="carnetContainerA" >
+            <div id="carnetContainerA"  >
                 <div  id="carouselA">
                     <div id="carouselContainerA">
                     </div>                   
@@ -96,14 +96,17 @@
                 p = this.value
                 if (n<p){
                         if(p<nbr+1)
-                        carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                        carouselContainer.style.transform="translateX("+(-p+1)*(1920)+"px)";
+                        // carouselContainer.style.transform="translateY("+(-p+1)*(1396)+"px)";
                         carouselContainer.style.transition="all 0.5s ease";
                         affichermasquer();
                         }
                 else {
                     if(p>0)
                         
-                        carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
+                        carouselContainer.style.transform="translateX("+(-p+1)*(1920)+"px)";
+                        // carouselContainer.style.transform="translateY("+(-p+1)*(1396)+"px)";
+
                         carouselContainer.style.transition="all 0.5s ease";
                         affichermasquer();
                         
@@ -142,7 +145,7 @@
             
             function resize(){
             
-                carousselScale = document.getElementById("carouselA")
+            carouselScale = document.getElementById("carouselA")
             carnetMargin = document.getElementById("carnetContainerA")
             mainW = document.getElementById("main").offsetWidth
             sh = window.innerHeight
@@ -158,7 +161,7 @@
             if (t>=0){
             
                 factor = sh/1396
-                carousselScale.style.transform = "scale("+0.8*factor+")"   
+                carouselScale.style.transform = "scale("+0.8*factor+")"
                 carnetMargin.style.marginLeft = t+"px"
 
             }
@@ -166,14 +169,15 @@
             else{
 
                 factor = mainW/1920
-                carousselScale.style.transform = "scale("+factor+")"
+                carouselScale.style.transform = "scale("+factor+")"
                 carnetMargin.style.marginLeft = 0
             }
             */
             else{
 
                 factor = mainW/1920
-                carousselScale.style.transform = "scale("+factor+")"
+                carouselScale.style.transform = "scale("+factor+")"
+                
                 carnetMargin.style.marginLeft = 0
             }
 
@@ -196,7 +200,7 @@
     
         
         
-                r.onclick=function(){
+                rA.onclick=function(){
                     if(p<nbr+1)
                         p++;
                         SliderDetector.value = p
@@ -207,7 +211,7 @@
         
                 }
         
-                l.onclick=function(){
+                lA.onclick=function(){
                     if(p>1)
                         p--;
                         SliderDetector.value = p
