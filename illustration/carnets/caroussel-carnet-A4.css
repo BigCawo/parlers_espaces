@@ -1,16 +1,39 @@
 
+.navBar{
+    position: relative; 
+    height: 10dvh;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    touch-action: none;
+}
+
+.bouton{
+    width: 35px;
+    cursor: pointer;
+    top : 10px
+}
+
+.slider{
+    min-width: 100%;
+}
+
+
+
+
 
 /*carnet A*/
 
 #carouselA{
     position: absolute;
     width: 1920px;
-    height: 1920px;
+    height: 1396px;
 
     /*border: solid 1px black;*/
     overflow-x: hidden;
     margin: 0;
     transform-origin: top left ;
+    z-index: -10;
     
     
     
@@ -20,16 +43,10 @@
     z-index: -10;
     position: relative;
 
-    min-height: 1396px;
+    height: 1396px;
 }
 
 
-
-.bouton{
-    width: 35px;
-    cursor: pointer;
-    top : 10px
-}
 
 #lA{
     left : 0;
@@ -61,6 +78,7 @@
     /* transform: rotate(-90deg); */
     width: 1920px;
     height: 1396px;
+    
 
 
     
@@ -70,9 +88,8 @@
 }
 
 
-.slider{
-    min-width: 100%;
-}
+
+
 
 
 
@@ -81,9 +98,15 @@
 
 @media screen and (max-width: 480px) {
 
-    :root{
-        --w-carousel:1920px;
+
+
+    .navBar p{
+    font-size: 4vw;
     }
+
+
+
+/* carnet A */
 
     #carnetContainerA{
         
@@ -110,5 +133,6 @@
     #rA:hover{
         transform: rotate(90deg) scale(1.1);
     }
+
 
 }
