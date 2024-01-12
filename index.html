@@ -1,79 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <script src="script.js"> </script>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/course.gif">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliot Bernaud Design Dessin Bricolage</title>
-    <link rel="shortcut icon" href="../assets/course.gif">
-    <link rel="stylesheet" href="../styles.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+    <title>Eliot Bernaud Design Dessin Bricolage</title>
 </head>
-<body>
-    <style>
-
-    @media screen and (max-width: 900px) {
-
-            .carton{  
-                padding-top: 0;
-            }
-
-            .carton h1{
-                padding-bottom: 0;
-            }
-
-            .carton h2{
-                padding-bottom: 0;
-            }
-
-            .carton p {
-                padding-bottom: 0;
-            }
-
-    }
-    @media screen and (max-width: 480px) {
-            #sidebar{
-                display: none;
-            }
-    }
-
-    </style>
+<body style="position: relative;">
+    
     <div id = sidebar>
 
-        <h1> <a href="../">ELIOT&nbsp;BERNAUD</a> </h1>
+
+
+
+        <h1 onclick="shutDownBaaaa()"> ELIOT&nbsp;BERNAUD </h1>
 
         <ul>
-            <li><a href="../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></li>        
+            <li><a href="qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></li>        
         </ul>
-    </div>
-
-    <div id = main>
+        </div>
 
 
 
-        <div id="intro" class="flexcontainer">
-            <div id="baliseScreen" class="carton">
-                <h1 id="date">Parlers Espace</h1>
-                <h2><span id="dateMobile"></span>2021</h2> <p class="typeProjet"> <i>- Mémoire de fin d'études </i></p>
-                <p id="baliseMobile"><b>Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.</b></p>
-                <p> Dans ce mémoire, je pars à l'exploration de ces "parlers espace" qui me fascinent. J'en propose une lecture tridimensionnelle puis je tente de montrer l'importance de poser un regard défigé sur ce qui compose nos quotidiens. Pour mieux les faire nôtres et pour cultiver notre autonomie et notre individualité dans notre vie de tous les jours.</p>
+    <div id="main">
+        <div class="header">
 
-                <p style="text-align: center; font-weight: 800;">
-                    <a class="pageLink" href="parlers-espaces/" target="_blank">acces au mémoire</a>
-                    <br><br>
-                    <a class="pageLink" href="https://bigcawo.itch.io/parlers-espaces" target="_blank">acces à la visite interactive des espaces</a>
-                </p>
-            </div>
-            <img id="imgIntro" loading="lazy" style="width: 100%; padding: 3%;" src="../assets/parlersespace.png" alt="e">
+            <ul id="categories">
+                
+                <li><button id="buttonObjet" class="button" onclick="test(1)" value ="off" >objet</button></li>
+                <li><button id="buttonFiction" class="button" onclick="test(2)" value ="off" >&nbsp;médiation&nbsp;</button></li>
+                <li><button id="buttonDessin" class="button" onclick="test(0)" value ="off" >illustration</button></li>
+                <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
+    
+            </ul>
+
 
         </div>
+
         
+        <div id = content>
+            <div id="descriptions"  >
+
+                <div   id="descObjet" class="desc">
+                    <p>
+                        <b>Les objets occupent une place centrale dans nos vies et façonnent nos identités personnelles.</b>
+                        <br><br>Depuis la révolution industrielle, ces derniers, à l’image de bactéries dans une boîte de pétri, se sont mis à proliférer. Ils débordent désormais de nos placards, de nos décharges, sur nos plages. Nous sommes submergés par une quantité d’objets dont la durabilité et la qualité, en opposition à leur nombre, se dégradent de plus en plus.
+                        <br><br>Repensons notre rapport à l’objet, inscrivons nous dans une démarche plus raisonnable, durable et respectueuse de l’environnement.
+                    </p>
+                </div>
+
+                <div id="descFiction" class="desc">
+                    <p>
+                        <b>Comment sensibiliser le public aux enjeux contemporains ?
+                        <br>Comment atteindre les personnes et les amener à se questionner sur leurs pratiques, sur leurs habitudes ?
+                        </b>
+                        <br><br>Je souhaite permettre aux gens d’appréhender ces sujets sérieux de manière ludique, légère et imaginative. <br> J'imagine des fictions, des histoires, je met en scene des récits...<br>Car les gens apprennent mieux quand on les fait rêver.
+                    </p>
+                </div>
+
+                <div id="descMemoire" class="desc">
+
+                </div>
+
+                <div id="descDessin" class="desc">
+
+                    <p>
+                        Le dessin est un de mes outils d'expression privilégié. Dessin technique, dessin d'imagination, croquis... Il est selon moi un très bon vecteur de transmission et de communication.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="projets">
+
+            
+                <div class="icons memoire dessin fiction">
+                    <p>Parlers Espace <br>~~~<br> <i>mémoire</i></p> </p>
+                    <a href="memoire/"><img  loading = lazy src="assets/icon_parlers-espace.png"></a>
+                </div>
+
         
-        <script src="../script.js"></script>
+                <div class="icons objet">
+                    <p>Abat-jour Double Clip</p>
+                    <a href="objet/lampe-double-clip/"><img loading = lazy src="assets/icon_lampe-pince.png"></a>
+                </div>
+        
+                <div class="icons dessin fiction memoire">
+                    <p>La Fabrique à Brac <br>~~~<br> <i>diplôme</i></p> </p>
+                    <a href="diplôme/"><img loading= lazy src="assets/icon_fabrique.png"></a>
+                </div>
+
+
+        
+                <div class="icons objet">
+                    <p>Mobilier Grillagé</p>
+                    <a href="objet/mobilier-grillage/"><img loading = lazy src="assets/icon_mobilier-grillage.png"></a>
+                </div>
+
+                <div class="icons fiction">
+                    <p>Pomme de Terre</p>
+                    <a href="mediation/pomme-de-terre/"><img loading= lazy src="assets/icon_pomme-de-terre.png" ></a>
+                </div>
+
+                <div class="icons objet">
+                    <p>Meuble à bazar</p>
+                    <a href="objet/meuble-a-bazar/"><img loading = lazy src="assets/icon_meuble-a-bazar.png"></a>
+                </div>
+
+                <div class="icons fiction" >
+                    <p>Chmup The Dog</p>
+                    <a href="mediation/chmup-the-dog/"><img loading = lazy src="assets/icon_chmup.png"></a>
+                    
+                </div>
+
+                <div class="icons objet">
+                    <p>Lampe Ressort</p>
+                    <a href="objet/lampe-ressort/"><img loading = lazy src="assets/icon_lampe-ressort.png"></a>
+                </div>
+        
+                <div class="icons objet">
+                    <p>Pol</p>
+                    <a href="objet/pol/"><img loading = lazy src="assets/icon_pol.png"></a>
+                </div>
+
+                <!-- <div class="icons objet">
+                    <p>Chose-pel</p>
+                    <a href="objet/chaise-pol/"><img loading = lazy src="assets/icon_chose-pel.png"></a>
+                </div>
+        
+                <div class="icons objet">
+                    <p>Nasa</p>
+                    <a href="objet/nasa/"><img loading = lazy src="assets/icon_nasa.png"></a>
+                </div>
+
+                <div class="icons objet">
+                    <p>Stellarium</p>
+                    <a href="objet/stellarium/"><img loading = lazy src="assets/icon_stellarium.png"></a>
+                </div> -->
+        
+                <div class="icons fiction">
+                    <p>Terres Lointaines</p>
+                    <a href="mediation/terres-lointaines/"><img loading= lazy src="assets/icon_terres-lointaines.png" ></a>
+                </div>
+            
+                <div class="icons dessin">
+                    <p>Illustrations</p>
+                <a href="illustration/illustrations/"><img loading= lazy src="assets/icon_illustrations.png" ></a>
+                </div>
+
+
+
+                    <!--
+
+                <div class="icons objet">
+                    <p>Stellarium</p>
+                    <a href="objet/pol/"><img loading= lazy src="assets/icon_pol.png" alt="pol"></a>
+                </div>
+
+
+                -->
+
+                <div class="icons objet">
+                    <p>Vase Suspendu</p>
+                    <a href="objet/vase-suspendu/"><img loading= lazy src="assets/icon_vase-suspendu.png"></a>
+                </div>
+
+
+                <div class="icons dessin">
+                    <p>Carnets</p>
+                    <a href="illustration/carnets/"> <img  loading= lazy src="assets/icon_carnets.png"> </a>
+                    <!--<a href="illustration/carnets/"></a>-->
+                </div>
+
+                <div class="icons memoire dessin fiction objet">
+                
+                </div>
+
+        
+            </div>
 
     </div>
+
 </body>
 </html>
