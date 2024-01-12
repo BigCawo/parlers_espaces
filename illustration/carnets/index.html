@@ -2,26 +2,15 @@
 <html lang="en">
 <head>
 
-    <style>
-        body{
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            height: 100vh;
-        }
 
-        .fullscreen{
-            scroll-snap-align: center;
-        }
-
-
-    </style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliot Bernaud Design Dessin Bricolage</title>
+
     <link rel="shortcut icon" href="../../assets/course.gif">
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="caroussel-carnet-A4.css">
+    <link rel="stylesheet" href="carnets.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
@@ -38,6 +27,8 @@
 
     <div id = main>
 
+        <p style="position: fixed;" id="output"></p>
+
         <div id="intro" class="fullscreen flexcontainer">
             <div class="carton">
                 <h1>Carnets</h1>
@@ -48,10 +39,13 @@
                 <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
+        <iframe class="fullscreen" style="width: 100%; height: 100%; margin: 0;"  src="A.html" frameborder="0"></iframe>
+   
+        <iframe class="fullscreen" style="width: 100%; height: 100%; margin: 0;"  src="B.html" frameborder="0"></iframe>
 
-        
         <!--carousel1-->
-        <div class="fullscreen">
+
+        <!-- <div class="fullscreen">
  
  
             <div class="navBar">
@@ -81,161 +75,44 @@
                 
             </div>
 
-        </div>
+        </div> -->
+
+        <!-- <div class="fullscreen">
+ 
+ 
+            <div class="navBar">
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="lB">
+
+                <p>2023-10 / 2024-01 - <b>Et la couleur fut</b></p>
+
+                <img style="max-width: auto; height: 5vh;" src="../../assets/bouton.png" alt="" class="bouton" id="rB">
+            </div>
 
 
+            <div id="carnetContainerB"   >
+                <div  id="carouselB">
+                    <div id="carouselContainerB">
+                    </div>                   
+                </div>
+            </div>
 
-          <script>
+
+            <div style="height: 80dvh; background-color: rgba(0, 243, 243, 0);">
 
 
+            </div>
 
-            var SliderDetector = document.getElementById("myRangeA");
-            var carnetWidth = document.getElementById("carnetContainerA")
-    
-            SliderDetector.oninput = function() {
-                p = this.value
-                if (n<p){
-                        if(p<nbr+1)
-                        carouselContainer.style.transform="translateX("+(-p+1)*(1920)+"px)";
-                        // carouselContainer.style.transform="translateY("+(-p+1)*(1396)+"px)";
-                        carouselContainer.style.transition="all 0.5s ease";
-                        affichermasquer();
-                        }
-                else {
-                    if(p>0)
-                        
-                        carouselContainer.style.transform="translateX("+(-p+1)*(1920)+"px)";
-                        // carouselContainer.style.transform="translateY("+(-p+1)*(1396)+"px)";
-
-                        carouselContainer.style.transition="all 0.5s ease";
-                        affichermasquer();
-                        
-                }
-                n =this.value
-
-            }
-    
-            document.body.onload=function(){
+            <div style="height: 10dvh; display: flex ; z-index : 1000" class="slidecontainer">
+                <input type="range" min="1" max="29" value="0" class="slider" id="myRangeB">
                 
+            </div>
 
-                
-                
-                
-                resize();
-                nbr = 55;
-                SliderDetector.value = 1
-                p = SliderDetector.value;
-                
-                n = SliderDetector.value;
-                
-    
-    
-                carouselContainer = document.getElementById("carouselContainerA")
-                l = document.getElementById("lA")
-                r = document.getElementById("rA")
-                carouselContainer.style.width = (1920*nbr)+"px";
-                for( i = 1 ; i <= nbr; i++){
-                    div = document.createElement("div");
-                    div.className="carouselPhotoA"
-                    div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+i+".jpg')";
-                    carouselContainer.appendChild(div);
-                }
-                affichermasquer();
-                }
-            
-            function resize(){
-            
-            carouselScale = document.getElementById("carouselA")
-            carnetMargin = document.getElementById("carnetContainerA")
-            mainW = document.getElementById("main").offsetWidth
-            sh = window.innerHeight
-            sw = window.innerWidth
+        </div> -->
 
-            t = (mainW - ((1920/1396)*0.8*sh))/2
 
-            
-
-            
-
-    
-            if (t>=0){
-            
-                factor = sh/1396
-                carouselScale.style.transform = "scale("+0.8*factor+")"
-                carnetMargin.style.marginLeft = t+"px"
-
-            }
-            /*
-            else{
-
-                factor = mainW/1920
-                carouselScale.style.transform = "scale("+factor+")"
-                carnetMargin.style.marginLeft = 0
-            }
-            */
-            else{
-
-                factor = mainW/1920
-                carouselScale.style.transform = "scale("+factor+")"
-                
-                carnetMargin.style.marginLeft = 0
-            }
-
-            
-            
-            
-
-    
-    
-            }
-    
-            resize();
-    
-            window.onresize=function(){
-                
-                resize();
-    
-            }
-    
-    
         
-        
-                rA.onclick=function(){
-                    if(p<nbr+1)
-                        p++;
-                        SliderDetector.value = p
-                    carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
-                    carouselContainer.style.transition="all 0.5s ease";
-    
-                   affichermasquer();
-        
-                }
-        
-                lA.onclick=function(){
-                    if(p>1)
-                        p--;
-                        SliderDetector.value = p
-                        
-                    carouselContainer.style.transform="translate("+(-p+1)*(1920)+"px)";
-                    carouselContainer.style.transition="all 0.5s ease";
-                    affichermasquer();
-                }
-    
-    
-              function affichermasquer(){
-                    if(p>=nbr)
-                        r.style.visibility = "hidden";
-                    else
-                        r.style.visibility = "visible";
-        
-                    if(p<=1)
-                        l.style.visibility = "hidden";
-                    else
-                        l.style.visibility = "visible";
-        
-                }
-                
-            </script>   
+
+
         
         <!--carousel1-->
 
@@ -250,6 +127,7 @@
         <p class="copyright">@ All right reserved @</p>
 
 
+        <script src="scriptB.js"> </script>
 
 
     </div>

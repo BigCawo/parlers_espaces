@@ -1,0 +1,145 @@
+/* 
+body{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.fullscreen{
+    scroll-snap-align: center;
+} */
+
+:root{
+    --Wcarnet : 1920px; 
+    --Hcarnet : 1396px; 
+}
+
+
+
+
+.navBar{
+    position: relative; 
+    height: 10dvh;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    touch-action: none;
+}
+
+.bouton{
+    width: auto;
+    height: 5dvh;
+    cursor: pointer;    
+}
+
+.slider{
+    min-width: 100%;
+}
+
+
+
+
+
+
+/*carnet B*/
+
+#carouselB{
+    position: absolute;
+    width: var(--Wcarnet);
+    height: var(--Hcarnet);
+
+    /*border: solid 1px black;*/
+    overflow: hidden;
+    margin: 0;
+    transform-origin: top left ;
+    z-index: -10;
+    
+    
+    
+}
+
+#carouselContainerB{
+    z-index: -10;
+    position: relative;
+    height: var(--Hcarnet);
+    
+}
+
+
+
+
+
+#lB:hover{
+    transform:scale(1.1);
+    transition: all 0.3s ease;
+}
+
+#rB:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.carouselPhotoB{
+    /* display: block; */
+    display: inline-block;
+    /* transform: rotate(-90deg); */
+    width: var(--Wcarnet);
+    height: var(--Hcarnet);
+    
+
+
+    
+
+
+    
+}
+
+
+
+
+
+
+
+
+/* téléphone */
+
+@media screen and (max-width: 480px) {
+
+
+
+    .navBar p{
+    font-size: 4vw;
+    }
+
+
+
+/* carnet A */
+
+    #carnetContainerB{
+        
+        transform-origin: top left; 
+        transform: translateY(80dvh)  rotate(-90deg)  scale(calc(1920/1396));
+    }
+
+    #lB{
+
+        transform: rotate(-90deg);
+
+    }
+    
+    #rB{
+
+        transform: rotate(-90deg);
+
+    }
+
+    #lB:hover{
+        transform: rotate(-90deg) scale(1.1);
+    }
+    
+    #rB:hover{
+        transform: rotate(-90deg) scale(1.1);
+    }
+
+
+}
