@@ -258,6 +258,7 @@ a:active {color: rgb(0, 0, 0);}
     padding-top: 25px;
     padding-bottom: 25px;  
     padding-right: 25px;
+    /* max-height: 50vh; */
 }
 
 
@@ -767,8 +768,25 @@ html{
 
 /* projets*/
 
+
+
+
+
 .carton{  
-    padding-right: 0px;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.carton h1{
+    padding-bottom: 0;
+}
+
+.carton h2{
+    padding-bottom: 0;
+}
+
+.carton p {
+    padding-bottom: 0;
 }
 
 .espace{
@@ -886,6 +904,14 @@ body{
 /* .icons {
     width: 100%;
 } */
+
+#sidebar{
+    display: none;
+}
+
+#intro{
+    border-bottom: 2px dotted black;
+}
 
 #descriptions{
     width: 100%;

@@ -192,4 +192,41 @@ function test(x) {
 
 }
 
+//intro//
 
+
+
+
+let content = document.getElementById('imgIntro');
+let parentMobile = document.getElementById('baliseMobile');
+let parentScreen = document.getElementById('baliseScreen');
+let dateMobile = document.getElementById("dateMobile")
+let date = document.getElementById("date")
+
+function myFunction(x) {
+if (x.matches) { // If media query matches
+
+
+
+    parentMobile.insertBefore(content, parentMobile.firstChild);
+    date.style.display = "inline-block";
+    dateMobile.innerHTML = "&nbsp;-&nbsp;"
+
+} else {
+    parentScreen.insertAdjacentElement("afterend",content);
+    date.style.display = "block";
+    dateMobile.innerHTML = ""
+
+}
+}
+
+// Create a MediaQueryList object
+let x = window.matchMedia("(max-width: 900px)")
+
+// Call listener function at run time
+myFunction(x);
+
+// Attach listener function on state changes
+x.addEventListener("change", function() {
+myFunction(x);
+}); 
