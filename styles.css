@@ -14,7 +14,7 @@
     --fs-t:1.5em;
     --fs-st : 1.25em;
     --fs-p : 0.75em;
-    --fs-c : 0.75em;
+    --fs-c : 1em;
     --w-main: 60vw;
     --test: calc((100vw - var(--w-main))/ -2);
 
@@ -630,7 +630,6 @@ button:hover {
     height: 100%;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 15px;
     font-weight: 700;
 }
 
@@ -907,6 +906,7 @@ body{
 #categories > li > button{
     margin: 0;
     padding: 12px 2px ;
+    font-size: var(--ff-t);
 }
 
 
