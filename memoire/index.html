@@ -7,6 +7,7 @@
     <title>Eliot Bernaud Design Dessin Bricolage</title>
     <link rel="shortcut icon" href="../assets/course.gif">
     <link rel="stylesheet" href="../styles.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
@@ -23,25 +24,27 @@
 
     <div id = main>
 
+
+
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Parlers Espace</h1>
-                <h2>2021</h2> <p class="typeProjet"> <i>- Mémoire de fin d'études </i></p>
-                <p><b>Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Parlers Espace</h1>
+                <h2><span id="dateMobile"></span>2021</h2> <p class="typeProjet"> <i>- Mémoire de fin d'études </i></p>
+                <p id="baliseMobile"><b>Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.</b></p>
                 <p> Dans ce mémoire, je pars à l'exploration de ces "parlers espace" qui me fascinent. J'en propose une lecture tridimensionnelle puis je tente de montrer l'importance de poser un regard défigé sur ce qui compose nos quotidiens. Pour mieux les faire nôtres et pour cultiver notre autonomie et notre individualité dans notre vie de tous les jours.</p>
 
                 <p style="text-align: center; font-weight: 800;">
                     <a class="pageLink" href="parlers-espaces/" target="_blank">acces au mémoire</a>
                     <br><br>
-                    <a class="pageLink" href="https://bigcawo.itch.io/parlers-espaces" target="_blank">acces direct à la visite des espaces</a>
+                    <a class="pageLink" href="https://bigcawo.itch.io/parlers-espaces" target="_blank">acces à la visite interactive des espaces</a>
                 </p>
             </div>
-            <img loading="lazy" style="width: 100%; padding: 3%;" src="../assets/parlersespace.png" alt="e">
+            <img id="imgIntro" loading="lazy" style="width: 100%; padding: 3%;" src="../assets/parlersespace.png" alt="e">
 
         </div>
         
-
-
+        
+        <script src="../script.js"></script>
 
     </div>
 </body>
