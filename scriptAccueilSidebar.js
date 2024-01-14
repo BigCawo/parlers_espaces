@@ -6,7 +6,7 @@ let ScrollY = window.scrollX
 let n=0
 
 window.addEventListener("scroll", function(){
-   
+    this.document.getElementById("oui").innerHTML = scrollY
     if(Mq480.matches){
         if (scrollY < 25){
             Sidebar.style.bottom= "0"
