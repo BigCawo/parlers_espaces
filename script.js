@@ -1,3 +1,6 @@
+
+// ~~~~ Accueil ~~~~ //
+
 function shutDownBaaaa() {
     let aa = buttonValue = document.getElementById("buttonDessin").value;
     let bb = buttonValue = document.getElementById("buttonObjet").value;
@@ -65,7 +68,6 @@ function shutDownBaaaa() {
     
     //descriptions
 }
-
 
 
 function test(x) {
@@ -192,41 +194,29 @@ function test(x) {
 
 }
 
-//intro//
+// ~~~~ Projets ~~~~ //
 
 
 
+// ~~~~ MediaQueries ~~~~ //
 
-let content = document.getElementById('imgIntro');
-let parentMobile = document.getElementById('baliseMobile');
-let parentScreen = document.getElementById('baliseScreen');
-let dateMobile = document.getElementById("dateMobile")
-let date = document.getElementById("date")
-
-function myFunction(x) {
-if (x.matches) { // If media query matches
+// MediaQueryList variables//
+let Mq1300 = window.matchMedia("(max-width: 1300px)")
+let Mq900 = window.matchMedia("(max-width: 900px)")
+let Mq480 = window.matchMedia("(max-width: 480px)")
 
 
 
-    parentMobile.insertBefore(content, parentMobile.firstChild);
-    date.style.display = "inline-block";
-    dateMobile.innerHTML = "&nbsp;-&nbsp;"
+// Listener function on state changes
 
-} else {
-    parentScreen.insertAdjacentElement("afterend",content);
-    date.style.display = "block";
-    dateMobile.innerHTML = ""
+Mq1300.addEventListener("change", function() {
+    null;
+}); 
 
-}
-}
+Mq900.addEventListener("change", function() {
+    null;
+}); 
 
-// Create a MediaQueryList object
-let x = window.matchMedia("(max-width: 900px)")
-
-// Call listener function at run time
-myFunction(x);
-
-// Attach listener function on state changes
-x.addEventListener("change", function() {
-myFunction(x);
+Mq480.addEventListener("change", function() {
+    SidebarHide(Mq480);
 }); 
