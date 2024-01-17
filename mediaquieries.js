@@ -1,10 +1,3 @@
-
-
-
-// ~~~~ Projets ~~~~ //
-
-
-
 // ~~~~ MediaQueries ~~~~ //
 
 // MediaQueryList variables//

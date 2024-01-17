@@ -24,13 +24,13 @@
     <div  id = main>
 
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Mobilier Grillagé</h1>
-                <h2>2020</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
-                <p><b>Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Mobilier Grillagé</h1>
+                <h2><span id="dateMobile"></span>2020</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
+                <p id="baliseMobile"><b>Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?</b></p>
                 <p>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide.</p>
             </div>
-            <img loading="lazy" style="margin : auto; max-height: 90vh; max-width: 100%;" src="../../assets/mobiliergrillage.jpg" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="../../assets/mobiliergrillage.jpg" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -76,9 +76,11 @@
             <img loading="lazy" class="illusfin" src="../../assets/mobiliergrillage-illus1.jpg" alt="">
         </div>
             
-
-
-
     </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>

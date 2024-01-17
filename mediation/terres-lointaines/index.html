@@ -24,15 +24,15 @@
     <div id = main>
 
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Terres lointaines</h1>
-                <h2>2020</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
-                <p><b>Un vaisseau s’écrase sur Terre. De ses décombres sort un être humanoïde. Celui-ci va tenter de trouver ses repères dans un monde qui lui est inconnu et partir à sa découverte.</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Terres lointaines</h1>
+                <h2><span id="dateMobile"></span>2020</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
+                <p id="baliseMobile"><b>Un vaisseau s’écrase sur Terre. De ses décombres sort un être humanoïde. Celui-ci va tenter de trouver ses repères dans un monde qui lui est inconnu et partir à sa découverte.</b></p>
                 <p>Ce court métrage, inspiré d’une bande dessinée de Moebius, Le Monde d’Édena, est réalisé dans le cadre d’un atelier de création vidéo, dont le thème était “l’hybride”.
                 <br><br>première partie, durée 2’30  
                 </p>
             </div>
-            <img loading="lazy" style="margin : auto;; max-width: 90vh;" src="../../assets/terreslointaines.png" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-width: 90vh;" src="../../assets/terreslointaines.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -86,7 +86,11 @@
 
 
 
-
     </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>

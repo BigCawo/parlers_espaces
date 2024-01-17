@@ -5,7 +5,7 @@
     /* général */
 
     --w-sidebar:50px;
-    --h-sidebar: 45px;
+    --h-sidebar: 55px;
     --spaces: 20px;
     --ff-t:Gabarito;
     --ff-st:Roboto;
@@ -259,6 +259,8 @@ a:active {color: rgb(0, 0, 0);}
     padding-top: 25px;
     padding-bottom: 25px;  
     padding-right: 25px;
+    max-height: 90dvh;
+    overflow-y: scroll;
     /* max-height: 50vh; */
 }
 
@@ -508,6 +510,8 @@ background-color: rgba(0, 0, 0, 0.8);
 
 
 
+
+
 #descriptions{ 
 
     transition: margin-bottom 0.5s ease;
@@ -547,7 +551,7 @@ background-color: rgba(0, 0, 0, 0.8);
 }
 
 #categories {background-color: rgba(127, 255, 212, 0);
-    height: var(--h-sidebar);
+    height: 40px;
     transition: height 0.25s ease;
     align-items: center;
     z-index: 10;
@@ -581,7 +585,7 @@ button{
     font-weight: 300;
     font-size: var(--fs-c);
     
-    line-height: 0;
+
     padding: 15px 6px;
     margin-right: 10px;
     text-decoration: none;
@@ -752,6 +756,36 @@ p{
     flex-direction: column;
     height:auto;
 }
+
+#imgIntro{
+    margin-bottom: 20px;
+}
+
+
+
+
+.carton{
+    max-height: unset;
+    overflow-y:unset;
+
+}
+
+.carton{  
+    padding-top: 0;
+}
+
+.carton h1{
+    padding-bottom: 0;
+}
+
+.carton h2{
+    padding-bottom: 0;
+}
+
+.carton p {
+    padding-bottom: 0;
+}
+
 /*
 html{
     scroll-snap-type:none;
@@ -871,7 +905,7 @@ body{
     position: fixed;
     width: 100%;
     height: var(--h-sidebar);
-    bottom: 0;
+    bottom: -10px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -892,10 +926,23 @@ body{
 
 /*accueil*/
 
-/* .icons {
-    width: 100%;
+/* #sidebarMargin{
+    height: 90px;
 } */
 
+/* #categories {
+    background-color: white;
+    margin: auto;
+    width: var(--w-main);
+    position: fixed;
+} */
+
+/* #header {
+    width: 100dvw;
+    z-index: 10;
+    position: fixed;
+    bottom :45px
+} */
 
 
 /* #intro{

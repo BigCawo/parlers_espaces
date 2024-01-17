@@ -1,0 +1,87 @@
+
+:root{
+    --w-carousel:840px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*
+#main{
+    background-color: rgba(0, 255, 255, 0);
+    margin: auto;
+    width: 90vw;
+    z-index: 10;
+}
+*/
+
+#carousel{
+    position: absolute;
+    width: var(--w-carousel);
+    height: 600px;
+    /*border: solid 1px black;*/
+    overflow: hidden;
+    margin: 0;
+    transform-origin: top left;
+    
+}
+
+#carousselContainer{
+    position: relative;
+    width: 420px;
+    height: 600px;
+}
+
+.bouton{
+    position: absolute;
+    width: 35px;
+    cursor: pointer;
+    top : 385px
+}
+
+#l{
+    left : 0;
+    transform: rotate(0deg);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+#r{
+    right: 0;
+    transform: rotate(180deg);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+#l:hover{
+    transform: rotate(0deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#r:hover{
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1; 
+    transition: all 0.3s ease;
+}
+
+.carouselPhoto{
+    display: inline-block;
+    width: 420px;
+    height: 600px;
+
+    
+}
+
+
+/* téléphone */
+
+@media screen and (max-width: 480px) {
+
+    :root{
+        --w-carousel:420px;
+    }
+
+}

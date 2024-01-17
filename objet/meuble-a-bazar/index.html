@@ -25,13 +25,13 @@
     <div id = main>
 
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Meuble à bazar</h1>
-                <h2>2023</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
-                <p><b>J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler.</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Meuble à bazar</h1>
+                <h2><span id="dateMobile"></span>2023</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
+                <p id="baliseMobile"><b>J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler.</b></p>
                 <p>Je l'ai conçu à partir de matière essentiellement récupérée, dont je disposais à proximité &lpar;volige   et massif de peuplier, contreplaqué et vis récupérées&rpar;</p>
             </div>
-            <img loading="lazy" style="margin : auto; max-height: 90vh; max-width: 100%;" src="../../assets/meuble-a-bazar.jpg" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="../../assets/meuble-a-bazar.jpg" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -60,8 +60,11 @@
         <p class="copyright">@ All right reserved @</p>
 
 
-
-
     </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>

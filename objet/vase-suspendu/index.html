@@ -25,15 +25,15 @@
     <div id = main>
 
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Vase suspendu</h1>
-                <h2>2017</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
-                <p><b>Quel récipient pour observer les fleurs autrement ?</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Vase suspendu</h1>
+                <h2><span id="dateMobile"></span>2017</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
+                <p id="baliseMobile"><b>Quel récipient pour observer les fleurs autrement ?</b></p>
                 <p>Ce projet de 2 semaines a été réalisé en collaboration avec Sidonie Couëdel. <br><br>
                     Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet.
                     <br><br>Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition.</p>
             </div>
-            <img loading="lazy" loading="lazy" style="margin : auto; max-height: 90vh; max-width: 100%;" src="../../assets/vase-suspendu.png" alt="e">
+            <img id="imgIntro" loading="lazy" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 100%;" src="../../assets/vase-suspendu.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -71,8 +71,11 @@
         <p class="copyright">@ All right reserved @</p>
 
 
-
-
     </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>

@@ -24,13 +24,13 @@
     <div id = main>
 
         <div id="intro" class="flexcontainer">
-            <div class="carton">
-                <h1>Lampe Ressort</h1>
-                <h2>2018</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
-                <p><b>Comment rendre perceptible et lisible le fonctionnement global d’un objet ?</b></p>
+            <div id="baliseScreen" class="carton">
+                <h1 id="date">Lampe Ressort</h1>
+                <h2><span id="dateMobile"></span>2018</h2> <p class="typeProjet"> <i>- Projet personnel </i></p>
+                <p id="baliseMobile"><b>Comment rendre perceptible et lisible le fonctionnement global d’un objet ?</b></p>
                 <p>Pour ce projet personnel, j’ai conçu un objet manifeste, un prototype de lampe d’architecte dont les principes de fonctionnement sont mis en valeur. L’objectif est de rendre l’objet plus compréhensible et tangible pour l’utilisateur.</p>
             </div>
-            <img loading="lazy" style="margin : auto; max-height: 90vh; max-width: 90vh;" src="../../assets/lamperessort.png" alt="e">
+            <img id="imgIntro" loading="lazy" style="margin : auto unset; max-height: 90vh; max-width: 90vh;" src="../../assets/lamperessort.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
@@ -65,8 +65,11 @@
 
 
 
-
-
     </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>
