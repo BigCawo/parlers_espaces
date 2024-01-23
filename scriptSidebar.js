@@ -9,6 +9,7 @@ let Sidebar = document.getElementById("sidebar")
 
 window.addEventListener("scroll", function(){
     
+    if(Mq480.matches){
 
         if (scrollY < 5){
             Sidebar.style.bottom= "-10px"
@@ -17,19 +18,22 @@ window.addEventListener("scroll", function(){
         else{
             Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
         }
-
+        }
 
 })
 
 document.body.addEventListener("scroll", function(){
     
 
-        if (document.body.scrollTop < 5){
+    if(Mq480.matches){
+
+        if (scrollY < 5){
             Sidebar.style.bottom= "-10px"
         }
 
         else{
             Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
+        }
         }
 
 
