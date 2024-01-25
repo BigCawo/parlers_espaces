@@ -61,7 +61,8 @@ function shutDownBaaaa() {
 */
     document.getElementById(z).value = "off"
 
-    document.getElementById(z).style.fontSize = "var(--fs-c)"
+    document.getElementById(z).style.fontSize = "100%"
+    document.getElementById(z).style.fontWeight = "300"
     document.getElementById("categories").style.height = "var(--h-sidebar)"
     
 
@@ -137,14 +138,15 @@ function test(x) {
             
             for (let i = 0; i < reset.length; i++) {
                 reset[i].value = "off"
-                reset[i].style.fontSize = "var(--fs-c)"
+                reset[i].style.fontSize = "100%"
+                reset[i].style.fontWeight = "300"
             }
 
 
             document.getElementById(z).value = "on"
-            document.getElementById(z).style.fontSize = "calc( var(--fs-c) * 1.5 )"
+            document.getElementById(z).style.fontSize = "125%"
+            document.getElementById(z).style.fontWeight = "900"
                 // document.getElementById("categories").style.height = "calc( var(--h-sidebar) * 1.5 )"
-
             const icons = document.getElementsByClassName("icons");
             for (let i = 0; i < icons.length; i++) {
                 icons[i].style.display = "none";
@@ -180,8 +182,10 @@ function test(x) {
 
             document.getElementById(z).value = "off"
 
-            document.getElementById(z).style.fontSize = "var(--fs-c)"
+            document.getElementById(z).style.fontSize = "100%"
+            document.getElementById(z).style.fontWeight = "300"
             // document.getElementById("categories").style.height = "var(--h-sidebar)"
+
             
 
             const icons = document.getElementsByClassName("icons");

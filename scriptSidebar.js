@@ -22,12 +22,26 @@ window.addEventListener("scroll", function(){
 
 })
 
+Mq480.addEventListener("change", function() {
+    if(Mq480.matches){
+
+        Sidebar.style.bottom= "-10px"
+        }
+        else{
+            Sidebar.style.bottom= "0px"
+        }
+}); 
+
+function bwyuu(){
+    document.getElementById("output").innerHTML = scrollTop
+}
+
 document.body.addEventListener("scroll", function(){
     
 
     if(Mq480.matches){
 
-        if (scrollY < 5){
+        if (document.body.scrollTop < 5){
             Sidebar.style.bottom= "-10px"
         }
 
