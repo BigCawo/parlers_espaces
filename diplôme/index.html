@@ -23,6 +23,9 @@
             align-items: center;
             justify-content: space-between;
         }
+        #a iframe{
+            max-height: 60dvh;
+        }
 
         @media screen and (max-width: 900px) {
         body{
@@ -40,9 +43,29 @@
             display: none;
             align-items: center;
             justify-content: space-between;
+        
+        }
         }
 
+        @media screen and (max-width: 480px) {
+
+        #a iframe{
+            max-height: 40dvh;
+
         }
+
+        #solid{
+            border-bottom: 1px solid black;
+        }
+
+
+
+
+        }
+
+
+
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,12 +95,39 @@
                 <p id="baliseMobile"><b>Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités. 
                 <br>grâce à leur forme, leur matière, leur abondance, ils peuvent devenir d’excellentes ressources pour créer d’autres objets, pour répondre à certains de nos besoins.</b></p>
                 <p>A travers la Fabrique à Brac, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité  <!-- pour les comprendre et se les réapproprier. <br><br>Pourrions nous imaginer un autre rapport à ces objets ?  <br>Pourrions-nous ne plus les voir comme de simples objets de consommation mais comme matière à créer ? --></p>
+                <br>
+                <a href="#a" style="position: sticky;"><b>Piste 1 - La série vidéo</b></a><br><br>
+                <a href="#b"><b>Piste 2 - Le bestiaire</b></a>
             </div>
+            
             <img id="imgIntro" loading="lazy" style="border: solid; border-color: black; border-radius: 20px; border-width: 2px;"  src="../assets/lafabriqueabrac.gif" alt="e">
+            
+            
+            
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
         <div class="espaceIntro"></div>
+
+        <div id="a" class="flexcontainer fullscreen" >
+            <div class="carton">
+                <br>
+                <h1>La série vidéo</h1>
+                <p class="typeProjet"> <i>- première piste </i></p>
+                <p> <b> Cette série vidéo, à destination d'un public jeune, montre comment décortiquer, s'approprier et réinterpréter des objets du quotidien.
+                <br><br>    
+                Par le biais de ces bricolages, le spectateur est familiarisé à des notions techniques et physiques, très utiles pour être autonome dans cette recherche de potentiels. </p>
+            </div>
+
+            <div >
+               <iframe style=" position: relative; max-width: 100%; " src="https://player.vimeo.com/video/885244920?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="La fabrique à brac - la toupie"></iframe>
+            </div>
+
+            
+            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+        </div>
+
+        <div class="espace"></div>
 
         <div class="flexcontainer fullscreen">
 
@@ -91,11 +141,11 @@
 
             </p>
             
-            <img loading="lazy"   src="../assets/lafabriqueabrac-boite_de_conserve.png" alt="e">
-            <img loading="lazy"   src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
-            <img loading="lazy"   src="../assets/lafabriqueabrac-souris_effaceur.png" alt="e">   
+            <img class="imgscreen" loading="lazy"   src="../assets/lafabriqueabrac-boite_de_conserve.png" alt="e">
+            <img class="imgscreen" loading="lazy"   src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
+            <img class="imgscreen" loading="lazy"   src="../assets/lafabriqueabrac-souris_effaceur.png" alt="e">   
 
-
+            <img class="imgmobile" src="../assets/lafabriqueabrac-pince_double_clip.gif" alt="">
        
         </div>
 
@@ -156,11 +206,17 @@
                 </p>
             </div>
 
-            <div style="max-width: 75%; margin: auto;">
-                <img loading="lazy" style="display: block;"  src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
-                <img loading="lazy"  style="display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
-                <img loading="lazy"  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">  
+            <div style="max-width: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between;">
+                <img loading="lazy" style="display: inline-block;"  src="../assets/lafabriqueabrac-pince_double_clip.png" alt="e">
+                <img loading="lazy"  style="height: 100%; flex-basis: 150%;  -moz-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img loading="lazy"  style="display: inline-block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">  
             </div>
+
+            <div class="espace"></div>
+            <div class="espace"></div>
 
             <div> 
 
@@ -170,12 +226,12 @@
 
             </div>
 
-            <div style="max-width: 75%; margin: auto;">
+            <div style="max-width: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between;">
                 <img loading="lazy"  style="display: block;"    src="../assets/lafabriqueabrac-interrogation.png" alt="e">
-                <img loading="lazy"  style="  -moz-transform: scale(-1, -1);
-                -o-transform: scale(-1, -1);
-                -webkit-transform: scale(-1, -1);
-                transform: scale(-1, -1); display: block;" src="../assets/lafabriqueabrac-fleche.png" alt="e">
+                <img loading="lazy"  style="height: 100%; flex-basis: 150%;  -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);" src="../assets/lafabriqueabrac-fleche.png" alt="e">
                 <img loading="lazy" style="display: block;"  src="../assets/lafabriqueabrac-assise.png" alt="e">  
                 <!--<p style="text-align: center; line-height: 0;" >A quoi j'arrive ?</p>-->
             </div>
@@ -215,7 +271,7 @@
     
         </div>
 
-        <div class="mobileContainer fullscreen" >
+        <div id="solid" class="mobileContainer fullscreen " >
 
             <div class="carton" > 
                 
@@ -248,25 +304,9 @@
 
         <!---->
 
-        <div class="flexcontainer fullscreen">
+        <div  style="min-height: 90vh;" id="b" class="flexcontainer fullscreen">
             <div class="carton">
-                <h1>La série vidéo</h1>
-                <p class="typeProjet"> <i>- première piste </i></p>
-                <p> <b> Je propose une série vidéo à destination d'un public jeune pour aborder ce décorticage d'objets de manière ludique. Les épisodes proposent tour à tour d'explorer l'une ou l'autre des voies soulevées plus tôt.</b> </p>
-                <p>Le spectateur y est invité à regarder différemment les objets de son quotidien, à les détourner, à se les réapproprier.
-                <br><br>    
-                Il est également familiarisé à des notions techniques et physiques, très utiles pour être autonome dans cette recherche de potentiels. </p>
-            </div>
-
-            <div >
-               <iframe style=" position: relative; max-width: 100%; max-height: 60vh;" src="https://player.vimeo.com/video/885244920?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="La fabrique à brac - la toupie"></iframe>
-            </div>
-            
-            <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
-        </div>
-
-        <div class="flexcontainer fullscreen">
-            <div class="carton">
+                <br>
                 <h1>Le bestiaire</h1>
                 <p class="typeProjet">  <i>- deuxième piste </i></p>
                 <p> <b> Cette exploration des potentiels, ce décorticage des objets génère beaucoup d'informations et soulève des notions intéressantes qui souvent s'interconnectent.</b> </p>
@@ -276,13 +316,19 @@
             <div >
                <img loading="lazy" style="border: solid; border-color: black; border-radius: 20px; border-width: 2px;" src="../assets/lafabriqueabrac-bestiaire.png" alt="">
             </div>
+
             
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
+            <div  class="espace"> </div>
+
+        
         </div>
         
 
         
         <div  class="espace"> </div>
+
+
 
 
         <div class="flexcontainer fullscreen">
@@ -304,7 +350,10 @@
                 <br>nouveaux objets fabriqués à partir d'objets ressources, s'inspirant parfois d'objets concepts et faisant appel à certaines propriétés et principes
             </p>
             <img loading="lazy" src="../assets/lafabriqueabrac-contenu.png" alt="">
+            <div  class="espace"> </div>
         </div>
+
+        <div  class="espace"> </div>
         
 
         <div class="flexcontainer fullscreen">
@@ -313,6 +362,7 @@
                 Comme pour un Wiki, chaque élément est connecté à d'autres éléments. Cela génère un réseau qui permet à l'utilisateur d'explorer, de se se perdre, de digresser à travers les contenus. Pour laisser libre place aux connexions inattendues.
             </p>
             <img loading="lazy" src="../assets/lafabriqueabrac-arborescence.png" alt="">
+            <div  class="espace"> </div>
         </div>
         
 
