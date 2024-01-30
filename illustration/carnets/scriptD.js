@@ -1,11 +1,11 @@
 
-// carnet A5 01-2023
+// carnet A4 10-2023
 
-var SliderDetector = document.getElementById("myRangeB");
+var SliderDetector = document.getElementById("myRangeD");
 
-let wB = 1920
-let hB = 1372
-let nbr = 95;
+let wD = 1920
+let hD = 1533
+let nbr = 51;
 
 
 
@@ -13,16 +13,16 @@ SliderDetector.oninput = function() {
     p = this.value
     if (n<p){
             if(p<nbr+1)
-            carouselContainer.style.transform="translateX("+(-p+1)*(wB)+"px)";
-            // carouselContainer.style.transform="translateY("+(-p+1)*(hB)+"px)";
+            carouselContainer.style.transform="translateX("+(-p+1)*(wD)+"px)";
+            // carouselContainer.style.transform="translateY("+(-p+1)*(hD)+"px)";
             carouselContainer.style.transition="all 0.5s ease";
             affichermasquer();
             }
     else {
         if(p>0)
             
-            carouselContainer.style.transform="translateX("+(-p+1)*(wB)+"px)";
-            // carouselContainer.style.transform="translateY("+(-p+1)*(hB)+"px)";
+            carouselContainer.style.transform="translateX("+(-p+1)*(wD)+"px)";
+            // carouselContainer.style.transform="translateY("+(-p+1)*(hD)+"px)";
 
             carouselContainer.style.transition="all 0.5s ease";
             affichermasquer();
@@ -42,14 +42,14 @@ document.body.onload=function(){
     n = SliderDetector.value;
 
 
-    carouselContainer = document.getElementById("carouselContainerB")
-    lB = document.getElementById("lB")
-    rB = document.getElementById("rB")
-    carouselContainer.style.width = (wB*nbr)+"px";
+    carouselContainer = document.getElementById("carouselContainerD")
+    lD = document.getElementById("lD")
+    rD = document.getElementById("rD")
+    carouselContainer.style.width = (wD*nbr)+"px";
     for( i = 1 ; i <= nbr; i++){
         div = document.createElement("div");
-        div.className="carouselPhotoB"
-        div.style.backgroundImage="url('../../assets/carnets/2023_01_A5/"+(i-1)+".jpg')";
+        div.className="carouselPhotoD"
+        div.style.backgroundImage="url('../../assets/carnets/2023_05_A5/"+(i-1)+".jpg')";
         carouselContainer.appendChild(div);
     }
     affichermasquer();
@@ -57,13 +57,13 @@ document.body.onload=function(){
 
 function resize(){
 
-carouselScale = document.getElementById("carouselB")
-carnetMargin = document.getElementById("carnetContainerB")
+carouselScale = document.getElementById("carouselD")
+carnetMargin = document.getElementById("carnetContainerD")
 mainW = document.getElementById("main2").offsetWidth
 sh = window.innerHeight
 sw = window.innerWidth
 
-t = (mainW - ((wB/hB)*0.8*sh))/2
+t = (mainW - ((wD/hD)*0.8*sh))/2
 
 
 
@@ -72,7 +72,7 @@ t = (mainW - ((wB/hB)*0.8*sh))/2
 
 if (t>=0){
 
-    factor = sh/hB
+    factor = sh/hD
     carouselScale.style.transform = "scale("+0.8*factor+")"
     carnetMargin.style.marginLeft = t+"px"
 
@@ -80,14 +80,14 @@ if (t>=0){
 /*
 else{
 
-    factor = mainW/wB
+    factor = mainW/wD
     carouselScale.style.transform = "scale("+factor+")"
     carnetMargin.style.marginLeft = 0
 }
 */
 else{
 
-    factor = mainW/wB
+    factor = mainW/wD
     carouselScale.style.transform = "scale("+factor+")"
     
     carnetMargin.style.marginLeft = 0
@@ -112,23 +112,23 @@ window.onresize=function(){
 
 
 
-    rB.onclick=function(){
+    rD.onclick=function(){
         if(p<nbr+1)
             p++;
             SliderDetector.value = p
-        carouselContainer.style.transform="translate("+(-p+1)*(wB)+"px)";
+        carouselContainer.style.transform="translate("+(-p+1)*(wD)+"px)";
         carouselContainer.style.transition="all 0.5s ease";
 
        affichermasquer();
 
     }
 
-    lB.onclick=function(){
+    lD.onclick=function(){
         if(p>1)
             p--;
             SliderDetector.value = p
             
-        carouselContainer.style.transform="translate("+(-p+1)*(wB)+"px)";
+        carouselContainer.style.transform="translate("+(-p+1)*(wD)+"px)";
         carouselContainer.style.transition="all 0.5s ease";
         affichermasquer();
     }
@@ -136,14 +136,14 @@ window.onresize=function(){
 
   function affichermasquer(){
         if(p>=nbr)
-            rB.style.visibility = "hidden";
+            rD.style.visibility = "hidden";
         else
-            rB.style.visibility = "visible";
+            rD.style.visibility = "visible";
 
         if(p<=1)
-            lB.style.visibility = "hidden";
+            lD.style.visibility = "hidden";
         else
-            lB.style.visibility = "visible";
+            lD.style.visibility = "visible";
 
     }
     

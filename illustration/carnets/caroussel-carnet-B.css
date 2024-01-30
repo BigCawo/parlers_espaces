@@ -11,7 +11,9 @@ body{
 
 :root{
     --Wcarnet : 1920px; 
-    --Hcarnet : 1396px; 
+    --Hcarnet : 1372px; 
+    --WcarnetAbs : 1920; 
+    --HcarnetAbs : 1372; 
 }
 
 
@@ -118,7 +120,7 @@ body{
     #carnetContainerB{
         
         transform-origin: top left; 
-        transform: translateY(80dvh)  rotate(-90deg)  scale(calc(1920/1396));
+        transform: translateY(80dvh)  rotate(-90deg)  scale(calc(var(--WcarnetAbs)/var(--HcarnetAbs)));
     }
 
     #lB{

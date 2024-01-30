@@ -11,10 +11,12 @@ body{
 
 :root{
     --Wcarnet : 1920px; 
-    --Hcarnet : 1396px; 
+    --Hcarnet : 1533px; 
     --WcarnetAbs : 1920; 
-    --HcarnetAbs : 1396; 
+    --HcarnetAbs : 1533; 
 }
+
+
 
 
 .navBar{
@@ -40,9 +42,10 @@ body{
 
 
 
-/*carnet A*/
 
-#carouselA{
+/*carnet B*/
+
+#carouselD{
     position: absolute;
     width: var(--Wcarnet);
     height: var(--Hcarnet);
@@ -57,7 +60,7 @@ body{
     
 }
 
-#carouselContainerA{
+#carouselContainerD{
     z-index: -10;
     position: relative;
     height: var(--Hcarnet);
@@ -68,17 +71,17 @@ body{
 
 
 
-#lA:hover{
+#lD:hover{
+    transform:scale(1.1);
+    transition: all 0.3s ease;
+}
+
+#rD:hover{
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
-#rA:hover{
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-}
-
-.carouselPhotoA{
+.carouselPhotoD{
     /* display: block; */
     display: inline-block;
     /* transform: rotate(-90deg); */
@@ -114,30 +117,29 @@ body{
 
 /* carnet A */
 
-    #carnetContainerA{
+    #carnetContainerD{
         
         transform-origin: top left; 
         transform: translateY(80dvh)  rotate(-90deg)  scale(calc(var(--WcarnetAbs)/var(--HcarnetAbs)));
     }
 
-    #lA{
-
+    #lD{
 
         transform: rotate(-90deg);
 
     }
     
-    #rA{
+    #rD{
 
         transform: rotate(-90deg);
 
     }
 
-    #lA:hover{
+    #lD:hover{
         transform: rotate(-90deg) scale(1.1);
     }
     
-    #rA:hover{
+    #rD:hover{
         transform: rotate(-90deg) scale(1.1);
     }
 

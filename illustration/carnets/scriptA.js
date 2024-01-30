@@ -5,7 +5,7 @@ var SliderDetector = document.getElementById("myRangeA");
 
 let wA = 1920
 let hA = 1396
-let nbr = 55;
+let nbr = 64;
 
 
 
@@ -49,7 +49,7 @@ document.body.onload=function(){
     for( i = 1 ; i <= nbr; i++){
         div = document.createElement("div");
         div.className="carouselPhotoA"
-        div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+i+".jpg')";
+        div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+(i-1)+".jpg')";
         carouselContainer.appendChild(div);
     }
     affichermasquer();
