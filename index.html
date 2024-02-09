@@ -3,157 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="assets/course.gif">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
     <title>Eliot Bernaud Design Dessin Bricolage</title>
-
 </head>
-<body onresize="loadValues()">
-    <div id="header">
-        <p id="output" style="position: fixed;">coucou</p>
-        <p id="output2" style="position: fixed; left :150px">coucou</p>
+<body style="position: relative;">
+
+
+    
+    <div id = sidebar>
+
+            <h1 onclick="shutDownBaaaa()"> ELIOT&nbsp;BERNAUD </h1>
+
+            <ul>
+                <li><a href="qui-suis-je/">Qui&nbsp;suis-je&nbsp;? <span id="oui"></span></a></li>        
+            </ul>
+
+
+
+
+
+
     </div>
 
 
 
-    <div id="center">
+
+    <div id="main">
 
 
-        <div id="maison">
 
-            <div id="projectInformations">
-                <!-- <div id="imgContainer">
-                    <img  src="assets/nasaV1.gif" alt="">
-                </div> -->
-                <div id="descContainer">
-                    <p>Comment donner aux jeunes en situation d’isolement géographique la chance d’accéder à l’éducation et aux loisirs ?</b></p>
-                    <p>Les Petits débrouillards, un réseau participant au renouveau permanent de l’éducation populaire, a consulté l’ENSCI pour réfléchir sur la création d’un module pour scooter. Celui-ci permettrait aux intervenants du réseau de proposer des activités scientifiques, créatives et ludiques aux les jeunes vivant dans des zones délaissées.
+        <div  id="header">
 
-                </div>
-            </div>
-    
+            <ul id="categories">
+       
                 
+                <li><button id="buttonObjet" class="button" onclick="test(1)" value ="off" >objet</button></li>
+                <li><button id="buttonFiction" class="button" onclick="test(2)" value ="off" >médiation</button></li>
+                <li><button id="buttonDessin" class="button" onclick="test(0)" value ="off" >illustration</button></li>
+                <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
+    
+            </ul>
+    
+    
+        </div>
+        
+        <div id = content>
+            <div id="descriptions"  >
+
+                <div   id="descObjet" class="desc">
+                    <p>
+                        <b>Les objets occupent une place centrale dans nos vies et façonnent nos identités personnelles.</b>
+                        <br><br>Depuis la révolution industrielle, ces derniers, à l’image de bactéries dans une boîte de pétri, se sont mis à proliférer. Ils débordent désormais de nos placards, de nos décharges, sur nos plages. Nous sommes submergés par une quantité d’objets dont la durabilité et la qualité, en opposition à leur nombre, se dégradent de plus en plus.
+                        <br><br>Repensons notre rapport à l’objet, inscrivons nous dans une démarche plus raisonnable, durable et respectueuse de l’environnement.
+                    </p>
+                </div>
+
+                <div id="descFiction" class="desc">
+                    <p>
+                        <b>Comment sensibiliser le public aux enjeux contemporains ?
+                        <br>Comment atteindre les personnes et les amener à se questionner sur leurs pratiques, sur leurs habitudes ?
+                        </b>
+                        <br><br>Je souhaite permettre aux gens d’appréhender ces sujets sérieux de manière ludique, légère et imaginative. <br> J'imagine des fictions, des histoires, je met en scene des récits...<br>Car les gens apprennent mieux quand on les fait rêver.
+                    </p>
+                </div>
+
+                <div id="descMemoire" class="desc">
+
+                </div>
+
+                <div id="descDessin" class="desc">
+
+                    <p>
+                        Le dessin est un de mes outils d'expression privilégiés. Dessin technique, dessin d'imagination, croquis... Il est selon moi un très bon vecteur de transmission et de communication.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="projets">
+
             
-
-
-            <!-- <div style="width: 0dvw; height: 100%; background-color: rgba(0, 0, 0, 0.50); margin: 0;" id="accueil">
-
-            </div> -->
-
-
-
-
-
-            <div id="spot">
-                <button id="buttonDesc" style="opacity: 0;" onclick="descSpawn(0)">
-                </button>
-                <div id="spotRight">
-                    <img  src="assets/spot_0000_Calque-12.png" alt="">
-                </div>
-                <div id="spotMiddle">
-                    <button id="babababaaa" onclick="test()">
-
-                    </button>
-                </div>
-                <div id="spotLeft">
-                    <img style="display: inline-block;" src="assets/spot_0000_Calque-12.png" alt="">
+                <div class="icons memoire dessin fiction">
+                    <p>Parlers Espace <br>~~~<br> <i>mémoire</i></p> </p>
+                    <a href="memoire/"><img  loading = lazy src="assets/icon_parlers-espace.png"></a>
+                    <!-- <div style="position: absolute; top: 0; background-color: aqua; height: 100%; width: 90dvw;" > -->
                 </div>
 
+        
+                <div class="icons objet">
+                    <p>Abat-jour Double Clip</p>
+                    <a href="objet/lampe-double-clip/"><img loading = lazy src="assets/icon_lampe-pince.png"></a>
+                </div>
+        
+                <div class="icons dessin fiction memoire">
+                    <p>La Fabrique à Brac <br>~~~<br> <i>diplôme</i></p> </p>
+                    <a href="diplôme/"><img loading= lazy src="assets/icon_fabrique.png"></a>
+                </div>
+
+
+        
+                <div class="icons objet">
+                    <p>Mobilier Grillagé</p>
+                    <a href="objet/mobilier-grillage/"><img loading = lazy src="assets/icon_mobilier-grillage.png"></a>
+                </div>
+
+                <div class="icons fiction">
+                    <p>Pomme de Terre</p>
+                    <a href="mediation/pomme-de-terre/"><img loading= lazy src="assets/icon_pomme-de-terre.png" ></a>
+                </div>
+
+                <div class="icons objet">
+                    <p>Meuble à bazar</p>
+                    <a href="objet/meuble-a-bazar/"><img loading = lazy src="assets/icon_meuble-a-bazar.png"></a>
+                </div>
+
+                <div class="icons fiction" >
+                    <p>Chmup The Dog</p>
+                    <a href="mediation/chmup-the-dog/"><img loading = lazy src="assets/icon_chmup.png"></a>
+                    
+                </div>
+
+                <div class="icons objet">
+                    <p>Lampe Ressort</p>
+                    <a href="objet/lampe-ressort/"><img loading = lazy src="assets/icon_lampe-ressort.png"></a>
+                </div>
+        
+                <div class="icons objet">
+                    <p>Pol</p>
+                    <a href="objet/pol/"><img loading = lazy src="assets/icon_pol.png"></a>
+                </div>
+
+                <!-- <div class="icons objet">
+                    <p>Chose-pel</p>
+                    <a href="objet/chaise-pol/"><img loading = lazy src="assets/icon_chose-pel.png"></a>
+                </div>
+        
+                <div class="icons objet">
+                    <p>Nasa</p>
+                    <a href="objet/nasa/"><img loading = lazy src="assets/icon_nasa.png"></a>
+                </div>
+
+                <div class="icons objet">
+                    <p>Stellarium</p>
+                    <a href="objet/stellarium/"><img loading = lazy src="assets/icon_stellarium.png"></a>
+                </div> -->
+        
+                <div class="icons fiction">
+                    <p>Terres Lointaines</p>
+                    <a href="mediation/terres-lointaines/"><img loading= lazy src="assets/icon_terres-lointaines.png" ></a>
+                </div>
+            
+                <div class="icons dessin">
+                    <p>Illustrations</p>
+                <a href="illustration/illustrations/"><img loading= lazy src="assets/icon_illustrations.png" ></a>
+                </div>
+
+
+
+                    <!--
+
+                <div class="icons objet">
+                    <p>Stellarium</p>
+                    <a href="objet/pol/"><img loading= lazy src="assets/icon_pol.png" alt="pol"></a>
+                </div>
+
+
+                -->
+
+                <div class="icons objet">
+                    <p>Vase Suspendu</p>
+                    <a href="objet/vase-suspendu/"><img loading= lazy src="assets/icon_vase-suspendu.png"></a>
+                </div>
+
+
+                <div class="icons dessin">
+                    <p>Carnets</p>
+                    <a href="illustration/carnets/"> <img  loading= lazy src="assets/icon_carnets.png"> </a>
+                    <!--<a href="illustration/carnets/"></a>-->
+                </div>
+
+                <div class="icons memoire dessin fiction objet">
+                
+                </div>
+
+        
             </div>
 
-            <div id="projects">
-
-
-                <!-- ollas -->
-
-                <div id="ollas" class="objet project" >
-
-                <img class="background" src="assets/accueil_0000s_0002_ollas-ap.png" alt="">
-                <img class="shadow" src="assets/accueil_0000s_0001_ollas-ombre.png" alt="">   
-                <img class="stroke" src="assets/accueil_0000s_0000_ollas.png" alt="">
-
-                </div>
-
-                <!-- chaiseAttache -->
-
-                <button class="buttonProject" id="buttonChaiseAttache" onclick="projectSelect(1)"></button> 
-
-                <div id="chaiseAttache" class="objet project">
-
-                    <img class="background" src="assets/accueil_0001s_0002_chaise-attache-ap.png" alt="">
-                    <img class="backgroundColor" src="assets/accueil_0001s_0003_chaise-attache-ap-couleur.png" alt="">
-                    <img class="backgroundColor2" src="assets/accueil_0001s_0003_chaise-attache-ap-couleur.png" alt="">
-
-                    <img class="shadow" src="assets/accueil_0001s_0001_chaise-attache-ombre.png" alt="">  
-                    <img class="stroke" src="assets/accueil_0001s_0000_chaise-attache.png" alt="">
-    
-                </div>
-
-                <!-- Nasa -->
-
-                <button class="buttonProject" id="buttonNasa" onclick="projectSelect(2)"></button> 
-
-                <div id="nasa" class="objet project">
-
-                    <img class="background" src="assets/accueil_0002s_0002_nasa-ap.png" alt="">
-                    <img class="backgroundColor" src="assets/accueil_0002s_0003_nasa-ap-couleur.png" alt="">
-                    <img class="backgroundColor2" src="assets/accueil_0002s_0003_nasa-ap-couleur.png" alt="">
-
-                    <img class="shadow" src="assets/accueil_0002s_0001_nasa-ombre.png" alt="">  
-                    <img class="stroke" src="assets/accueil_0002s_0000_nasa.png" alt="">
-    
-                </div>
-
-                <!-- meubleBazar -->
-
-                <button class="buttonProject" id="buttonMeubleBazar" onclick="projectSelect(3)"></button> 
-
-                <div id="meubleBazar" class="objet project">
-
-
-                    <img class="background" src="assets/accueil_0003s_0002_meuble-a-bazar-ap.png" alt="">
-                    <img class="shadow" src="assets/accueil_0003s_0001_meuble-a-bazar-ombre.png" alt="">  
-                    <img class="stroke" src="assets/accueil_0003s_0000_meuble-a-bazar.png" alt="">
-    
-                </div>
-
-                <!-- pol -->
-
-                <div id="pol" class="objet project">
-
-                    <button class="buttonProject" id="buttonPol" onclick="projectSelect(4)"></button> 
-
-                    <img class="background" src="assets/accueil_0005s_0002_pol-ap.png" alt="">
-                    <img class="shadow" src="assets/accueil_0005s_0001_pol-ombre.png" alt="">  
-                    <img class="stroke" src="assets/accueil_0005s_0000_pol.png" alt="">
-    
-                </div>
-
-            </div>
-
-
+            <div id="sidebarMargin"> </div>
+        
         </div>
-
-        <!-- <div id="ground">
-
-        </div> -->
-
-
-
     </div>
-
-
-
-
-    <div id="footer">
-
-
-        </div>
-
-    </div>
-    <script src="mediaquieries.js" ></script>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"> </script>
+<script src="scriptAccueil.js"> </script>
+<script src="scriptSidebar.js"></script>
 </html>
