@@ -1,26 +1,5 @@
 // index.js
 
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
-var wheelOpt = supportsPassive ? { passive: false } : false;
-
-
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-
-  window.addEventListener('touchmove', preventDefault, false); // mobile
-}
-
-function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-
-  window.removeEventListener('touchmove', preventDefault, false);
-}
 
 
 
@@ -53,16 +32,20 @@ Mq480.addEventListener("change", function() {
 
 
 function loadValues() {
+    projectHilight(projectValue)
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
     pChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetLeft);
     wChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetWidth);
+    hChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetHeight);
 
     pNasa = Number(document.getElementById("buttonNasa").offsetLeft);
     wNasa = Number(document.getElementById("buttonNasa").offsetWidth);
+    hNasa = Number(document.getElementById("buttonNasa").offsetHeight);
 
     pMeubleBazar = Number(document.getElementById("buttonMeubleBazar").offsetLeft);
     wMeubleBazar = Number(document.getElementById("buttonMeubleBazar").offsetWidth);
+    hMeubleBazar = Number(document.getElementById("buttonMeubleBazar").offsetHeight);
 
 
     WindowWidth = window.innerWidth;
@@ -95,17 +78,15 @@ center.addEventListener("scroll", function(){
 
     output.innerHTML = this.scrollLeft
     output2.innerHTML = y;
-    // setTimeout(()=> {
-    //     descSpawn(0);
-    //     }
-    //     ,300);
-    
+
     
 
 })
 
 
-
+function test(){
+    output.innerHTML = "oui"  
+}
 
     
 
@@ -122,7 +103,7 @@ function descSpawn(x){
     else{
 
         if (x == 1) {
-            
+            document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0)";
             document.getElementById("buttonDesc").style.visibility = "visible";
             document.getElementById("spot").style.visibility = "visible";
             document.getElementById("spot").style.opacity = "0.55";
@@ -159,6 +140,7 @@ function descSpawn(x){
         }
 
     if (x == 0) {
+        document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0.2)";
         document.getElementById("projectInformations").style.left = "100dvw"
         document.getElementById("buttonDesc").style.visibility = "hidden"
         document.getElementById("spot").style.visibility = "hidden"
@@ -233,30 +215,43 @@ function scrollTo(x){
 }
 
 function projectHilight(x){
+
     if(x == 1){
+        a = wChaiseAttache;
+        b = hChaiseAttache;
         document.getElementById("chaiseAttache").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
         document.getElementById("chaiseAttache").style.zIndex = 9
 
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+wChaiseAttache/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-wChaiseAttache/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-wChaiseAttache/2+"px"
-        document.getElementById("spotMiddle").style.width = wChaiseAttache+"px"
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        document.getElementById("spotMiddle").style.height = b+"px"
     }
 
     if(x == 2){
+        a = wNasa;
+        b = hNasa;
         document.getElementById("nasa").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
         document.getElementById("nasa").style.zIndex = 9
 
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+wNasa/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-wNasa/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-wNasa/2+"px"
-        document.getElementById("spotMiddle").style.width = wNasa+"px"
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        document.getElementById("spotMiddle").style.height = b+"px"
 
         // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
     }
 
     if(x == 3){
-        null
+        a = wMeubleBazar;
+        b = hMeubleBazar;
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        document.getElementById("spotMiddle").style.height = b+"px"
     }
 }
 // CHAISEATTACHE
