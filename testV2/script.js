@@ -1,13 +1,35 @@
 // index.js
 
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+var wheelOpt = supportsPassive ? { passive: false } : false;
+
+
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+
+  window.addEventListener('touchmove', preventDefault, false); // mobile
+}
+
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+
+  window.removeEventListener('touchmove', preventDefault, false);
+}
+
+
+
+
 // Get the root element
 var root = document.documentElement;
-
-// Get the computed styles of the root element
 var style = getComputedStyle(root);
 
-// Get the value of the --color-font-general variable
-let scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
+
 
 let projectValue = 0;
 let center = document.getElementById("center");
@@ -31,6 +53,8 @@ Mq480.addEventListener("change", function() {
 
 
 function loadValues() {
+    scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
+
     pChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetLeft);
     wChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetWidth);
 
@@ -69,8 +93,14 @@ window.onload = loadValues();
 
 center.addEventListener("scroll", function(){
 
-    output.innerHTML = projectValue
-    output2.innerHTML = y
+    output.innerHTML = this.scrollLeft
+    output2.innerHTML = y;
+    // setTimeout(()=> {
+    //     descSpawn(0);
+    //     }
+    //     ,300);
+    
+    
 
 })
 
@@ -92,8 +122,16 @@ function descSpawn(x){
     else{
 
         if (x == 1) {
-            document.getElementById("buttonDesc").style.visibility = "visible"
-            document.getElementById("spot").style.opacity = "0.55"
+            
+            document.getElementById("buttonDesc").style.visibility = "visible";
+            document.getElementById("spot").style.visibility = "visible";
+            document.getElementById("spot").style.opacity = "0.55";
+            //disableButtons
+            const disableButtons = document.getElementsByClassName("buttonProject");
+            for (let i = 0; i < disableButtons.length; i++) {
+                disableButtons[i].style.visibility = "hidden";
+            }
+            
             
             if(spawnState == 1) {
             document.getElementById("projectInformations").style.left = "100dvw"
@@ -123,12 +161,18 @@ function descSpawn(x){
     if (x == 0) {
         document.getElementById("projectInformations").style.left = "100dvw"
         document.getElementById("buttonDesc").style.visibility = "hidden"
+        document.getElementById("spot").style.visibility = "hidden"
         document.getElementById("spot").style.opacity = "0"
+        //enableButtons
+        const disableButtons = document.getElementsByClassName("buttonProject");
+        for (let i = 0; i < disableButtons.length; i++) {
+            disableButtons[i].style.visibility = "visible";
+        }
+        
 
         const backgroundColor = document.getElementsByClassName("backgroundColor2");
         for (let i = 0; i < backgroundColor.length; i++) {
             backgroundColor[i].style.opacity = 0;
-            
         }
 
         spawnState = 0
