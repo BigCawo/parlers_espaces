@@ -7,6 +7,7 @@ let Mq480 = window.matchMedia("(max-width: 480px)")
 
 
 
+
 // Listener function on state changes
 
 Mq1300.addEventListener("change", function() {
