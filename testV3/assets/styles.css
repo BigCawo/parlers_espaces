@@ -1,0 +1,389 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+/* html{scroll-behavior: smooth;} */
+
+:root{
+
+    /* general */
+
+    --ff-t:Gabarito;
+    --ff-st:Roboto;
+    --ff-p:Roboto;
+    --ff-c:Gabarito;
+    --fs-t:1.5em;
+    --fs-st : 1.25em;
+    --fs-p : 0.75em;
+    --fs-c : 1em;
+
+    /* accueil */
+
+    --w-proj : 4512px;
+    --w-projAbs : 4508;
+    --h-proj : 1084px;
+    --h-projAbs : 1084;
+    --h-center : 90dvh;
+    --h-header : 5dvh;
+    --projRatio : calc(var(--w-projAbs)/var(--h-projAbs));
+    --w-desc : 25dvw;
+
+    /* projects dimensions */
+    --scaleFactor : 1;
+
+    --p-chaiseAttache : calc(715*var(--scaleFactor));
+    --w-chaiseAttache : calc(245*var(--scaleFactor));
+    --h-chaiseAttache : calc(350*var(--scaleFactor));
+
+
+    --p-Nasa : calc(1026*var(--scaleFactor));
+    --w-Nasa : calc(670*var(--scaleFactor));
+    --h-Nasa : calc(380*var(--scaleFactor));
+
+    --p-MeubleBazar : calc(1763*var(--scaleFactor));
+    --w-MeubleBazar : calc(420*var(--scaleFactor));
+    --h-MeubleBazar : calc(395*var(--scaleFactor));
+}
+
+/* general */
+
+body{
+    font-size: 200%;
+}
+
+p{  
+    padding-top: var(--spaces) ;
+    padding-bottom: var(--spaces);
+    background-color: rgba(137, 43, 226, 0);
+    font-size: var(--fs-p);
+    font-family: var(--ff-p);
+    line-height: 150%;
+}
+
+#header{
+    background-color: rgba(0, 0, 0, 0.55) ;
+    height: var(--h-header) ;
+}
+
+#center{
+    scroll-behavior: smooth;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+    z-index: 0;
+
+    height: var(--h-center); 
+    width: 100vw;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+}
+
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.50) ;
+    position: relative;
+    height: var(--h-header);
+    /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
+    /* overflow: hidden; */
+    /* margin: 1dvh; */
+}
+
+    /* ~~~~~~~~ projects ~~~~~~~~ */
+
+
+#maison{
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color ease 0.25s;
+    height: 100%; 
+    width: 350vw;
+}
+
+#accueil{
+    height: 100%; width: 100vw;
+    display: inline-block
+}
+
+
+#projects{
+    display: inline-block; 
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    height: 100%; 
+    width: 200vW;
+    height: calc(var(--scaleFactor)*100%);
+}
+
+.project{
+    position: absolute;
+    height: 100%; 
+    width: auto;
+    z-index: 5;
+}
+
+/* #filter{
+    z-index: -5;
+    opacity: 0;
+} */
+
+#projects div > img{
+    height: 100%; 
+    position: absolute;
+    z-index: 5;
+
+}
+
+
+    /* ~~~~~~~~ visuels projectS ~~~~~~~~ */
+
+/* .stroke{
+    z-index: 10;
+} */
+
+.shadow{
+    /* z-index: 5; */
+    opacity: 0.35;
+}
+
+.backgroundColor{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+}
+
+.backgroundColor2{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+}
+
+.background{
+    transition: opacity ease 0.2s;
+}
+
+
+    /* ~~~~~~~~ visuels GENERAUX ~~~~~~~~ */
+
+
+#spot{
+    
+    position: fixed; 
+    overflow: hidden;
+    left: 0;
+    width: 100dvw; 
+    height: 90dvh; 
+    visibility: hidden;
+    opacity: 0;
+    transition: left ease 0.25s;
+    transition: opacity ease 0.25s;
+    z-index: 10;
+}
+
+/* #spot img{
+    opacity: 1;
+
+} */
+
+#babababaaa{
+    position: relative;
+    z-index: 10;
+    bottom : 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+}
+
+#spotRight{
+    position: absolute;
+    left: 25dvw;
+    transform-origin: 0 0;
+    transition: left ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spotLeft{
+    position: absolute;
+    left: 25dvw;
+    transform-origin: 0 0;
+    transform: scale(-1,1);
+    transition: left ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spotMiddle{
+    position: absolute;
+    left: 25dvw;
+    bottom: 0;
+    transition: all ease 0.25s;
+    width: 100%; 
+    height: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    opacity: 1;
+    z-index: 8;
+    
+
+}
+
+
+/* #wall{
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+/* #filter{
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+    /* ~~~~~~~~ projects DESCRIPTION ~~~~~~~~ */
+
+    #projectInformations{
+    
+        position: fixed;    
+        right: calc(-1*var(--w-desc));
+        transition: left ease 0.4s;
+        top: calc(var(--h-header) + 2dvh);
+        z-index: 51;
+        background-color: rgba(255, 255, 255, 0.856);
+        max-height: calc(var(--h-center) - 4dvh);
+        width: var(--w-desc);
+        border: 2px solid black ;
+        border-right: 0;
+        border-radius: 5px 0 0 5px;
+        padding: 2dvh;
+        overflow: hidden;
+      
+    } 
+    
+    #buttonDesc{
+        position: fixed; 
+        top: var(--h-header); 
+        left: 0; 
+        visibility: hidden;
+        opacity: 1; 
+        width: 100dvw; 
+
+        height: var(--h-center); 
+        z-index: 5;  
+    }
+
+
+    /* 
+    #imgContainer{
+        display: inline-block;
+    }
+    
+    #imgContainer img{
+        position: relative;
+        padding-left: 3dvw;
+        
+        background-color: rgba(0, 0, 255, 0);
+        max-height: calc((96dvh - var(--h-center)) - var(--h-header));
+        width: auto;
+    } */
+    
+    /* #descContainer{
+    
+        position: relative;
+        background-color: rgba(137, 43, 226, 0);
+        display: inline-block;
+        max-height: inherit;
+        overflow-y: scroll;
+    } */
+    
+    
+
+    /* ~~~~~~~~ boutons ~~~~~~~~ */
+
+.buttonProject{
+    opacity: 0;
+    position: absolute; 
+    z-index: 50;
+}
+
+#buttonChaiseAttache{
+
+    width: calc((var(--w-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+    
+
+
+}
+
+#buttonNasa{
+
+    width: calc((var(--w-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+
+#buttonMeubleBazar{
+
+    width: calc((var(--w-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+
+ :root{
+    --scaleFactor : 0.66;
+    --w-desc : 98dvw
+}
+
+#projectInformations{
+
+    height: calc(var(--h-center)/2 - 2dvh);
+    width: var(--w-desc);
+    border: 2px solid black ;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 2dvh;
+    overflow: hidden;
+  
+} 
+
+#projects{
+    top: 34%;
+}
+}
