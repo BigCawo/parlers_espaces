@@ -17,7 +17,7 @@ let output2 = document.getElementById("output2");
 let supervoil = 0;
 let voile = document.getElementById("filter");
 let spawnState = 0;
-let offsetDesc = "52dvw"
+let offsetDesc = "75dvw"
 
 
 //mediaqueries
@@ -60,7 +60,7 @@ function loadValues() {
     }
     else {
         projectCenter = -0.25
-        offsetDesc = "52dvw";
+        offsetDesc = "75dvw";
     }  
 
 }; 
@@ -143,7 +143,11 @@ function descSpawn(x){
         document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0.2)";
         document.getElementById("projectInformations").style.left = "100dvw"
         document.getElementById("buttonDesc").style.visibility = "hidden"
-        document.getElementById("spot").style.visibility = "hidden"
+        
+        setTimeout(()=> {
+            document.getElementById("spot").style.visibility = "hidden"
+            }
+            ,300);
         document.getElementById("spot").style.opacity = "0"
         //enableButtons
         const disableButtons = document.getElementsByClassName("buttonProject");
