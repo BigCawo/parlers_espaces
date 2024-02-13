@@ -56,11 +56,9 @@ function loadValues() {
 
     if (Mq480.matches){
         projectCenter = -0.45
-        // wDesc = "2dvh";
     }
     else {
         projectCenter = -0.25
-        // wDesc = "75dvw";
     }  
 
 }; 
@@ -68,11 +66,7 @@ function loadValues() {
 window.onload = loadValues();
 
 
-// projectValue.addEventListener("change", function(){
 
-//     output.innerHTML = "oui"
-
-// })
 
 center.addEventListener("scroll", function(){
 
@@ -103,15 +97,15 @@ function descSpawn(x){
     else{
 
         if (x == 1) {
-            document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0)";
+            // document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0)";
             document.getElementById("buttonDesc").style.visibility = "visible";
             document.getElementById("spot").style.visibility = "visible";
             document.getElementById("spot").style.opacity = "0.55";
             //disableButtons
-            const disableButtons = document.getElementsByClassName("buttonProject");
-            for (let i = 0; i < disableButtons.length; i++) {
-                disableButtons[i].style.visibility = "hidden";
-            }
+            // const disableButtons = document.getElementsByClassName("buttonProject");
+            // for (let i = 0; i < disableButtons.length; i++) {
+            //     disableButtons[i].style.visibility = "hidden";
+            // }
             
             
             if(spawnState == 1) {
@@ -133,36 +127,39 @@ function descSpawn(x){
         }
     }
 
-    const resetZIndex = document.getElementsByClassName("project");
-        for (let i = 0; i < resetZIndex.length; i++) {
-            resetZIndex[i].style.zIndex = "initial";
-            
-        }
-
     if (x == 0) {
-        document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0.2)";
-        document.getElementById("projectInformations").style.right = "calc(-1*var(--w-desc))"
-        document.getElementById("buttonDesc").style.visibility = "hidden"
-        
-        setTimeout(()=> {
-            document.getElementById("spot").style.visibility = "hidden"
-            }
-            ,300);
+        // document.getElementById("maison").style.backgroundColor = "rgba(0, 0, 0,0.2)";
         document.getElementById("spot").style.opacity = "0"
-        //enableButtons
-        const disableButtons = document.getElementsByClassName("buttonProject");
-        for (let i = 0; i < disableButtons.length; i++) {
-            disableButtons[i].style.visibility = "visible";
-        }
-        
 
         const backgroundColor = document.getElementsByClassName("backgroundColor2");
         for (let i = 0; i < backgroundColor.length; i++) {
             backgroundColor[i].style.opacity = 0;
         }
+        
+        setTimeout(()=> {
+            document.getElementById("projectInformations").style.right = "calc(-1*var(--w-desc))"
+            document.getElementById("buttonDesc").style.visibility = "hidden"
+            document.getElementById("spot").style.visibility = "hidden"
 
-        spawnState = 0
-        projectValue = 0
+            //enableButtons
+            const disableButtons = document.getElementsByClassName("buttonProject");
+            for (let i = 0; i < disableButtons.length; i++) {
+                disableButtons[i].style.visibility = "visible";
+            }
+            
+
+            const resetZIndex = document.getElementsByClassName("project");
+            for (let i = 0; i < resetZIndex.length; i++) {
+                resetZIndex[i].style.zIndex = "initial";
+                
+            }
+        
+
+            spawnState = 0
+            projectValue = 0
+            }
+            ,350);
+        
 
     }
 }
@@ -173,13 +170,28 @@ function projectSelect(x){
 
     y = projectValue
 
+    if (projectValue == x){
+        if (x == 1){
+            window.location.href = "index.html"
+        }
+
+        if (x == 2){
+            window.location.href = "index.html"
+        }
+
+        if (x == 3){
+            window.location.href = "index.html"
+        }
+    }
+
+
     projectValue = x;
 
-    const background = document.getElementsByClassName("background");
-    for (let i = 0; i < background.length; i++) {
-        background[i].style.opacity = 0.6;
+    // const background = document.getElementsByClassName("background");
+    // for (let i = 0; i < background.length; i++) {
+    //     background[i].style.opacity = 0.6;
         
-    }
+    // }
 
     const backgroundColor = document.getElementsByClassName("backgroundColor2");
     for (let i = 0; i < backgroundColor.length; i++) {
@@ -193,10 +205,14 @@ function projectSelect(x){
         
     }
 
-    descSpawn(1);
+    const non = document.getElementsByClassName("project");
+    for (let i = 0; i < non.length; i++) {
+        non[i].style.zIndex = 5;
+        
+    }
 
     
-
+    descSpawn(1);
     scrollTo(x);
     projectHilight(x);
 }
@@ -224,26 +240,26 @@ function projectHilight(x){
         a = wChaiseAttache;
         b = hChaiseAttache;
         document.getElementById("chaiseAttache").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("chaiseAttache").style.zIndex = 9
+        document.getElementById("chaiseAttache").style.zIndex = 10
 
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
-        document.getElementById("spotMiddle").style.height = b+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
     }
 
     if(x == 2){
         a = wNasa;
         b = hNasa;
         document.getElementById("nasa").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("nasa").style.zIndex = 9
+        document.getElementById("nasa").style.zIndex = 10
 
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
-        document.getElementById("spotMiddle").style.height = b+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
 
         // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
     }
@@ -251,11 +267,13 @@ function projectHilight(x){
     if(x == 3){
         a = wMeubleBazar;
         b = hMeubleBazar;
+        document.getElementById("meubleBazar").style.zIndex = 10
+
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
-        document.getElementById("spotMiddle").style.height = b+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
     }
 }
 // CHAISEATTACHE

@@ -17,8 +17,8 @@
 
     /* accueil */
 
-    --w-proj : 4512px;
-    --w-projAbs : 4508;
+    --w-proj : 5500px;
+    --w-projAbs : 5500;
     --h-proj : 1084px;
     --h-projAbs : 1084;
     --h-center : 90dvh;
@@ -29,18 +29,48 @@
     /* projects dimensions */
     --scaleFactor : 1;
 
-    --p-chaiseAttache : calc(715*var(--scaleFactor));
+    --p-Ollas : calc(3041*var(--scaleFactor));
+    --w-Ollas : calc(71*var(--scaleFactor));
+    --h-Ollas : calc(88*var(--scaleFactor));
+    --o-Ollas : calc(599*var(--scaleFactor));
+
+    --p-chaiseAttache : calc(1685*var(--scaleFactor));
     --w-chaiseAttache : calc(245*var(--scaleFactor));
     --h-chaiseAttache : calc(350*var(--scaleFactor));
 
 
-    --p-Nasa : calc(1026*var(--scaleFactor));
+    --p-Nasa : calc(1995*var(--scaleFactor));
     --w-Nasa : calc(670*var(--scaleFactor));
     --h-Nasa : calc(380*var(--scaleFactor));
 
-    --p-MeubleBazar : calc(1763*var(--scaleFactor));
+    --p-MeubleBazar : calc(2736*var(--scaleFactor));
     --w-MeubleBazar : calc(420*var(--scaleFactor));
     --h-MeubleBazar : calc(395*var(--scaleFactor));
+
+    --p-Pol : calc(3259*var(--scaleFactor));
+    --w-Pol : calc(401*var(--scaleFactor));
+    --h-Pol : calc(294*var(--scaleFactor));
+
+    --p-TableBasse : calc(3687*var(--scaleFactor));
+    --w-TableBasse : calc(505*var(--scaleFactor));
+    --h-TableBasse : calc(155*var(--scaleFactor));
+
+    --p-MobilierGrillage : calc(4221*var(--scaleFactor));
+    --w-MobilierGrillage : calc(597*var(--scaleFactor));
+    --h-MobilierGrillage : calc(386*var(--scaleFactor));
+
+    --p-LampeColette : calc(3199*var(--scaleFactor));
+    --w-LampeColette : calc(189*var(--scaleFactor));
+    --h-LampeColette : calc(93*var(--scaleFactor));
+    --o-LampeColette : calc(327*var(--scaleFactor));
+
+    --p-LampeIcosaedre : calc(3662*var(--scaleFactor));
+    --w-LampeIcosaedre : calc(302*var(--scaleFactor));
+    --h-LampeIcosaedre : calc(361*var(--scaleFactor));
+
+    --p-APropos : calc(227*var(--scaleFactor));
+    --w-APropos : calc(772*var(--scaleFactor));
+    --h-APropos : calc(576*var(--scaleFactor));
 }
 
 /* general */
@@ -153,7 +183,7 @@ p{
 
 .backgroundColor2{
     opacity: 0;
-    transition: opacity ease 0.2s;
+    transition: opacity ease 0.35s;
 }
 
 .background{
@@ -173,9 +203,9 @@ p{
     height: 90dvh; 
     visibility: hidden;
     opacity: 0;
-    transition: left ease 0.25s;
+    transition: all ease 0.25s;
     transition: opacity ease 0.25s;
-    z-index: 10;
+    z-index: 9;
 }
 
 /* #spot img{
@@ -197,7 +227,7 @@ p{
     position: absolute;
     left: 25dvw;
     transform-origin: 0 0;
-    transition: left ease 0.25s;
+    transition: all ease 0.25s;
     transition: opacity ease 0.25s;
     height: 100%; 
     width: 100dvw;
@@ -210,7 +240,7 @@ p{
     left: 25dvw;
     transform-origin: 0 0;
     transform: scale(-1,1);
-    transition: left ease 0.25s;
+    transition: all ease 0.25s;
     transition: opacity ease 0.25s;
     height: 100%; 
     width: 100dvw;
@@ -219,15 +249,16 @@ p{
 }
 
 #spotMiddle{
+    overflow: hidden;
     position: absolute;
     left: 25dvw;
     bottom: 0;
-    transition: all ease 0.25s;
     width: 100%; 
-    height: 100%;
-    /* background-color: rgb(255, 255, 255); */
+    height: var(--h-center);
+    transition: opacity ease 0.25s;
+    background-color: rgb(255, 255, 255);
     opacity: 1;
-    z-index: 8;
+    z-index: -1;
     
 
 }
@@ -276,7 +307,7 @@ p{
     } 
     
     #buttonDesc{
-        position: fixed; 
+        position:  fixed; 
         top: var(--h-header); 
         left: 0; 
         visibility: hidden;
@@ -284,8 +315,18 @@ p{
         width: 100dvw; 
 
         height: var(--h-center); 
-        z-index: 5;  
+        z-index: 12;  
     }
+
+    /* #buttonOut{
+        display: none;
+        position: relative;
+        background-color: aqua;
+        bottom: 0;
+        width: 100%;
+        height: 150px; 
+
+    } */
 
 
     /* 
@@ -316,9 +357,19 @@ p{
     /* ~~~~~~~~ boutons ~~~~~~~~ */
 
 .buttonProject{
-    opacity: 0;
+    opacity: 0.5;
     position: absolute; 
     z-index: 50;
+}
+
+#buttonOllas{
+
+    width: calc((var(--w-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    top: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
 }
 
 #buttonChaiseAttache{
@@ -352,6 +403,66 @@ p{
     bottom: 0;
     left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+#buttonPol{
+
+    width: calc((var(--w-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    bottom: 0;
+    left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonTableBasse{
+
+    width: calc((var(--w-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonMobilierGrillage{
+
+    width: calc((var(--w-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeColette{
+
+    width: calc((var(--w-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    top: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeIcosaedre{
+
+    width: calc((var(--w-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    top: 0;
+    left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonAPropos{
+
+    width: calc((var(--w-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
 
 }
