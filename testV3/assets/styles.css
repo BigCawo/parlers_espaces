@@ -521,7 +521,7 @@ p{
 
     width: calc((var(--w-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
     height: calc((var(--h-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
-    top: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
 
