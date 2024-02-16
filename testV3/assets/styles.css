@@ -558,7 +558,7 @@ p{
 @media screen and (max-width: 480px){
 
  :root{
-    --scaleFactor : 0.66;
+
     --w-desc : 98dvw
 }
 
@@ -574,7 +574,4 @@ p{
   
 } 
 
-#projects{
-    top: 34%;
-}
 }
