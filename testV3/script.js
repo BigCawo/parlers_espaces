@@ -35,6 +35,10 @@ function loadValues() {
     projectHilight(projectValue)
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
+    pOllas = Number(document.getElementById("buttonOllas").offsetLeft);
+    wOllas = Number(document.getElementById("buttonOllas").offsetWidth);
+    hOllas = Number(document.getElementById("buttonOllas").offsetHeight);
+
     pChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetLeft);
     wChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetWidth);
     hChaiseAttache = Number(document.getElementById("buttonChaiseAttache").offsetHeight);
@@ -47,6 +51,29 @@ function loadValues() {
     wMeubleBazar = Number(document.getElementById("buttonMeubleBazar").offsetWidth);
     hMeubleBazar = Number(document.getElementById("buttonMeubleBazar").offsetHeight);
 
+    pPol = Number(document.getElementById("buttonPol").offsetLeft);
+    wPol = Number(document.getElementById("buttonPol").offsetWidth);
+    hPol = Number(document.getElementById("buttonPol").offsetHeight);
+
+    pTableBasse = Number(document.getElementById("buttonTableBasse").offsetLeft);
+    wTableBasse = Number(document.getElementById("buttonTableBasse").offsetWidth);
+    hTableBasse = Number(document.getElementById("buttonTableBasse").offsetHeight);
+
+    pMobilierGrillage = Number(document.getElementById("buttonMobilierGrillage").offsetLeft);
+    wMobilierGrillage = Number(document.getElementById("buttonMobilierGrillage").offsetWidth);
+    hMobilierGrillage = Number(document.getElementById("buttonMobilierGrillage").offsetHeight);
+
+    pLampeColette = Number(document.getElementById("buttonLampeColette").offsetLeft);
+    wLampeColette = Number(document.getElementById("buttonLampeColette").offsetWidth);
+    hLampeColette = Number(document.getElementById("buttonLampeColette").offsetHeight);
+
+    pLampeIcosaedre = Number(document.getElementById("buttonLampeIcosaedre").offsetLeft);
+    wLampeIcosaedre = Number(document.getElementById("buttonLampeIcosaedre").offsetWidth);
+    hLampeIcosaedre = Number(document.getElementById("buttonLampeIcosaedre").offsetHeight);
+
+    pAPropos = Number(document.getElementById("buttonAPropos").offsetLeft);
+    wAPropos = Number(document.getElementById("buttonAPropos").offsetWidth);
+    hAPropos = Number(document.getElementById("buttonAPropos").offsetHeight);
 
     WindowWidth = window.innerWidth;
     wAccueil = 0*WindowWidth;
@@ -219,6 +246,8 @@ function projectSelect(x){
 
 
 function scrollTo(x){
+
+
     if(x == 1){
         center.scrollTo(projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
 
@@ -231,6 +260,30 @@ function scrollTo(x){
 
     if(x == 3){
         center.scrollTo(projectCenter*WindowWidth+(pMeubleBazar+0.5*wMeubleBazar), 0)
+    }
+
+    if(x == 4){
+        center.scrollTo(projectCenter*WindowWidth+(pPol+0.5*wPol), 0)
+    }
+
+    if(x == 5){
+        center.scrollTo(projectCenter*WindowWidth+(pTableBasse+0.5*wTableBasse), 0)
+    }
+
+    if(x == 6){
+        center.scrollTo(projectCenter*WindowWidth+(pMobilierGrillage+0.5*wMobilierGrillage), 0)
+    }
+
+    if(x == 7){
+        center.scrollTo(projectCenter*WindowWidth+(pLampeColette+0.5*wLampeColette), 0)
+    }
+
+    if(x == 8){
+        center.scrollTo(projectCenter*WindowWidth+(pLampeIcosaedre+0.5*wLampeIcosaedre), 0)
+    }
+
+    if(x == 9){
+        center.scrollTo(projectCenter*WindowWidth+(pAPropos+0.5*wAPropos), 0)
     }
 }
 
@@ -269,6 +322,78 @@ function projectHilight(x){
         b = hMeubleBazar;
         document.getElementById("meubleBazar").style.zIndex = 10
 
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 4){
+        a = wPol;
+        b = hPol;
+        document.getElementById("pol").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 5){
+        a = wTableBasse;
+        b = hTableBasse;
+        document.getElementById("tableBasse").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 6){
+        a = wMobilierGrillage;
+        b = hMobilierGrillage;
+        document.getElementById("mobilierGrillage").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 7){
+        a = wLampeColette;
+        b = hLampeColette;
+        document.getElementById("lampeColette").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 8){
+        a = wLampeIcosaedre;
+        b = hLampeIcosaedre;
+        document.getElementById("lampeIcosaedre").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 9){
+        a = wAPropos;
+        b = hAPropos;
+        document.getElementById("APropos").style.zIndex = 10
+    
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
