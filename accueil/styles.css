@@ -1,0 +1,627 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+/* html{scroll-behavior: smooth;} */
+
+:root{
+
+    /* general */
+
+    --ff-t:Gabarito;
+    --ff-st:Roboto;
+    --ff-p:Roboto;
+    --ff-c:Gabarito;
+    --fs-t:1.5em;
+    --fs-st : 1.25em;
+    --fs-p : 0.75em;
+    --fs-c : 1em;
+
+    /* accueil */
+
+    --w-proj : 5500px;
+    --w-projAbs : 5500;
+    --h-proj : 1084px;
+    --h-projAbs : 1084;
+    --h-center : 90dvh;
+    --h-header : 5dvh;
+    --projRatio : calc(var(--w-projAbs)/var(--h-projAbs));
+    --w-desc : 25dvw;
+
+    /* projects dimensions */
+    --scaleFactor : 1;
+
+    --p-Ollas : calc(3041*var(--scaleFactor));
+    --w-Ollas : calc(71*var(--scaleFactor));
+    --h-Ollas : calc(88*var(--scaleFactor));
+    --o-Ollas : calc(391*var(--scaleFactor));
+
+    --p-chaiseAttache : calc(1685*var(--scaleFactor));
+    --w-chaiseAttache : calc(245*var(--scaleFactor));
+    --h-chaiseAttache : calc(350*var(--scaleFactor));
+
+
+    --p-Nasa : calc(1995*var(--scaleFactor));
+    --w-Nasa : calc(670*var(--scaleFactor));
+    --h-Nasa : calc(380*var(--scaleFactor));
+
+    --p-MeubleBazar : calc(2736*var(--scaleFactor));
+    --w-MeubleBazar : calc(420*var(--scaleFactor));
+    --h-MeubleBazar : calc(395*var(--scaleFactor));
+
+    --p-Pol : calc(3259*var(--scaleFactor));
+    --w-Pol : calc(401*var(--scaleFactor));
+    --h-Pol : calc(294*var(--scaleFactor));
+
+    --p-TableBasse : calc(3687*var(--scaleFactor));
+    --w-TableBasse : calc(505*var(--scaleFactor));
+    --h-TableBasse : calc(155*var(--scaleFactor));
+
+    --p-MobilierGrillage : calc(4221*var(--scaleFactor));
+    --w-MobilierGrillage : calc(597*var(--scaleFactor));
+    --h-MobilierGrillage : calc(386*var(--scaleFactor));
+
+    --p-LampeColette : calc(3199*var(--scaleFactor));
+    --w-LampeColette : calc(189*var(--scaleFactor));
+    --h-LampeColette : calc(93*var(--scaleFactor));
+    --o-LampeColette : calc(700*var(--scaleFactor));
+
+    --p-LampeIcosaedre : calc(3662*var(--scaleFactor));
+    --w-LampeIcosaedre : calc(302*var(--scaleFactor));
+    --h-LampeIcosaedre : calc(361*var(--scaleFactor));
+
+    --p-APropos : calc(227*var(--scaleFactor));
+    --w-APropos : calc(772*var(--scaleFactor));
+    --h-APropos : calc(576*var(--scaleFactor));
+}
+
+/* general */
+
+body{
+    font-size: 200%;
+}
+
+p{  
+    padding-top: var(--spaces) ;
+    padding-bottom: var(--spaces);
+    background-color: rgba(137, 43, 226, 0);
+    font-size: var(--fs-p);
+    font-family: var(--ff-p);
+    line-height: 150%;
+}
+
+#header{
+    background-color: rgba(0, 0, 0, 0.55) ;
+    height: var(--h-header) ;
+}
+
+#center{
+    scroll-behavior: smooth;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+    z-index: 0;
+
+    height: var(--h-center); 
+    width: 100vw;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+}
+
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.50) ;
+    position: relative;
+    height: calc(100dvh - var(--h-header) - var(--h-center) ) ;
+    /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
+    /* overflow: hidden; */
+    /* margin: 1dvh; */
+}
+
+    /* ~~~~~~~~ projects ~~~~~~~~ */
+
+
+#maison{
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color ease 0.25s;
+    height: 100%; 
+    width: calc((var(--projRatio)*var(--h-center))*2);
+
+}
+
+#accueil{
+    height: 100%; width: 100vw;
+    display: inline-block
+}
+
+
+#projects{
+    display: inline-block; 
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    height: calc(var(--scaleFactor)*100%);
+}
+
+.project{
+    position: absolute;
+    height: 100%; 
+    width: auto;
+    z-index: 5;
+}
+
+/* #filter{
+    z-index: -5;
+    opacity: 0;
+} */
+
+    /* ~~~~~~~~ visuels projectS ~~~~~~~~ */
+
+.project img{
+    height: 100%; 
+    position: absolute;
+    z-index: 5;
+
+}
+
+
+
+
+
+
+
+#ollas{
+
+    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+
+
+#chaiseAttache{
+
+    bottom: 0;
+    left: calc((var(--p-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+    
+
+
+}
+
+#nasa{
+
+    bottom: 0;
+    left: calc((var(--p-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+#meubleBazar{
+
+    left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: 0;
+}
+
+
+#pol{
+
+    bottom: 0;
+    left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#tableBasse{
+
+    bottom: 0;
+    left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#mobilierGrillage{
+
+    bottom: 0;
+    left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#lampeColette{
+
+    bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#lampeIcosaedre{
+
+    top: calc((-730/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#aPropos{
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+
+
+.shadow{
+    opacity: 0.35;
+}
+
+.backgroundColor{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+}
+
+.backgroundColor2{
+    opacity: 0;
+    transition: opacity ease 0.35s;
+}
+
+.background{
+    transition: opacity ease 0.2s;
+}
+
+
+    /* ~~~~~~~~ visuels GENERAUX ~~~~~~~~ */
+
+#corps{
+    position: relative; 
+    transition: all ease 0.35s;
+}
+#spot{
+    
+    position: fixed; 
+    overflow: hidden;
+    left: 0;
+    width: 100dvw; 
+    height: 90dvh; 
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    z-index: 9;
+}
+
+/* #spot img{
+    opacity: 1;
+
+} */
+
+#babababaaa{
+    position: relative;
+    z-index: 10;
+    bottom : 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+}
+
+#spotRight{
+    position: absolute;
+
+    transform-origin: 0 0;
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spotLeft{
+    position: absolute;
+ 
+    transform-origin: 0 0;
+    transform: scale(-1,1);
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spotMiddle{
+    overflow: hidden;
+    position: absolute;
+
+    bottom: 0;
+    width: 100%; 
+    height: var(--h-center);
+    transition: opacity ease 0.25s;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    z-index: -1;
+    
+
+}
+
+
+/* #wall{
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+/* #filter{
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+    /* ~~~~~~~~ projects DESCRIPTION ~~~~~~~~ */
+
+    #projectInformations{
+    
+        position: fixed;    
+        right: calc(-1*var(--w-desc));
+        transition: left ease 0.4s;
+        top: calc(var(--h-header) + 2dvh);
+        z-index: 51;
+        background-color: rgba(255, 255, 255, 0.856);
+        max-height: calc(var(--h-center) - 4dvh);
+        width: var(--w-desc);
+        border: 2px solid black ;
+        border-right: 0;
+        border-radius: 5px 0 0 5px;
+        padding: 2dvh;
+        overflow: hidden;
+      
+    } 
+
+    #projectAnimation{
+        position: fixed;            
+        transition: left ease 0.4s;
+        z-index: 51;
+        height: var(--h-center);
+        width: 50dvw;
+        visibility: hidden;
+        overflow: hidden;
+    
+        /* visibility: hidden;
+        opacity: 0;
+        transition: all ease 0.25s;
+        transition: opacity ease 0.25s; */
+    
+    }
+    
+    .animations{
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: 25%;
+        height: calc((var(--w-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));;
+    
+    
+    }
+    
+    
+    #buttonDesc{
+        position:  fixed; 
+        top: var(--h-header); 
+        left: 0; 
+        visibility: hidden;
+        opacity: 1; 
+        width: 100dvw; 
+
+        height: var(--h-center); 
+        z-index: 12;  
+    }
+
+    /* #buttonOut{
+        display: none;
+        position: relative;
+        background-color: aqua;
+        bottom: 0;
+        width: 100%;
+        height: 150px; 
+
+    } */
+
+
+    /* 
+    #imgContainer{
+        display: inline-block;
+    }
+    
+    #imgContainer img{
+        position: relative;
+        padding-left: 3dvw;
+        
+        background-color: rgba(0, 0, 255, 0);
+        max-height: calc((96dvh - var(--h-center)) - var(--h-header));
+        width: auto;
+    } */
+    
+    /* #descContainer{
+    
+        position: relative;
+        background-color: rgba(137, 43, 226, 0);
+        display: inline-block;
+        max-height: inherit;
+        overflow-y: scroll;
+    } */
+    
+    
+
+    /* ~~~~~~~~ boutons ~~~~~~~~ */
+
+.buttonProject{
+    opacity: 0;
+    position: absolute; 
+    z-index: 50;
+}
+
+#buttonOllas{
+
+    width: calc((var(--w-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    top: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonChaiseAttache{
+
+    width: calc((var(--w-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+    
+
+
+}
+
+#buttonNasa{
+
+    width: calc((var(--w-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+
+#buttonMeubleBazar{
+
+    width: calc((var(--w-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+#buttonPol{
+
+    width: calc((var(--w-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    bottom: 0;
+    left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonTableBasse{
+
+    width: calc((var(--w-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonMobilierGrillage{
+
+    width: calc((var(--w-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeColette{
+
+    width: calc((var(--w-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeIcosaedre{
+
+    width: calc((var(--w-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    top: 0;
+    left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonAPropos{
+
+    width: calc((var(--w-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+
+ :root{
+    /* --scaleFactor : 0.66; */
+    --w-desc : 98dvw;
+    --h-center : 85dvh;
+    --p-APropos: 20 ;
+}
+
+#projectInformations{
+
+    height: calc(var(--h-center)/2 - 2dvh);
+    width: var(--w-desc);
+    border: 2px solid black ;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 2dvh;
+    overflow: hidden;
+  
+} 
+
+/* #projects{
+    top: 34%;
+} */
+
+#projectAnimation{
+    left: 0;
+
+}
+
+.animations{
+    top: 50%;
+    height: 50%;
+
+
+}
+}
