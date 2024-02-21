@@ -10,7 +10,7 @@ var style = getComputedStyle(root);
 
 
 
-let projectValue = 0;
+let projectValue = -1;
 let center = document.getElementById("center");
 let output = document.getElementById("output");
 let output2 = document.getElementById("output2");
@@ -35,7 +35,7 @@ function loadValues() {
     projectHilight(projectValue)
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
-    pOllas = Number(document.getElementById("buttonOllas").offsetLeft);
+    POllas = Number(document.getElementById("buttonOllas").offsetLeft);
     wOllas = Number(document.getElementById("buttonOllas").offsetWidth);
     hOllas = Number(document.getElementById("buttonOllas").offsetHeight);
 
@@ -75,6 +75,16 @@ function loadValues() {
     wAPropos = Number(document.getElementById("buttonAPropos").offsetWidth);
     hAPropos = Number(document.getElementById("buttonAPropos").offsetHeight);
 
+    pLampeRessort = Number(document.getElementById("buttonLampeRessort").offsetLeft);
+    wLampeRessort = Number(document.getElementById("buttonLampeRessort").offsetWidth);
+    hLampeRessort = Number(document.getElementById("buttonLampeRessort").offsetHeight);
+
+    pVaseSuspendu = Number(document.getElementById("buttonVaseSuspendu").offsetLeft);
+    wVaseSuspendu = Number(document.getElementById("buttonVaseSuspendu").offsetWidth);
+    hVaseSuspendu = Number(document.getElementById("buttonVaseSuspendu").offsetHeight);
+
+
+
     WindowWidth = window.innerWidth;
     wAccueil = 0*WindowWidth;
  
@@ -98,21 +108,24 @@ window.onload = loadValues();
 center.addEventListener("scroll", function(){
 
     output.innerHTML = this.scrollLeft
-    output2.innerHTML = y;
-
-    
+    output2.innerHTML = y;  
 
 })
+
+const scrollContainer = document.getElementById('center');
+
+scrollContainer.addEventListener('wheel', (evt) => {
+    evt.preventDefault();
+    scrollContainer.style.scrollBehavior = "initial"
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.scrollBehavior = "smooth"
+  output2.innerHTML = "non"
+});
 
 
 function test(){
     output.innerHTML = "oui"  
 }
-
-    
-
-
-
 
 
 
@@ -205,12 +218,9 @@ function projectSelect(x){
         document.getElementById("corps").style.opacity = "0"
         setTimeout(()=> {
 
-        if (x == 0){
-            null
-        }
 
         if (x == 1){
-            window.location.href = "..objet/chaise-pol/"
+            window.location.href = "..objet/chaise-Pol/"
         }
 
         if (x == 2){
@@ -222,11 +232,11 @@ function projectSelect(x){
         }
         
         if (x == 4){
-            window.location.href = "../objet/pol/"
+            window.location.href = "../objet/Pol/"
         }
 
         if (x == 5){
-            null        
+            window.location.href = ""       
         }
 
         if (x == 6){
@@ -238,16 +248,25 @@ function projectSelect(x){
         }
 
         if (x == 8){
-            null
+            window.location.href = ""
         }
         
         if (x == 9){
             window.location.href = "../qui-suis-je/"
         }
         
-        // if (x == 10){
-        //     window.location.href = "index.html"
-        // }
+        if (x == 10){
+            window.location.href = "../objet/lampe-ressort/"
+        }
+
+        if (x == 11){
+            window.location.href = "../objet/vase-suspendu/"
+        }
+
+        if (x == 12){
+            window.location.href = ""
+        }
+
 
 
         }
@@ -292,7 +311,6 @@ function projectSelect(x){
 
 function scrollTo(x){
 
-
     if(x == 1){
         center.scrollTo(projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
 
@@ -330,9 +348,35 @@ function scrollTo(x){
     if(x == 9){
         center.scrollTo(projectCenter*WindowWidth+(pAPropos+0.5*wAPropos), 0)
     }
+
+    if(x == 10){
+        center.scrollTo(projectCenter*WindowWidth+(pLampeRessort+0.5*wLampeRessort), 0)
+    }
+
+    if(x == 11){
+        center.scrollTo(projectCenter*WindowWidth+(pVaseSuspendu+0.5*wVaseSuspendu), 0)
+    }
+
+    if(x == 12){
+        center.scrollTo(projectCenter*WindowWidth+(POllas+0.5*wOllas), 0);
+
+    }
 }
 
 function projectHilight(x){
+
+    if(x == 12){
+        a = wOllas;
+        b = hOllas;
+        document.getElementById("Ollas").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Ollas").style.zIndex = 10
+
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
 
     if(x == 1){
         a = wChaiseAttache;
@@ -378,7 +422,8 @@ function projectHilight(x){
     if(x == 4){
         a = wPol;
         b = hPol;
-        document.getElementById("pol").style.zIndex = 10
+        document.getElementById("Pol").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Pol").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
@@ -390,7 +435,8 @@ function projectHilight(x){
     if(x == 5){
         a = wTableBasse;
         b = hTableBasse;
-        document.getElementById("tableBasse").style.zIndex = 10
+        document.getElementById("TableBasse").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("TableBasse").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
@@ -402,7 +448,8 @@ function projectHilight(x){
     if(x == 6){
         a = wMobilierGrillage;
         b = hMobilierGrillage;
-        document.getElementById("mobilierGrillage").style.zIndex = 10
+        document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("MobilierGrillage").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
@@ -414,7 +461,8 @@ function projectHilight(x){
     if(x == 7){
         a = wLampeColette;
         b = hLampeColette;
-        document.getElementById("lampeColette").style.zIndex = 10
+        document.getElementById("LampeColette").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("LampeColette").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
@@ -426,7 +474,8 @@ function projectHilight(x){
     if(x == 8){
         a = wLampeIcosaedre;
         b = hLampeIcosaedre;
-        document.getElementById("lampeIcosaedre").style.zIndex = 10
+        document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("LampeIcosaedre").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
@@ -438,6 +487,11 @@ function projectHilight(x){
     if(x == 9){
         a = wAPropos;
         b = hAPropos;
+        const non = document.getElementById("APropos").getElementsByClassName("backgroundColor2");
+        for (let i = 0; i < non.length; i++) {
+            non[i].style.opacity = 1;
+            
+        }
         document.getElementById("APropos").style.zIndex = 10
     
         document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
@@ -446,7 +500,39 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
         // document.getElementById("buttonOut").style.height = b+"px"
     }
+
+    if(x == 10){
+        a = wLampeRessort;
+        b = hLampeRessort;
+        document.getElementById("LampeRessort").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("LampeRessort").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 11){
+        a = wVaseSuspendu;
+        b = hVaseSuspendu;
+        document.getElementById("VaseSuspendu").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("VaseSuspendu").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+
 }
+
+
+
+
 // CHAISEATTACHE
 
 let buttonChaiseAttache = document.getElementById("buttonChaiseAttache")
@@ -505,6 +591,183 @@ buttonMeubleBazar.addEventListener("mouseover", function(){
 buttonMeubleBazar.addEventListener("mouseout", function(){
 
     document.getElementById("meubleBazar").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Pol
+
+let buttonPol = document.getElementById("buttonPol")
+buttonPol.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Pol").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonPol.addEventListener("mouseout", function(){
+
+    document.getElementById("Pol").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// VaseSuspendu
+
+let buttonVaseSuspendu = document.getElementById("buttonVaseSuspendu")
+buttonVaseSuspendu.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("VaseSuspendu").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonVaseSuspendu.addEventListener("mouseout", function(){
+
+    document.getElementById("VaseSuspendu").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// APropos
+
+let buttonAPropos = document.getElementById("buttonAPropos")
+buttonAPropos.addEventListener("mouseover", function(){
+
+    
+    const non = document.getElementById("APropos").getElementsByClassName("backgroundColor");
+    for (let i = 0; i < non.length; i++) {
+        non[i].style.opacity = 1;
+        
+    }
+
+})
+
+buttonAPropos.addEventListener("mouseout", function(){
+
+    const non = document.getElementById("APropos").getElementsByClassName("backgroundColor");
+    for (let i = 0; i < non.length; i++) {
+        non[i].style.opacity = 0;
+        
+    }
+
+
+})
+
+// TableBasse
+
+let buttonTableBasse = document.getElementById("buttonTableBasse")
+buttonTableBasse.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("TableBasse").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonTableBasse.addEventListener("mouseout", function(){
+
+    document.getElementById("TableBasse").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// MobilierGrillage
+
+let buttonMobilierGrillage = document.getElementById("buttonMobilierGrillage")
+buttonMobilierGrillage.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonMobilierGrillage.addEventListener("mouseout", function(){
+
+    document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// LampeColette
+
+let buttonLampeColette = document.getElementById("buttonLampeColette")
+buttonLampeColette.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("LampeColette").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonLampeColette.addEventListener("mouseout", function(){
+
+    document.getElementById("LampeColette").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// LampeIcosaedre
+
+let buttonLampeIcosaedre = document.getElementById("buttonLampeIcosaedre")
+buttonLampeIcosaedre.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonLampeIcosaedre.addEventListener("mouseout", function(){
+
+    document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// LampeRessort
+
+let buttonLampeRessort = document.getElementById("buttonLampeRessort")
+buttonLampeRessort.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("LampeRessort").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonLampeRessort.addEventListener("mouseout", function(){
+
+    document.getElementById("LampeRessort").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Ollas
+
+let buttonOllas = document.getElementById("buttonOllas")
+buttonOllas.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Ollas").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonOllas.addEventListener("mouseout", function(){
+
+    document.getElementById("Ollas").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
 
 
 })

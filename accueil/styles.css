@@ -68,9 +68,20 @@
     --w-LampeIcosaedre : calc(302*var(--scaleFactor));
     --h-LampeIcosaedre : calc(361*var(--scaleFactor));
 
-    --p-APropos : calc(227*var(--scaleFactor));
+    --p-APropos : calc(250*var(--scaleFactor));
     --w-APropos : calc(772*var(--scaleFactor));
     --h-APropos : calc(576*var(--scaleFactor));
+
+    --p-LampeRessort : calc(3800*var(--scaleFactor));
+    --w-LampeRessort : calc(234*var(--scaleFactor));
+    --h-LampeRessort : calc(460*var(--scaleFactor));
+    --o-LampeRessort : calc(145*var(--scaleFactor));
+
+    --p-VaseSuspendu : calc(2275*var(--scaleFactor));
+    --w-VaseSuspendu : calc(257*var(--scaleFactor));
+    --h-VaseSuspendu : calc(350*var(--scaleFactor));
+    --o-VaseSuspendu : calc(370*var(--scaleFactor));
+
 }
 
 /* general */
@@ -114,6 +125,31 @@ p{
     /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
     /* overflow: hidden; */
     /* margin: 1dvh; */
+}
+
+#projects{
+
+
+    animation-duration:  1s ;
+    animation-name: popsIn ;
+
+}
+
+@keyframes popsIn {
+    0%{
+        bottom : var(--h-center);
+        opacity: 0;
+    }
+
+    33%{
+        bottom: calc(1/2* var(--h-center));
+        opacity: 0;
+    }
+
+    100%{
+        bottom: initial;
+        opacity: 1;
+    }
 }
 
     /* ~~~~~~~~ projects ~~~~~~~~ */
@@ -171,10 +207,11 @@ p{
 
 
 
-#ollas{
+#APropos{
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
-    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
-    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
 }
 
 
@@ -205,7 +242,7 @@ p{
 }
 
 
-#pol{
+#Pol{
 
     bottom: 0;
     left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -213,7 +250,7 @@ p{
 
 }
 
-#tableBasse{
+#TableBasse{
 
     bottom: 0;
     left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -221,7 +258,7 @@ p{
 
 }
 
-#mobilierGrillage{
+#MobilierGrillage{
 
     bottom: 0;
     left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -229,7 +266,7 @@ p{
 
 }
 
-#lampeColette{
+#LampeColette{
 
     bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -237,7 +274,7 @@ p{
 
 }
 
-#lampeIcosaedre{
+#LampeIcosaedre{
 
     top: calc((-730/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
@@ -245,18 +282,34 @@ p{
 
 }
 
-#aPropos{
+
+#LampeRessort{
+    bottom: calc((var(--o-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+    left: calc((var(--p-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#VaseSuspendu{
     bottom: 0;
-    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: calc((var(--o-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
 
 }
 
+#Ollas{
+
+    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
 
 
-.shadow{
+
+/* .shadow{
     opacity: 0.35;
-}
+} */
 
 .backgroundColor{
     opacity: 0;
@@ -479,7 +532,7 @@ p{
 
     width: calc((var(--w-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
     height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
-    top: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
 
@@ -580,7 +633,25 @@ p{
 
 }
 
+#buttonLampeRessort{
 
+    width: calc((var(--w-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonVaseSuspendu{
+
+    width: calc((var(--w-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--h-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
 
 
 
@@ -598,6 +669,7 @@ p{
 }
 
 #projectInformations{
+    right: calc(-1*var(--w-desc));
 
     height: calc(var(--h-center)/2 - 2dvh);
     width: var(--w-desc);
@@ -606,6 +678,7 @@ p{
     border-radius: 5px 0 0 5px;
     padding: 2dvh;
     overflow: hidden;
+    transition: all ease 0.25s;
   
 } 
 
