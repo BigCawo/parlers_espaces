@@ -18,7 +18,7 @@ let supervoil = 0;
 let voile = document.getElementById("filter");
 let spawnState = 0;
 let wDesc = Number(style.getPropertyValue('--w-desc'));
-
+let w = projectValue
 
 //mediaqueries
 
@@ -108,18 +108,33 @@ window.onload = loadValues();
 center.addEventListener("scroll", function(){
 
     output.innerHTML = this.scrollLeft
-    output2.innerHTML = y;  
+    output2.innerHTML = w;  
 
 })
 
 const scrollContainer = document.getElementById('center');
 
 scrollContainer.addEventListener('wheel', (evt) => {
+    spotsVisible = document.getElementById("spot").style.opacity
     evt.preventDefault();
+    if (spotsVisible == 0.55){ 
+        
+
+  
+        w = Math.max(projectValue +  Math.sign(evt.deltaY),0)
+        if(0 < w && w < 13){
+            scrollContainer.style.scrollBehavior = "initial"
+            projectSelect(w)
+            }
+
+    }
+    else {
     scrollContainer.style.scrollBehavior = "initial"
     scrollContainer.scrollLeft += evt.deltaY;
+    }
     scrollContainer.style.scrollBehavior = "smooth"
-  output2.innerHTML = "non"
+
+  
 });
 
 
@@ -290,11 +305,7 @@ function projectSelect(x){
         
     }
 
-    const spotsVisibility = document.getElementsByClassName("spots");
-    for (let i = 0; i < spotsVisibility.length; i++) {
-        spotsVisibility[i].style.opacity = 0;
-        
-    }
+
 
     const non = document.getElementsByClassName("project");
     for (let i = 0; i < non.length; i++) {
