@@ -232,7 +232,7 @@ function projectSelect(x){
     if (projectValue == x){
         document.getElementById("corps").style.opacity = "0"
         setTimeout(()=> {
-
+            document.getElementById("corps").style.opacity = "1"    
 
         if (x == 1){
             window.location.href = "..objet/chaise-Pol/"
