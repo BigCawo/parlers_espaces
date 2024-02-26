@@ -87,7 +87,7 @@
 /* general */
 
 body{
-    font-size: 200%;
+    font-size: 100%;
 }
 
 p{  
@@ -97,6 +97,16 @@ p{
     font-size: var(--fs-p);
     font-family: var(--ff-p);
     line-height: 150%;
+}
+
+h1{
+    font-family: var(--ff-t);
+    font-size: var(--fs-t);
+}
+
+h2{
+    font-family: var(--ff-t);
+    font-size: var(--fs-st);
 }
 
 #header{
@@ -200,10 +210,6 @@ p{
     z-index: 5;
 
 }
-
-
-
-
 
 
 
@@ -338,7 +344,7 @@ p{
     overflow: hidden;
     left: 0;
     width: 100dvw; 
-    height: 90dvh; 
+    height: var(--h-center); 
     visibility: hidden;
     opacity: 0;
     transition: all ease 0.25s;
@@ -426,6 +432,7 @@ p{
 
     /* ~~~~~~~~ projects DESCRIPTION ~~~~~~~~ */
 
+
     #projectInformations{
     
         position: fixed;    
@@ -440,8 +447,9 @@ p{
         border-right: 0;
         border-radius: 5px 0 0 5px;
         padding: 2dvh;
+        padding-top: 1.5dvh;
         overflow: hidden;
-      
+        transition: all ease 0.25s;
     } 
 
     #projectAnimation{
@@ -458,6 +466,10 @@ p{
         transition: all ease 0.25s;
         transition: opacity ease 0.25s; */
     
+    }
+
+    #ProjectName{
+        padding: 1dvh;
     }
     
     .animations{
@@ -664,21 +676,33 @@ p{
  :root{
     /* --scaleFactor : 0.66; */
     --w-desc : 98dvw;
-    --h-center : 85dvh;
+    --h-center : 65dvh;
+    --h-header : 30dvh;
     --p-APropos: 20 ;
+    
+}
+
+body{
+    font-size: 4.5vw;
+}
+
+p{
+    font-size: 100%;
 }
 
 #projectInformations{
     right: calc(-1*var(--w-desc));
-
-    height: calc(var(--h-center)/2 - 2dvh);
+    top: 1dvh;
+    height: calc(var(--h-header) - 2dvh);
     width: var(--w-desc);
     border: 2px solid black ;
     border-right: 0;
     border-radius: 5px 0 0 5px;
-    padding: 2dvh;
-    overflow: hidden;
+    padding: 1.5dvh;
+    padding-top: 1dvh;
+    overflow: scroll;
     transition: all ease 0.25s;
+
   
 } 
 
@@ -697,4 +721,9 @@ p{
 
 
 }
+
+#ProjectName{
+    padding: 0.5dvh;
+}
+
 }
