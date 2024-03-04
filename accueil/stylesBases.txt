@@ -8,11 +8,18 @@
 
 }
 
+#Base{
+
+    bottom: calc((var(--o-Base)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Base)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
 :root{
 
---p-Base : calc(9999*var(--scaleFactor));
---w-Base : calc(8888*var(--scaleFactor));
---h-Base : calc(7777*var(--scaleFactor));
+    --p-Base : calc(750*var(--scaleFactor));
+    --w-Base : calc(330*var(--scaleFactor));
+    --h-Base : calc(333*var(--scaleFactor));
+    --o-Base : calc(0*var(--scaleFactor));
 
 }
 
@@ -22,12 +29,12 @@
 
 <div id="ollas" class="objet project">
 
-    <img class="background" src="assets/accueil_0000s_0002_ollas-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0000s_0002_ollas-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0000s_0002_ollas-ap.png" alt="">
+    <img class="background" src="assets_accueil/illustrations_0000s_0002_ollas-ap.png" alt="">
+    <img class="backgroundColor" src="assets_accueil/illustrations_0000s_0002_ollas-ap.png" alt="">
+    <img class="backgroundColor2" src="assets_accueil/illustrations_0000s_0002_ollas-ap.png" alt="">
     
-    <img class="shadow" src="assets/accueil_0000s_0001_ollas-ombre.png" alt="">   
-    <img class="stroke" src="assets/accueil_0000s_0000_ollas.png" alt="">
+    <img class="shadow" src="assets_accueil/illustrations_0000s_0001_ollas-ombre.png" alt="">   
+    <img class="stroke" src="assets_accueil/illustrations_0000s_0000_ollas.png" alt="">
 
 </div>
 
@@ -38,149 +45,29 @@
 
 <div id="chaiseAttache" class="objet project">
 
-    <img class="background" src="assets/accueil_0001s_0002_chaise-attache-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0001s_0003_chaise-attache-ap-couleur.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0001s_0003_chaise-attache-ap-couleur.png" alt="">
+    <img class="background" src="assets_accueil/illustrations_0001s_" alt="">
+    <img class="backgroundColor" src="assets_accueil/illustrations_" alt="">
+    <img class="backgroundColor2" src="assets_accueil/illustrations_" alt="">
 
-    <img class="shadow" src="assets/accueil_0001s_0001_chaise-attache-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0001s_0000_chaise-attache.png" alt="">
-
-</div>
-
-<!-- Base -->
-
-<button class="buttonProject" id="buttonBase" onclick="projectSelect(2)"></button> 
-
-<div id="Base" class="objet project">
-
-    <img class="background" src="assets/accueil_0002s_0002_Base-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0002s_0003_Base-ap-couleur.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0002s_0003_Base-ap-couleur.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0002s_0001_Base-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0002s_0000_Base.png" alt="">
+    <img class="shadow" src="assets_accueil/illustrations_.png" alt="">  
+    <img class="stroke" src="assets_accueil/illustrations_.png" alt="">
 
 </div>
 
+                <!-- Base -->
 
-<!-- mBase -->
+                <button class="buttonProject" id="buttonBase" onclick="projectSelect(2)"></button> 
 
-<button class="buttonProject" id="buttonMBase" onclick="projectSelect(3)"></button> 
+                <div id="Base" class="objet project">
 
-<div id="mBase" class="objet project">
+                    <img class="background" src="assets_accueil/illustrations_" alt="">
+                    <img class="backgroundColor" src="assets_accueil/illustrations_" alt="">
+                    <img class="backgroundColor2" src="assets_accueil/illustrations_" alt="">
 
+                    <img class="shadow" src="assets_accueil/illustrations_.png" alt="">  
+                    <img class="stroke" src="assets_accueil/illustrations_.png" alt="">
 
-    <img class="background" src="assets/accueil_0003s_0002_meuble-a-bazar-ap.png" alt="">
-    <img class="shadow" src="assets/accueil_0003s_0001_meuble-a-bazar-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0003s_0000_meuble-a-bazar.png" alt="">
-
-</div>
-
-<!-- pol -->
-
-<button class="buttonProject" id="buttonPol" onclick="projectSelect(4)"></button> 
-
-<div id="pol" class="objet project">
-
-    <img class="background" src="assets/accueil_0005s_0002_pol-ap.png" alt="">
-    <img class="shadow" src="assets/accueil_0005s_0001_pol-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0005s_0000_pol.png" alt="">
-
-</div>
-
-<!-- tableBasse -->
-
-<button class="buttonProject" id="buttonTableBasse" onclick="projectSelect(5)"></button> 
-
-<div id="tableBasse" class="objet project">
-
-    <img class="background" src="assets/accueil_0004s_0002_table-basse-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0004s_0002_table-basse-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0004s_0002_table-basse-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0004s_0001_table-basse-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0004s_0000_table-basse.png" alt="">
-
-</div>
-
-<!-- mobilierGrillage -->
-
-<button class="buttonProject" id="buttonMobilierGrillage" onclick="projectSelect(6)"></button> 
-
-<div id="mobilierGrillage" class="objet project">
-
-    <img class="background" src="assets/accueil_0010s_0002_chaise-grillage-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0010s_0002_chaise-grillage-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0010s_0002_chaise-grillage-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0010s_0001_chaise-grillage-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0010s_0000_chaise-grillage.png" alt="">
-
-</div>
-
-<!-- lampeColette -->
-
-<button class="buttonProject" id="buttonLampeColette" onclick="projectSelect(7)"></button> 
-
-<div id="lampeColette" class="objet project">
-
-    <img class="background" src="assets/accueil_0007s_0002_lampe-colette-double-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0007s_0002_lampe-colette-double-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0007s_0002_lampe-colette-double-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0007s_0001_lampe-colette-double-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0007s_0000_lampe-colette-double.png" alt="">
-
-</div>
-
-<!-- lampeIcosaedre -->
-
-<button class="buttonProject" id="buttonLampeIcosaedre" onclick="projectSelect(8)"></button> 
-
-<div id="lampeIcosaedre" class="objet project">
-
-    <img class="background" src="assets/accueil_0006s_0002_lampe-icosaedre-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0006s_0002_lampe-icosaedre-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0006s_0002_lampe-icosaedre-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0006s_0001_lampe-icosaedre-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0006s_0000_lampe-icosaedre.png" alt="">
-
-</div>
-
-<!-- aPropos -->
-
-<button class="buttonProject" id="buttonAPropos" onclick="projectSelect(9)"></button> 
-
-<div id="aPropos" class="project">
-
-    <img class="background" src="assets/accueil_0013s_0002_bureau-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0013s_0002_bureau-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0013s_0002_bureau-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0013s_0001_bureau-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0013s_0000_bureau.png" alt="">
-    
-
-    <img class="background" src="assets/accueil_0012s_0002_bureau-ap.png" alt="">
-    <img class="backgroundColor" src="assets/accueil_0012s_0002_bureau-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/accueil_0012s_0002_bureau-ap.png" alt="">
-
-    <img class  ="shadow" src="assets/accueil_0012s_0001_bureau-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0012s_0000_bureau.png" alt="">
-
-
-    <img class="background" src="assets/accueil_0011s_0002_chaise-ap.png" alt="">
-    <img class="backgroundColor" src="assets/assets/accueil_0011s_0002_chaise-ap.png" alt="">
-    <img class="backgroundColor2" src="assets/assets/accueil_0011s_0002_chaise-ap.png" alt="">
-
-    <img class="shadow" src="assets/accueil_0011s_0001_chaise-ombre.png" alt="">  
-    <img class="stroke" src="assets/accueil_0011s_0000_chaise.png" alt="">
-
-</div>
-
-
-
+                </div>
 
 
 if(x == 4){
@@ -203,3 +90,22 @@ if(x == 3){
     document.getElementById("spotMiddle").style.width = a+"px"
     // document.getElementById("buttonOut").style.height = b+"px"
 }
+
+// BASE
+
+let buttonbase = document.getElementById("buttonbase")
+buttonbase.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("base").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonbase.addEventListener("mouseout", function(){
+
+    document.getElementById("base").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})

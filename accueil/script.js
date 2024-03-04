@@ -20,6 +20,8 @@ let spawnState = 0;
 let wDesc = Number(style.getPropertyValue('--w-desc'));
 let w = projectValue
 
+let b = 1000
+
 //mediaqueries
 
 Mq480.addEventListener("change", function() {
@@ -83,6 +85,43 @@ function loadValues() {
     wVaseSuspendu = Number(document.getElementById("buttonVaseSuspendu").offsetWidth);
     hVaseSuspendu = Number(document.getElementById("buttonVaseSuspendu").offsetHeight);
 
+    pTerresLointaines = Number(document.getElementById("buttonTerresLointaines").offsetLeft);
+    wTerresLointaines = Number(document.getElementById("buttonTerresLointaines").offsetWidth);
+    hTerresLointaines = Number(document.getElementById("buttonTerresLointaines").offsetHeight);
+
+    pFabriqueABrac = Number(document.getElementById("buttonFabriqueABrac").offsetLeft);
+    wFabriqueABrac = Number(document.getElementById("buttonFabriqueABrac").offsetWidth);
+    hFabriqueABrac = Number(document.getElementById("buttonFabriqueABrac").offsetHeight);
+
+    pChmupTheDog = Number(document.getElementById("buttonChmupTheDog").offsetLeft);
+    wChmupTheDog = Number(document.getElementById("buttonChmupTheDog").offsetWidth);
+    hChmupTheDog = Number(document.getElementById("buttonChmupTheDog").offsetHeight);
+
+    pParlersEspace = Number(document.getElementById("buttonParlersEspace").offsetLeft);
+    wParlersEspace = Number(document.getElementById("buttonParlersEspace").offsetWidth);
+    hParlersEspace = Number(document.getElementById("buttonParlersEspace").offsetHeight);
+
+    pPommeDeTerre = Number(document.getElementById("buttonPommeDeTerre").offsetLeft);
+    wPommeDeTerre = Number(document.getElementById("buttonPommeDeTerre").offsetWidth);
+    hPommeDeTerre = Number(document.getElementById("buttonPommeDeTerre").offsetHeight);
+
+    pCarnets = Number(document.getElementById("buttonCarnets").offsetLeft);
+    wCarnets = Number(document.getElementById("buttonCarnets").offsetWidth);
+    hCarnets = Number(document.getElementById("buttonCarnets").offsetHeight);
+
+    pIllustrations = Number(document.getElementById("buttonIllustrations").offsetLeft);
+    wIllustrations = Number(document.getElementById("buttonIllustrations").offsetWidth);
+    hIllustrations = Number(document.getElementById("buttonIllustrations").offsetHeight);
+
+    pStellarium = Number(document.getElementById("buttonStellarium").offsetLeft);
+    wStellarium = Number(document.getElementById("buttonStellarium").offsetWidth);
+    hStellarium = Number(document.getElementById("buttonStellarium").offsetHeight);
+
+    pCharlette = Number(document.getElementById("buttonCharlette").offsetLeft);
+    wCharlette = Number(document.getElementById("buttonCharlette").offsetWidth);
+    hCharlette = Number(document.getElementById("buttonCharlette").offsetHeight);
+
+
 
 
     WindowWidth = window.innerWidth;
@@ -122,7 +161,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
 
   
         w = Math.max(projectValue +  Math.sign(evt.deltaY),0)
-        if(0 < w && w < 13){
+        if(0 < w && w < 22){
             scrollContainer.style.scrollBehavior = "initial"
             projectSelect(w)
             }
@@ -235,53 +274,90 @@ function projectSelect(x){
             document.getElementById("corps").style.opacity = "1"    
 
         if (x == 1){
-            window.location.href = "..objet/chaise-Pol/"
+                window.location.href = "../qui-suis-je/"
+
         }
 
         if (x == 2){
-            window.location.href = "../objet/nasa/"
+            window.location.href = "../"
+
         }
 
         if (x == 3){
-            window.location.href = "../objet/meuble-a-bazar/"
+            window.location.href = ""
         }
-        
+
         if (x == 4){
-            window.location.href = "../objet/Pol/"
+            window.location.href = "..objet/chaise-Pol/"
         }
 
         if (x == 5){
-            window.location.href = ""       
+            window.location.href = "../objet/nasa/"
         }
 
         if (x == 6){
-            window.location.href = "../objet/mobilier-grillage/"
+            window.location.href = "../"
         }
 
         if (x == 7){
-            window.location.href = "../objet/lampe-double-clip/"
+            window.location.href = ""       
         }
 
         if (x == 8){
-            window.location.href = ""
-        }
-        
-        if (x == 9){
-            window.location.href = "../qui-suis-je/"
-        }
-        
-        if (x == 10){
             window.location.href = "../objet/lampe-ressort/"
         }
 
+        if (x == 9){
+            window.location.href = "../objet/lampe-double-clip/"
+        }
+
+        if (x == 10){
+            window.location.href = "../"
+        }
+
         if (x == 11){
-            window.location.href = "../objet/vase-suspendu/"
+            window.location.href = "../objet/meuble-a-bazar/"
         }
 
         if (x == 12){
+            window.location.href = "../objet/vase-suspendu/"
+        }
+
+        if (x == 13){
+            window.location.href = "../"
+        }
+
+        if (x == 14){
+            window.location.href = "../"
+        }
+
+        if (x == 15){
+            window.location.href = "../"
+        }
+        
+        if (x == 16){
+            window.location.href = "../objet/Pol/"
+        }
+
+        if (x == 17){
             window.location.href = ""
         }
 
+        if (x == 18){
+            window.location.href = "../"
+        }
+
+        if (x == 19){
+            window.location.href = "../objet/mobilier-grillage/"
+        }
+
+        if (x == 20){
+            window.location.href = "../"
+        }
+
+        if (x == 21){
+            window.location.href = "../"
+        }
 
 
         }
@@ -323,179 +399,104 @@ function projectSelect(x){
 function scrollTo(x){
 
     if(x == 1){
-        center.scrollTo(projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
-
+        center.scrollTo(projectCenter*WindowWidth+(pAPropos+0.5*wAPropos), 0)
     }
 
     if(x == 2){
+        center.scrollTo(projectCenter*WindowWidth+(pTerresLointaines+0.5*wTerresLointaines), 0)
+    }
+
+    if(x == 3){
+        center.scrollTo(projectCenter*WindowWidth+(pLampeIcosaedre+0.5*wLampeIcosaedre), 0)
+    }
+
+    if(x == 4){
+        center.scrollTo(projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
+    }
+
+    if(x == 5){
         center.scrollTo(projectCenter*WindowWidth+(pNasa+0.5*wNasa), 0);
         // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
     }
 
-    if(x == 3){
-        center.scrollTo(projectCenter*WindowWidth+(pMeubleBazar+0.5*wMeubleBazar), 0)
-    }
-
-    if(x == 4){
-        center.scrollTo(projectCenter*WindowWidth+(pPol+0.5*wPol), 0)
-    }
-
-    if(x == 5){
-        center.scrollTo(projectCenter*WindowWidth+(pTableBasse+0.5*wTableBasse), 0)
-    }
-
     if(x == 6){
-        center.scrollTo(projectCenter*WindowWidth+(pMobilierGrillage+0.5*wMobilierGrillage), 0)
+        center.scrollTo(projectCenter*WindowWidth+(pFabriqueABrac+0.5*wFabriqueABrac), 0)
     }
 
     if(x == 7){
-        center.scrollTo(projectCenter*WindowWidth+(pLampeColette+0.5*wLampeColette), 0)
+        center.scrollTo(projectCenter*WindowWidth+(pTableBasse+0.5*wTableBasse), 0)
     }
 
     if(x == 8){
-        center.scrollTo(projectCenter*WindowWidth+(pLampeIcosaedre+0.5*wLampeIcosaedre), 0)
-    }
-
-    if(x == 9){
-        center.scrollTo(projectCenter*WindowWidth+(pAPropos+0.5*wAPropos), 0)
-    }
-
-    if(x == 10){
         center.scrollTo(projectCenter*WindowWidth+(pLampeRessort+0.5*wLampeRessort), 0)
     }
 
+    if(x == 9){
+        center.scrollTo(projectCenter*WindowWidth+(pLampeColette+0.5*wLampeColette), 0)
+    }
+
+    if(x == 10){
+        center.scrollTo(projectCenter*WindowWidth+(pChmupTheDog+0.5*wChmupTheDog), 0)
+    }
+
     if(x == 11){
-        center.scrollTo(projectCenter*WindowWidth+(pVaseSuspendu+0.5*wVaseSuspendu), 0)
+        center.scrollTo(projectCenter*WindowWidth+(pMeubleBazar+0.5*wMeubleBazar), 0)
     }
 
     if(x == 12){
+        center.scrollTo(projectCenter*WindowWidth+(pVaseSuspendu+0.5*wVaseSuspendu), 0)
+    }
+
+    if(x == 13){
+        center.scrollTo(projectCenter*WindowWidth+(pParlersEspace+0.5*wParlersEspace), 0)
+    }
+
+    if(x == 14){
+        center.scrollTo(projectCenter*WindowWidth+(pPommeDeTerre+0.5*wPommeDeTerre), 0)
+    }
+
+    if(x == 15){
+        center.scrollTo(projectCenter*WindowWidth+(pCarnets+0.5*wCarnets), 0)
+    }
+
+    if(x == 16){
+        center.scrollTo(projectCenter*WindowWidth+(pPol+0.5*wPol), 0)
+    }
+
+    if(x == 17){
         center.scrollTo(projectCenter*WindowWidth+(POllas+0.5*wOllas), 0);
 
     }
+
+    if(x == 18){
+        center.scrollTo(projectCenter*WindowWidth+(pIllustrations+0.5*wIllustrations), 0)
+    }
+
+
+    if(x == 19){
+        center.scrollTo(projectCenter*WindowWidth+(pMobilierGrillage+0.5*wMobilierGrillage), 0)
+    }
+
+    if(x == 20){
+        center.scrollTo(projectCenter*WindowWidth+(pStellarium+0.5*wStellarium), 0)
+    }
+
+    if(x == 21){
+        center.scrollTo(projectCenter*WindowWidth+(pCharlette+0.5*wCharlette), 0)
+    }
+
+
+
+
+
+
+
+
 }
 
 function projectHilight(x){
 
-    if(x == 12){
-        a = wOllas;
-        b = hOllas;
-        document.getElementById("Ollas").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("Ollas").style.zIndex = 10
-
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
     if(x == 1){
-        a = wChaiseAttache;
-        b = hChaiseAttache;
-        document.getElementById("chaiseAttache").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("chaiseAttache").style.zIndex = 10
-
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 2){
-        a = wNasa;
-        b = hNasa;
-        document.getElementById("nasa").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("nasa").style.zIndex = 10
-
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-
-        // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
-    }
-
-    if(x == 3){
-        a = wMeubleBazar;
-        b = hMeubleBazar;
-        document.getElementById("meubleBazar").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("meubleBazar").style.zIndex = 10
-
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 4){
-        a = wPol;
-        b = hPol;
-        document.getElementById("Pol").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("Pol").style.zIndex = 10
-    
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 5){
-        a = wTableBasse;
-        b = hTableBasse;
-        document.getElementById("TableBasse").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("TableBasse").style.zIndex = 10
-    
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 6){
-        a = wMobilierGrillage;
-        b = hMobilierGrillage;
-        document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("MobilierGrillage").style.zIndex = 10
-    
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 7){
-        a = wLampeColette;
-        b = hLampeColette;
-        document.getElementById("LampeColette").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("LampeColette").style.zIndex = 10
-    
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 8){
-        a = wLampeIcosaedre;
-        b = hLampeIcosaedre;
-        document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
-        document.getElementById("LampeIcosaedre").style.zIndex = 10
-    
-        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
-        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
-        document.getElementById("spotMiddle").style.width = a+"px"
-        // document.getElementById("buttonOut").style.height = b+"px"
-    }
-
-    if(x == 9){
         a = wAPropos;
         b = hAPropos;
         const non = document.getElementById("APropos").getElementsByClassName("backgroundColor2");
@@ -512,7 +513,89 @@ function projectHilight(x){
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
-    if(x == 10){
+    if(x == 2){
+        a = wTerresLointaines;
+        b = hTerresLointaines;
+        document.getElementById("TerresLointaines").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("TerresLointaines").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 3){
+        a = wLampeIcosaedre;
+        b = hLampeIcosaedre;
+        document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("LampeIcosaedre").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 4){
+        a = wChaiseAttache;
+        b = hChaiseAttache;
+        document.getElementById("chaiseAttache").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("chaiseAttache").style.zIndex = 10
+
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+
+
+    if(x == 5){
+        a = wNasa;
+        b = hNasa;
+        document.getElementById("nasa").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("nasa").style.zIndex = 10
+
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+
+        // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
+    }
+
+    if(x == 6){
+        a = wFabriqueABrac;
+        b = hFabriqueABrac;
+        document.getElementById("FabriqueABrac").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("FabriqueABrac").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 7){
+        a = wTableBasse;
+        b = hTableBasse;
+        document.getElementById("TableBasse").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("TableBasse").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 8){
         a = wLampeRessort;
         b = hLampeRessort;
         document.getElementById("LampeRessort").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
@@ -525,7 +608,47 @@ function projectHilight(x){
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
+    if(x == 9){
+        a = wLampeColette;
+        b = hLampeColette;
+        document.getElementById("LampeColette").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("LampeColette").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 10){
+        a = wChmupTheDog;
+        b = hChmupTheDog;
+        document.getElementById("ChmupTheDog").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("ChmupTheDog").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+
     if(x == 11){
+        a = wMeubleBazar;
+        b = hMeubleBazar;
+        document.getElementById("meubleBazar").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("meubleBazar").style.zIndex = 10
+
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 12){
         a = wVaseSuspendu;
         b = hVaseSuspendu;
         document.getElementById("VaseSuspendu").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
@@ -537,6 +660,133 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
         // document.getElementById("buttonOut").style.height = b+"px"
     }
+
+    if(x == 13){
+        a = wParlersEspace;
+        b = hParlersEspace;
+        document.getElementById("ParlersEspace").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("ParlersEspace").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 14){
+        a = wPommeDeTerre;
+        b = hPommeDeTerre;
+        document.getElementById("PommeDeTerre").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("PommeDeTerre").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 15){
+        a = wCarnets;
+        b = hCarnets;
+        document.getElementById("Carnets").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Carnets").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 16){
+        a = wPol;
+        b = hPol;
+        document.getElementById("Pol").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Pol").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+
+    if(x == 17){
+        a = wOllas;
+        b = hOllas;
+        document.getElementById("Ollas").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Ollas").style.zIndex = 10
+
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 18){
+        a = wIllustrations;
+        b = hIllustrations;
+        document.getElementById("Illustrations").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Illustrations").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 19){
+        a = wMobilierGrillage;
+        b = hMobilierGrillage;
+        document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("MobilierGrillage").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 20){
+        a = wStellarium;
+        b = hStellarium;
+        document.getElementById("Stellarium").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Stellarium").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 21){
+        a = wCharlette;
+        b = hCharlette;
+        document.getElementById("Charlette").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("Charlette").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -782,3 +1032,175 @@ buttonOllas.addEventListener("mouseout", function(){
 
 
 })
+
+// TerresLointaines
+
+let buttonTerresLointaines = document.getElementById("buttonTerresLointaines")
+buttonTerresLointaines.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("TerresLointaines").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonTerresLointaines.addEventListener("mouseout", function(){
+
+    document.getElementById("TerresLointaines").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// FabriqueABrac
+
+let buttonFabriqueABrac = document.getElementById("buttonFabriqueABrac")
+buttonFabriqueABrac.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("FabriqueABrac").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonFabriqueABrac.addEventListener("mouseout", function(){
+
+    document.getElementById("FabriqueABrac").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// ChmupTheDog
+
+let buttonChmupTheDog = document.getElementById("buttonChmupTheDog")
+buttonChmupTheDog.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("ChmupTheDog").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonChmupTheDog.addEventListener("mouseout", function(){
+
+    document.getElementById("ChmupTheDog").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// ParlersEspace
+
+let buttonParlersEspace = document.getElementById("buttonParlersEspace")
+buttonParlersEspace.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("ParlersEspace").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonParlersEspace.addEventListener("mouseout", function(){
+
+    document.getElementById("ParlersEspace").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// PommeDeTerre
+
+let buttonPommeDeTerre = document.getElementById("buttonPommeDeTerre")
+buttonPommeDeTerre.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("PommeDeTerre").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonPommeDeTerre.addEventListener("mouseout", function(){
+
+    document.getElementById("PommeDeTerre").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Carnets
+
+let buttonCarnets = document.getElementById("buttonCarnets")
+buttonCarnets.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Carnets").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonCarnets.addEventListener("mouseout", function(){
+
+    document.getElementById("Carnets").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Illustrations
+
+let buttonIllustrations = document.getElementById("buttonIllustrations")
+buttonIllustrations.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Illustrations").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonIllustrations.addEventListener("mouseout", function(){
+
+    document.getElementById("Illustrations").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Stellarium
+
+let buttonStellarium = document.getElementById("buttonStellarium")
+buttonStellarium.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Stellarium").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonStellarium.addEventListener("mouseout", function(){
+
+    document.getElementById("Stellarium").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// Charlette
+
+let buttonCharlette = document.getElementById("buttonCharlette")
+buttonCharlette.addEventListener("mouseover", function(){
+
+    
+    document.getElementById("Charlette").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonCharlette.addEventListener("mouseout", function(){
+
+    document.getElementById("Charlette").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+

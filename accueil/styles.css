@@ -17,8 +17,8 @@
 
     /* accueil */
 
-    --w-proj : 5500px;
-    --w-projAbs : 5500;
+    --w-proj : 12000px;
+    --w-projAbs : 12000;
     --h-proj : 1084px;
     --h-projAbs : 1084;
     --h-center : 90dvh;
@@ -29,42 +29,42 @@
     /* projects dimensions */
     --scaleFactor : 1;
 
-    --p-Ollas : calc(3041*var(--scaleFactor));
-    --w-Ollas : calc(71*var(--scaleFactor));
-    --h-Ollas : calc(88*var(--scaleFactor));
-    --o-Ollas : calc(391*var(--scaleFactor));
+    --p-Ollas : calc(6846*var(--scaleFactor));
+    --w-Ollas : calc(288*var(--scaleFactor));
+    --h-Ollas : calc(115*var(--scaleFactor));
+    --o-Ollas : calc(294*var(--scaleFactor));
 
-    --p-chaiseAttache : calc(1685*var(--scaleFactor));
+    --p-chaiseAttache : calc(2677*var(--scaleFactor));
     --w-chaiseAttache : calc(245*var(--scaleFactor));
     --h-chaiseAttache : calc(350*var(--scaleFactor));
 
 
-    --p-Nasa : calc(1995*var(--scaleFactor));
+    --p-Nasa : calc(3039*var(--scaleFactor));
     --w-Nasa : calc(670*var(--scaleFactor));
     --h-Nasa : calc(380*var(--scaleFactor));
 
-    --p-MeubleBazar : calc(2736*var(--scaleFactor));
+    --p-MeubleBazar : calc(4744*var(--scaleFactor));
     --w-MeubleBazar : calc(420*var(--scaleFactor));
     --h-MeubleBazar : calc(395*var(--scaleFactor));
 
-    --p-Pol : calc(3259*var(--scaleFactor));
+    --p-Pol : calc(6787*var(--scaleFactor));
     --w-Pol : calc(401*var(--scaleFactor));
     --h-Pol : calc(294*var(--scaleFactor));
 
-    --p-TableBasse : calc(3687*var(--scaleFactor));
+    --p-TableBasse : calc(3822*var(--scaleFactor));
     --w-TableBasse : calc(505*var(--scaleFactor));
     --h-TableBasse : calc(155*var(--scaleFactor));
 
-    --p-MobilierGrillage : calc(4221*var(--scaleFactor));
+    --p-MobilierGrillage : calc(7450*var(--scaleFactor));
     --w-MobilierGrillage : calc(597*var(--scaleFactor));
     --h-MobilierGrillage : calc(386*var(--scaleFactor));
 
-    --p-LampeColette : calc(3199*var(--scaleFactor));
+    --p-LampeColette : calc(4087*var(--scaleFactor));
     --w-LampeColette : calc(189*var(--scaleFactor));
     --h-LampeColette : calc(93*var(--scaleFactor));
     --o-LampeColette : calc(700*var(--scaleFactor));
 
-    --p-LampeIcosaedre : calc(3662*var(--scaleFactor));
+    --p-LampeIcosaedre : calc(2530*var(--scaleFactor));
     --w-LampeIcosaedre : calc(302*var(--scaleFactor));
     --h-LampeIcosaedre : calc(361*var(--scaleFactor));
 
@@ -72,15 +72,63 @@
     --w-APropos : calc(772*var(--scaleFactor));
     --h-APropos : calc(576*var(--scaleFactor));
 
-    --p-LampeRessort : calc(3800*var(--scaleFactor));
+    --p-LampeRessort : calc(3812*var(--scaleFactor));
     --w-LampeRessort : calc(234*var(--scaleFactor));
     --h-LampeRessort : calc(460*var(--scaleFactor));
     --o-LampeRessort : calc(145*var(--scaleFactor));
 
-    --p-VaseSuspendu : calc(2275*var(--scaleFactor));
+    --p-VaseSuspendu : calc(4765*var(--scaleFactor));
     --w-VaseSuspendu : calc(257*var(--scaleFactor));
     --h-VaseSuspendu : calc(350*var(--scaleFactor));
-    --o-VaseSuspendu : calc(370*var(--scaleFactor));
+    --o-VaseSuspendu : calc(395*var(--scaleFactor));
+
+    --p-ChmupTheDog : calc(4155*var(--scaleFactor));
+    --w-ChmupTheDog : calc(424*var(--scaleFactor));
+    --h-ChmupTheDog : calc(386*var(--scaleFactor));
+    --o-ChmupTheDog : calc(180*var(--scaleFactor));
+
+    --p-TerresLointaines : calc(1926*var(--scaleFactor));
+    --w-TerresLointaines : calc(707*var(--scaleFactor));
+    --h-TerresLointaines : calc(208*var(--scaleFactor));
+    --o-TerresLointaines : calc(300*var(--scaleFactor));
+
+    --p-FabriqueABrac : calc(3081*var(--scaleFactor));
+    --w-FabriqueABrac : calc(652*var(--scaleFactor));
+    --h-FabriqueABrac : calc(481*var(--scaleFactor));
+    --o-FabriqueABrac : calc(380*var(--scaleFactor));
+
+    --p-ParlersEspace : calc(5092*var(--scaleFactor));
+    --w-ParlersEspace : calc(837*var(--scaleFactor));
+    --h-ParlersEspace : calc(532*var(--scaleFactor));
+    --o-ParlersEspace : calc(500*var(--scaleFactor));
+
+    --p-PommeDeTerre : calc(5619*var(--scaleFactor));
+    --w-PommeDeTerre : calc(653*var(--scaleFactor));
+    --h-PommeDeTerre : calc(586*var(--scaleFactor));
+    --o-PommeDeTerre : calc(0*var(--scaleFactor));
+
+    --p-Carnets : calc(6417*var(--scaleFactor));
+    --w-Carnets : calc(238*var(--scaleFactor));
+    --h-Carnets : calc(335*var(--scaleFactor));
+    --o-Carnets : calc(370*var(--scaleFactor));
+
+    --p-Illustrations : calc(6813*var(--scaleFactor));
+    --w-Illustrations : calc(657*var(--scaleFactor));
+    --h-Illustrations : calc(442*var(--scaleFactor));
+    --o-Illustrations : calc(450*var(--scaleFactor));
+
+    --p-Stellarium : calc(8184*var(--scaleFactor));
+    --w-Stellarium : calc(882*var(--scaleFactor));
+    --h-Stellarium : calc(598*var(--scaleFactor));
+    --o-Stellarium : calc(0*var(--scaleFactor));
+
+    --p-Charlette : calc(9193*var(--scaleFactor));
+    --w-Charlette : calc(761*var(--scaleFactor));
+    --h-Charlette : calc(589*var(--scaleFactor));
+    --o-Charlette : calc(0*var(--scaleFactor));
+
+
+
 
 }
 
@@ -311,6 +359,59 @@ h2{
     left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 }
 
+#ChmupTheDog{
+
+    bottom: calc((var(--o-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#TerresLointaines{
+
+    bottom: calc((var(--o-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#FabriqueABrac{
+
+    bottom: calc((var(--o-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#ParlersEspace{
+
+    bottom: calc((var(--o-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#PommeDeTerre{
+
+    bottom: calc((var(--o-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Carnets{
+
+    bottom: calc((var(--o-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Illustrations{
+
+    bottom: calc((var(--o-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Stellarium{
+
+    bottom: calc((var(--o-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Charlette{
+
+    bottom: calc((var(--o-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
 
 
 /* .shadow{
@@ -664,6 +765,97 @@ h2{
 
 
 }
+
+#buttonChmupTheDog{
+
+    width: calc((var(--w-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonTerresLointaines{
+
+    width: calc((var(--w-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonFabriqueABrac{
+
+    width: calc((var(--w-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonParlersEspace{
+
+    width: calc((var(--w-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonPommeDeTerre{
+
+    width: calc((var(--w-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonCarnets{
+
+    width: calc((var(--w-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonIllustrations{
+
+    width: calc((var(--w-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonStellarium{
+
+    width: calc((var(--w-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonCharlette{
+
+    width: calc((var(--w-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
 
 
 
