@@ -279,16 +279,18 @@ function projectSelect(x){
         }
 
         if (x == 2){
-            window.location.href = "../"
+            window.location.href = "../mediation/terres-lointaines/"
 
         }
 
         if (x == 3){
-            window.location.href = ""
+            null
+            // window.location.href = "../objet/lampe-icosaedre/"
         }
 
         if (x == 4){
-            window.location.href = "..objet/chaise-Pol/"
+            null
+            // window.location.href = "..objet/chaise-Pol/"
         }
 
         if (x == 5){
@@ -296,11 +298,12 @@ function projectSelect(x){
         }
 
         if (x == 6){
-            window.location.href = "../"
+            window.location.href = "../diplôme/"
         }
 
         if (x == 7){
-            window.location.href = ""       
+            null
+            // window.location.href = "../objet/table-basse/"       
         }
 
         if (x == 8){
@@ -312,7 +315,7 @@ function projectSelect(x){
         }
 
         if (x == 10){
-            window.location.href = "../"
+            window.location.href = "../mediation/chmup-the-dog"
         }
 
         if (x == 11){
@@ -324,15 +327,15 @@ function projectSelect(x){
         }
 
         if (x == 13){
-            window.location.href = "../"
+            window.location.href = "../memoire/"
         }
 
         if (x == 14){
-            window.location.href = "../"
+            window.location.href = "../mediation/pomme-de-terre/"
         }
 
         if (x == 15){
-            window.location.href = "../"
+            window.location.href = "../illustration/carnets/"
         }
         
         if (x == 16){
@@ -340,11 +343,12 @@ function projectSelect(x){
         }
 
         if (x == 17){
-            window.location.href = ""
+            null
+            // window.location.href = "../objet/ollas"
         }
 
         if (x == 18){
-            window.location.href = "../"
+            window.location.href = "../illustration/illustrations/"
         }
 
         if (x == 19){
@@ -352,11 +356,13 @@ function projectSelect(x){
         }
 
         if (x == 20){
-            window.location.href = "../"
+            null
+            // window.location.href = "../objet/stellarium/"
         }
 
         if (x == 21){
-            window.location.href = "../"
+            null
+            // window.location.href = "../objet/charlette/"
         }
 
 
@@ -510,6 +516,7 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+        document.getElementById("ProjectText").innerHTML = "AH NON HEIN"
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -523,6 +530,11 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Terres lointaines"
+        document.getElementById("ProjectText").innerHTML = "Ce court métrage raconte, inspiré du 'Monde d'Edena' écrit et dessiné par Moebius, raconte l'histoire d'un être humanoïde s'écrasant sur une terre inconnue, qu'il va devoir arpenter et découvrir."
+
+        
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -536,6 +548,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Lampe Icosaèdre"
+        document.getElementById("ProjectText").innerHTML = "Luminaire fabriqué à partir d'une ancienne maquette de projet. Il offre une lumière diffuse idéale pour travailler."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -549,6 +565,11 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Chaise Pol"
+        document.getElementById("ProjectText").innerHTML = "Cette assise reprend le principe d'assemblage d'une de mes autres projets."
+
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -564,6 +585,12 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Nasa"
+        document.getElementById("ProjectText").innerHTML = "Les Petits débrouillards, un réseau participant au renouveau permanent de l’éducation populaire, a consulté l’ENSCI pour réfléchir sur la création d’un module pour scooter. Celui-ci permettrait aux intervenants du réseau de proposer des activités scientifiques, créatives et ludiques aux les jeunes vivant dans des zones délaissées.<br><br> Avec Adèle Nyitrai, nous avons proposé un module déployable, servant à la fois de contenant au matériel nécessaire aux activités et de plan de travail pour les effectuer."
+
+
+
         // document.getElementById("buttonOut").style.height = b+"px"
 
         // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
@@ -579,6 +606,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "La Fabrique à Brac"
+        document.getElementById("ProjectText").innerHTML = "Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités.<br>Grâce à leur forme, leur matière, leur abondance, ils peuvent devenir d’excellentes ressources pour créer d’autres objets.<br><br>A travers la Fabrique à Brac, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -592,6 +623,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Table Basse"
+        document.getElementById("ProjectText").innerHTML = "Petite table fabriquée à partir d'un ancien meuble recyclé"
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -605,6 +640,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Lampe Ressort"
+        document.getElementById("ProjectText").innerHTML = "Ce projet est un objet manifeste, un prototype de lampe d’architecte dont les principes de fonctionnement sont mis en valeur. L’objectif est de rendre l’objet plus compréhensible et tangible pour l’utilisateur."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -618,6 +657,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Lampe Colette"
+        document.getElementById("ProjectText").innerHTML = "Cette applique murale orientable est conçue autour de la pince à dessin, objet industriel que j’ai détourné de son utilisation principale pour en faire une pièce d’assemblage à multiples facettes."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -631,6 +674,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Chmup The Dog"
+        document.getElementById("ProjectText").innerHTML = "Chmup, chien fidèle aux pouvoirs télékinésiques, part à la recherche de son maitre fait prisonnier dans un repaire de scientifiques.<br><br>Ce projet personnel, jeu encore à l’état de prototype, est une sorte de souvenir nostalgique de mes heures passées à jouer. Il est né d’une envie de passer du côté de la production des jeux vidéos, de l’autre coté de l’écran."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -645,6 +692,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Meuble à bazar"
+        document.getElementById("ProjectText").innerHTML = "J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler.<br><br>Je l'ai conçu à partir de matière essentiellement récupérée, dont je disposais à proximité (volige et massif de peuplier, contreplaqué et vis récupérées)"
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -658,6 +709,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Vase Suspendu"
+        document.getElementById("ProjectText").innerHTML = "Ce projet de 2 semaines a été réalisé en collaboration avec Sidonie Couëdel.<br><br>Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet.<br><br> Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -671,6 +726,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Parlers Espace"
+        document.getElementById("ProjectText").innerHTML = "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.<br><br>Dans ce mémoire, je pars à l'exploration de ces 'parlers espace' qui me fascinent. J'en propose une lecture tridimensionnelle puis je tente de montrer l'importance de poser un regard défigé sur ce qui compose nos quotidiens. Pour mieux les faire nôtres et pour cultiver notre autonomie et notre individualité dans notre vie de tous les jours."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -684,6 +743,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Pomme de terre"
+        document.getElementById("ProjectText").innerHTML = "Une pomme de terre nostalgique du passé se réveille dans une caisse. Elle espère être cuisinée comme ses aïeules, mais le monde de la cuisine a bien changé...<br><br>Ce court métrage d’animation, réalisé avec Théophile Perrot lors d’un projet libre de 3 semaines, tente d’interroger le spectateur sur le lien qu’il entretient avec la production de ce qu’il consomme. Après avoir vu le traitement que subissent ses plats préparés, ne devrait il pas prendre le temps de cuisiner lui même ses repas ?<br><br>durée 3’45 "
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -697,6 +760,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Carnets"
+        document.getElementById("ProjectText").innerHTML = "Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis...<br><br>J'y dessine et j'y écrit ce que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi. "
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -710,9 +777,12 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Pol"
+        document.getElementById("ProjectText").innerHTML = "Peut-on imaginer des scénographies temporaires qui ne soient pas génératrices de grandes quantités de déchets ?<br><br>Issu d’un partenariat avec la galerie d’art Bertrand Grimont, ce projet est une tentative de contrepied à la tendance actuelle des scénographies jetables."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
-
 
     if(x == 17){
         a = wOllas;
@@ -724,6 +794,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Ollas"
+        document.getElementById("ProjectText").innerHTML = "J'ai imaginé cette ollas en terre cuite dans le cadre de mon stage chez les Transfarmers. "
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -737,6 +811,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Illustrations"
+        document.getElementById("ProjectText").innerHTML = ""
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -750,6 +828,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Mobilier Grillagé"
+        document.getElementById("ProjectText").innerHTML = "Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?<br><br>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -763,6 +845,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Stellarium"
+        document.getElementById("ProjectText").innerHTML = "Cet observatoire stellaire, qui est un de mes premiers projets, a été réalisé dans les cadre des Travaux Personnels Encadrés de première. <br><br> Celui ci propose au spectateur une visite guidée des exoplanètes potentiellement habitables proches de la terre."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 
@@ -776,6 +862,10 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Charlette"
+        document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation du premier prototype."
+
         // document.getElementById("buttonOut").style.height = b+"px"
     }
 

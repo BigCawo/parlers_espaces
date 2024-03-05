@@ -70,16 +70,16 @@
                 </div>
 
 
-if(x == 4){
+if(x == b){
     center.scrollTo(projectCenter*WindowWidth+(pBase+0.5*wBase), 0)
 }
 
 
-pBase = Number(document.getElementById("buttonBase").offsetLeft);
-wBase = Number(document.getElementById("buttonBase").offsetWidth);
-hBase = Number(document.getElementById("buttonBase").offsetHeight);
+    pBase = Number(document.getElementById("buttonBase").offsetLeft);
+    wBase = Number(document.getElementById("buttonBase").offsetWidth);
+    hBase = Number(document.getElementById("buttonBase").offsetHeight);
 
-if(x == 3){
+if(x == b){
     a = wMBase;
     b = hMBase;
     document.getElementById("mBase").style.zIndex = 10
