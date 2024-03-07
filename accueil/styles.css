@@ -2,29 +2,35 @@
 
 /* html{scroll-behavior: smooth;} */
 
+@font-face { font-family: Fababrac-titre; src: url('../assets/fonts/Fababrac-GTitre.otf'); } 
+@font-face { font-family: Fababrac; src: url('../assets/fonts/Fababrac-Minuscule.otf'); } 
+@font-face { font-family: Fababrac-soustitre; src: url('../assets/fonts/Fababrac-Soustitre.otf'); } 
+
+
+
 :root{
 
     /* general */
 
-    --ff-t:Gabarito;
-    --ff-st:Roboto;
+    --ff-t:Fababrac-titre;
+    --ff-st:Fababrac;
     --ff-p:Roboto;
     --ff-c:Gabarito;
-    --fs-t:1.5em;
-    --fs-st : 1.25em;
-    --fs-p : 0.75em;
+    --fs-t: 2dvw;
+    --fs-st : 1.25dvw;
+    --fs-p : 1dvw;
     --fs-c : 1em;
 
     /* accueil */
 
     --w-proj : 12000px;
-    --w-projAbs : 12000;
+    --w-projAbs : 6000;
     --h-proj : 1084px;
     --h-projAbs : 1084;
     --h-center : 90dvh;
     --h-header : 5dvh;
-    --projRatio : calc(var(--w-projAbs)/var(--h-projAbs));
-    --w-desc : 25dvw;
+    --projRatio: calc(var(--w-projAbs)/var(--h-projAbs));
+    --w-desc : 35dvw;
 
     /* projects dimensions */
     --scaleFactor : 1;
@@ -32,7 +38,7 @@
     --p-Ollas : calc(6846*var(--scaleFactor));
     --w-Ollas : calc(288*var(--scaleFactor));
     --h-Ollas : calc(115*var(--scaleFactor));
-    --o-Ollas : calc(294*var(--scaleFactor));
+    --o-Ollas : calc(287*var(--scaleFactor));
 
     --p-chaiseAttache : calc(2677*var(--scaleFactor));
     --w-chaiseAttache : calc(245*var(--scaleFactor));
@@ -80,7 +86,7 @@
     --p-VaseSuspendu : calc(4765*var(--scaleFactor));
     --w-VaseSuspendu : calc(257*var(--scaleFactor));
     --h-VaseSuspendu : calc(350*var(--scaleFactor));
-    --o-VaseSuspendu : calc(395*var(--scaleFactor));
+    --o-VaseSuspendu : calc(392*var(--scaleFactor));
 
     --p-ChmupTheDog : calc(4155*var(--scaleFactor));
     --w-ChmupTheDog : calc(424*var(--scaleFactor));
@@ -95,7 +101,7 @@
     --p-FabriqueABrac : calc(3081*var(--scaleFactor));
     --w-FabriqueABrac : calc(652*var(--scaleFactor));
     --h-FabriqueABrac : calc(481*var(--scaleFactor));
-    --o-FabriqueABrac : calc(380*var(--scaleFactor));
+    --o-FabriqueABrac : calc(370*var(--scaleFactor));
 
     --p-ParlersEspace : calc(5092*var(--scaleFactor));
     --w-ParlersEspace : calc(837*var(--scaleFactor));
@@ -136,6 +142,7 @@
 
 body{
     font-size: 100%;
+
 }
 
 p{  
@@ -157,15 +164,37 @@ h2{
     font-size: var(--fs-st);
 }
 
+h3{
+    font-family: var(--ff-t);
+    font-size: 7dvh;
+}
+
+
+#entete{
+    position: absolute;
+    width: 100dvw;
+    margin-top: 10dvh;
+    margin-left: calc(var(--p-APropos)*1px) ;
+}
+#entete p{
+    font-family: var(--ff-st);
+    font-size: 4dvh;
+
+}
+
 #header{
+    position: relative;
+    z-index: 5;
     background-color: rgba(0, 0, 0, 0.55) ;
     height: var(--h-header) ;
+    border-bottom: 2px solid black;
 }
 
 #center{
+    
     scroll-behavior: smooth;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+
+
     position: relative;
     z-index: 0;
 
@@ -175,14 +204,24 @@ h2{
     overflow-y: hidden;
 }
 
+button{
+    cursor: zoom-in;
+}
+
+#buttonDesc{
+    cursor: pointer;
+}
+
 
 #footer{
     background-color: rgba(0, 0, 0, 0.50) ;
     position: relative;
+    z-index: 5;
     height: calc(100dvh - var(--h-header) - var(--h-center) ) ;
     /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
     /* overflow: hidden; */
     /* margin: 1dvh; */
+    border-top: 2px solid black;
 }
 
 #projects{
@@ -214,6 +253,7 @@ h2{
 
 
 #maison{
+    left: 100dvw;
     /* position: relative; */
     background-color: rgba(0, 0, 0, 0.2);
     transition: background-color ease 0.25s;
@@ -244,6 +284,8 @@ h2{
     width: auto;
     z-index: 5;
 }
+
+
 
 /* #filter{
     z-index: -5;
@@ -493,6 +535,12 @@ h2{
     z-index: -1;
 }
 
+#spot img{
+    height: var(--h-center);
+}
+
+
+
 #spotMiddle{
     overflow: hidden;
     position: absolute;
@@ -547,11 +595,15 @@ h2{
         border: 2px solid black ;
         border-right: 0;
         border-radius: 5px 0 0 5px;
-        padding: 2dvh;
-        padding-top: 1.5dvh;
+
         overflow: hidden;
         transition: all ease 0.25s;
     } 
+
+    #descContainer{
+        padding: 2dvh;
+        padding-top: 1.5dvh;
+    }
 
     #projectAnimation{
         position: fixed;            
@@ -631,7 +683,47 @@ h2{
         overflow-y: scroll;
     } */
     
+    /* ~~~~~~~~ barre navigation ~~~~~~~~ */
+
+
+.categories {background-color: rgba(127, 255, 212, 0);
+
+    height: 100%;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto ;
+    opacity: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    list-style-type: none;
+    transition: all 0.5s ease;
     
+}
+
+.categories li{
+    margin-left: 3dvh;
+    margin-right: 3dvh;
+    /* text-transform: uppercase; */
+}
+
+#footer ul{
+    display: none;
+}
+
+.button{
+    background: none;
+	color: inherit;
+	border: none;
+
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+}
 
     /* ~~~~~~~~ boutons ~~~~~~~~ */
 
@@ -639,6 +731,7 @@ h2{
     opacity: 0;
     position: absolute; 
     z-index: 50;
+
 }
 
 #buttonOllas{
@@ -877,6 +970,7 @@ h2{
 body{
     font-size: 4.5vw;
 }
+h1{font-size: 200%;}
 
 p{
     font-size: 100%;
@@ -898,6 +992,16 @@ p{
   
 } 
 
+#footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#header ul{
+    display: none;
+}
+
 /* #projects{
     top: 34%;
 } */
@@ -918,4 +1022,13 @@ p{
     padding: 0.5dvh;
 }
 
+#spotMiddle{
+    background-color: rgb(0, 0, 0);
 }
+
+#spot img{
+    visibility: hidden;
+}
+
+}
+
