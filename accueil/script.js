@@ -147,7 +147,9 @@ function loadValues() {
 window.onload = loadValues();
 
 
-
+center.addEventListener("touchmove", function() {
+   descSpawn(0);
+}); 
 
 
 center.addEventListener("scroll", function(){
@@ -155,6 +157,9 @@ center.addEventListener("scroll", function(){
 
     // output2.innerHTML = projectHide;
     // output.innerHTML = this.scrollLeft;
+    if(Mq480.matches && spotsVisible == 0.55)
+    {center.style.overflowX = "hidden" }
+
     if(this.scrollLeft > projectHide){
         document.getElementById("categories").style.opacity = "1";
         document.getElementById("categories2").style.opacity = "1";
@@ -210,8 +215,10 @@ function descSpawn(x){
             document.getElementById("spot").style.visibility = "visible";
             document.getElementById("spot").style.opacity = "0.55";
             descContainer.scrollTop = "0";
-            if(Mq480.matches)
-            {center.style.overflowX = "hidden" }
+
+            // if(Mq480.matches)
+            // {center.style.overflowX = "hidden" }
+
             //disableButtons
             // const disableButtons = document.getElementsByClassName("buttonProject");
             // for (let i = 0; i < disableButtons.length; i++) {

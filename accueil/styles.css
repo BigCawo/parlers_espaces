@@ -1003,24 +1003,44 @@ body{
 h1{font-size: 200%;}
 
 p{
-    font-size: 100%;
+    font-size: 80%;
 }
 
 #projectInformations{
     right: calc(-1*var(--w-desc));
     top: 1dvh;
-    height: calc(var(--h-header) - 2dvh);
+    max-height: calc(var(--h-header) - 2dvh);
     width: var(--w-desc);
     border: 2px solid black ;
     border-right: 0;
     border-radius: 5px 0 0 5px;
-    padding: 1.5dvh;
-    padding-top: 1dvh;
-    overflow: scroll;
+    padding: 0.75dvh;
+    padding-top: 0.5dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     transition: all ease 0.25s;
 
   
 } 
+
+.closeButton{
+    
+    padding-right: 0.75dvh;
+    background: none;
+	color: inherit;
+	border: none;
+    opacity: 0.75;
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+    height: 20%; 
+    position: fixed; 
+    bottom: 0;
+    /* top: calc((1dvh - var(--h-header)));  */
+    right: 0;
+}
 
 #footer ul{
     display: flex;
