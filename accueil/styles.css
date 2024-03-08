@@ -173,12 +173,12 @@ h3{
 #entete{
     position: absolute;
     width: 100dvw;
-    margin-top: 10dvh;
-    margin-left: calc(var(--p-APropos)*1px) ;
+    padding-top: 10dvh;
+    padding-left: 10dvh;
 }
 #entete p{
     font-family: var(--ff-st);
-    font-size: 4dvh;
+    font-size: 3dvh;
 
 }
 
@@ -209,7 +209,9 @@ button{
 }
 
 #buttonDesc{
+    position: relative;
     cursor: pointer;
+    
 }
 
 
@@ -283,6 +285,7 @@ button{
     height: 100%; 
     width: auto;
     z-index: 5;
+    transition: opacity 0.35s ease;
 }
 
 
@@ -304,9 +307,21 @@ button{
 
 
 #APropos{
+    position: absolute;
+    height: 100%; 
+    width: auto;
+    z-index: 5;
+    transition: opacity 0.35s ease;
     bottom: 0;
     left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
+
+}
+
+#APropos img{
+    height: 100%; 
+    position: absolute;
+    z-index: 5;
 
 }
 
@@ -703,7 +718,7 @@ button{
     
 }
 
-.categories li{
+#categories li{
     margin-left: 3dvh;
     margin-right: 3dvh;
     /* text-transform: uppercase; */
@@ -961,8 +976,8 @@ button{
  :root{
     /* --scaleFactor : 0.66; */
     --w-desc : 98dvw;
-    --h-center : 65dvh;
-    --h-header : 30dvh;
+    --h-center : 58dvh;
+    --h-header : 37dvh;
     --p-APropos: 20 ;
     
 }
@@ -995,11 +1010,28 @@ p{
 #footer ul{
     display: flex;
     flex-direction: row;
+    overflow: scroll;
     justify-content: space-around;
+
+}
+
+#footer ul li button{
+    font-family: fababrac;
+    padding-left: 2dvw;
+    padding-right: 1dvw;
 }
 
 #header ul{
     display: none;
+
+}
+
+#entete{
+    width: 100dvw;
+    position: relative;
+    /* top : calc(-1* var(--h-header)); */
+    padding-top: 5dvh;
+    padding-left: 5dvh;
 }
 
 /* #projects{

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
-    <title>Eliot Bernaud Design Dessin Bricolage</title>
+    <title>Eliot Bernaud Design Illustration Bricolage</title>
 
 </head>
 <body id ="corps" onresize="loadValues()">
@@ -16,20 +16,19 @@
             <ul  id="categories" class="categories">
        
                 
-                <li><button id="buttonObjet" class="button" onclick="test(1)" value ="off" >objet</button></li>
-                <li><button id="buttonFiction" class="button" onclick="test(2)" value ="off" >médiation</button></li>
-                <li><button id="buttonDessin" class="button" onclick="test(0)" value ="off" >illustration</button></li>
+                <li><button id="buttonObjet" class="button" onclick="projectSort(1)" value ="off" >Objet</button></li>
+                <li><button id="buttonMediation" class="button" onclick="projectSort(2)" value ="off" >médiation</button></li>
+                <li><button id="buttonIllustration" class="button" onclick="projectSort(0)" value ="off" >illustration</button></li>
+                <li><button id="buttonMultimedia" class="button" onclick="projectSort(3)" value ="off" >multimedia</button></li>
+
                 <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
     
             </ul>
 
-         <!-- <p id="output" style="position: fixed; opacity: 1;">coucou</p>
+          <!-- <p id="output" style="position: fixed; opacity: 1;">coucou</p>
         <p id="output2" style="position: fixed; left :150px;">coucou</p> -->
     </div>
 
-    <div style="visibility: hidden;" id="projectAnimation">
-        <img style="visibility: hidden;" class="animations" src="assets_accueil/0002.gif" alt=""  >
-    </div>
 
     <div id="projectInformations">
         <button style="width: 100%; height: 100%; position: absolute; opacity: 0;" onclick="projectSelect(-1)"></button>
@@ -57,8 +56,7 @@
 
 
             <div id="projects">
-                <button id="buttonDesc" style="opacity: 0;" onclick="descSpawn(0)">
-                </button>
+                <button id="buttonDesc" style="opacity: 0;" onclick="descSpawn(0)"></button>
                
 
 
@@ -85,16 +83,16 @@
                 <div id="entete">
                     <h3>ELIOT BERNAUD</h3>
                     <p>
-                        Design - Conception - Médiation - Illustration
+                        Design - Multimédia - Illustration - Médiation
                     </p>
                 </div>
                 <!-- aPropos -->
 
-                <img style="position: absolute; height: 100%;" src="assets_accueil/textes-info.png" alt="">
+                <!-- <img style="position: absolute; height: 100%;" src="assets_accueil/textes-info.png" alt=""> -->
 
                 <button class="buttonProject" id="buttonAPropos" onclick="projectSelect(1)"></button> 
 
-                <div id="APropos" class=" project">
+                <div id="APropos" class="Mediation Objet Illustration">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0002s_0002_bureau-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0003s_0002_bureau-couleur.png" alt="">
@@ -134,7 +132,7 @@
 
                 <button class="buttonProject" id="buttonTerresLointaines" onclick="projectSelect(2)"></button> 
 
-                <div id="TerresLointaines" class="objet project">
+                <div id="TerresLointaines" class="Multimedia Illustration project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_terres-lointaines-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_terres-lointaines-couleurs.png" alt="">
@@ -149,7 +147,7 @@
 
                 <button class="buttonProject" id="buttonLampeIcosaedre" onclick="projectSelect(3)"></button> 
 
-                <div  id="LampeIcosaedre" class="objet project">
+                <div  id="LampeIcosaedre" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_lampe-icosaedre-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_lampe-icosaedre-couleur.png" alt="">
@@ -164,7 +162,7 @@
 
                 <button class="buttonProject" id="buttonChaiseAttache" onclick="projectSelect(4)"></button> 
 
-                <div id="chaiseAttache" class="objet project">
+                <div id="chaiseAttache" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_chaise-attache-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_chaise-attache-couleur.png" alt="">
@@ -179,7 +177,7 @@
 
                 <button class="buttonProject" id="buttonNasa" onclick="projectSelect(5)"></button> 
 
-                <div id="nasa" class="objet project">
+                <div id="nasa" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_nasa-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_nasa-ap-couleur.png" alt="">
@@ -194,7 +192,7 @@
 
                 <button class="buttonProject" id="buttonFabriqueABrac" onclick="projectSelect(6)"></button> 
 
-                <div id="FabriqueABrac" class="objet project">
+                <div id="FabriqueABrac" class="Mediation Illustration project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_fabrique-a-brac-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_fabrique-a-brac-couleur.png" alt="">
@@ -209,7 +207,7 @@
 
                 <button class="buttonProject" id="buttonTableBasse" onclick="projectSelect(7)"></button> 
 
-                <div id="TableBasse" class="objet project">
+                <div id="TableBasse" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_table-basse-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_table-basse-couleur.png" alt="">
@@ -224,7 +222,7 @@
 
                 <button class="buttonProject" id="buttonLampeRessort" onclick="projectSelect(8)"></button> 
 
-                <div id="LampeRessort" class="objet project">
+                <div id="LampeRessort" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_lampe-ressort-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_lampe-ressort-couleur.png" alt="">
@@ -239,7 +237,7 @@
 
                 <button class="buttonProject" id="buttonLampeColette" onclick="projectSelect(9)"></button> 
 
-                <div id="LampeColette" class="objet project">
+                <div id="LampeColette" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_lampe-colette-double-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_lampe-colette-double-couleur.png" alt="">
@@ -254,7 +252,7 @@
 
                 <button class="buttonProject" id="buttonChmupTheDog" onclick="projectSelect(10)"></button> 
 
-                <div id="ChmupTheDog" class="illustration project">
+                <div id="ChmupTheDog" class="Illustration Multimedia project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_chmup-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_chmup-couleur.png" alt="">
@@ -269,7 +267,7 @@
 
                 <button class="buttonProject" id="buttonMeubleBazar" onclick="projectSelect(11)"></button> 
 
-                <div id="meubleBazar" class="objet project">
+                <div id="meubleBazar" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_meuble-a-bazar-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_meuble-a-bazar-couleur.png" alt="">
@@ -284,7 +282,7 @@
 
                 <button class="buttonProject" id="buttonVaseSuspendu" onclick="projectSelect(12)"></button> 
 
-                <div id="VaseSuspendu" class="objet project">
+                <div id="VaseSuspendu" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_vase-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_vase-couleurs.png" alt="">
@@ -299,7 +297,7 @@
 
                 <button class="buttonProject" id="buttonParlersEspace" onclick="projectSelect(13)"></button> 
 
-                <div id="ParlersEspace" class="objet project">
+                <div id="ParlersEspace" class="Mediation Multimedia Illustration project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_parlers-espace-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_parlers-espace-couleur.png" alt="">
@@ -314,7 +312,7 @@
 
                 <button class="buttonProject" id="buttonPommeDeTerre" onclick="projectSelect(14)"></button> 
 
-                <div id="PommeDeTerre" class="objet project">
+                <div id="PommeDeTerre" class="Mediation Multimedia project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_pomme-de-terre-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_pomme-de-terre-couleur.png" alt="">
@@ -329,7 +327,7 @@
 
                 <button class="buttonProject" id="buttonCarnets" onclick="projectSelect(15)"></button> 
 
-                <div id="Carnets" class="objet project">
+                <div id="Carnets" class="Illustration project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_carnets-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_carnets-couleur.png" alt="">
@@ -344,7 +342,7 @@
 
                 <button class="buttonProject" id="buttonPol" onclick="projectSelect(16)"></button> 
 
-                <div id="Pol" class="objet project">
+                <div id="Pol" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_pol-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_pol-couleur.png" alt="">
@@ -359,7 +357,7 @@
 
                 <button class="buttonProject" id="buttonOllas" onclick="projectSelect(17)"></button> 
 
-                <div id="Ollas" class="objet project">
+                <div id="Ollas" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_Ollas-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_Ollas-couleur.png" alt="">
@@ -374,7 +372,7 @@
 
                 <button class="buttonProject" id="buttonIllustrations" onclick="projectSelect(18)"></button> 
 
-                <div id="Illustrations" class="objet project">
+                <div id="Illustrations" class="Illustration project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_illustrations-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_illustrations-couleur.png" alt="">
@@ -389,7 +387,7 @@
 
                 <button class="buttonProject" id="buttonMobilierGrillage" onclick="projectSelect(19)"></button> 
 
-                <div id="MobilierGrillage" class="objet project">
+                <div id="MobilierGrillage" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_chaise-grillage-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_chaise-grillage-couleur.png" alt="">
@@ -404,7 +402,7 @@
 
                 <button class="buttonProject" id="buttonStellarium" onclick="projectSelect(20)"></button> 
 
-                <div id="Stellarium" class="objet project">
+                <div id="Stellarium" class="Objet Mediation project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_stellarium-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_stellarium-couleur.png" alt="">
@@ -419,7 +417,7 @@
 
                 <button class="buttonProject" id="buttonCharlette" onclick="projectSelect(21)"></button> 
 
-                <div id="Charlette" class="objet project">
+                <div id="Charlette" class="Objet project">
 
                     <img class="background" src="assets_accueil/illustrations_APropos_0000s_0003_charlette-ap.png" alt="">
                     <img class="backgroundColor" src="assets_accueil/illustrations_APropos_0000s_0002_charlette-couleur.png" alt="">
@@ -449,12 +447,14 @@
     <div id="footer">
 
 
-        <ul class="categories">
+        <ul id="categories2" class="categories">
        
                 
-            <li><button id="buttonObjet" class="button" onclick="test(1)" value ="off" >objet</button></li>
-            <li><button id="buttonFiction" class="button" onclick="test(2)" value ="off" >médiation</button></li>
-            <li><button id="buttonDessin" class="button" onclick="test(0)" value ="off" >illustration</button></li>
+            <li><button id="buttonObjet2" class="button" onclick="projectSort(1)" value ="off" >OBJET</button></li>
+            <li><button id="buttonMediation2" class="button" onclick="projectSort(2)" value ="off" >MÉDIATION</button></li>
+            <li><button id="buttonIllustration2" class="button" onclick="projectSort(0)" value ="off" >ILLUSTRATION</button></li>
+            <li><button id="buttonMultimedia2" class="button" onclick="projectSort(3)" value ="off" >MULTIMÉDIA</button></li>
+
             <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
 
         </ul>
@@ -463,5 +463,6 @@
 
     <script src="mediaquieries.js" ></script>
     <script src="script.js"></script>
+    <script src="scriptAccueil.js"></script>
 </body>
 </html>

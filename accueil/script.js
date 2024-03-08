@@ -127,6 +127,7 @@ function loadValues() {
 
 
     WindowWidth = window.innerWidth;
+    
     wAccueil = 0*WindowWidth;
  
 
@@ -134,9 +135,11 @@ function loadValues() {
 
     if (Mq480.matches){
         projectCenter = -0.50
+        projectHide = WindowWidth/2
     }
     else {
         projectCenter = -0.25
+        projectHide = WindowWidth/4
     }  
 
 }; 
@@ -149,11 +152,22 @@ window.onload = loadValues();
 center.addEventListener("scroll", function(){
 
 
-    // output2.innerHTML = w;
-    // output.innerHTML = this.scrollLeft
-    if(this.scrollLeft > 500)
-    {document.getElementById("categories").style.opacity = "1"} 
-    else{document.getElementById("categories").style.opacity = "0"}
+    // output2.innerHTML = projectHide;
+    // output.innerHTML = this.scrollLeft;
+    if(this.scrollLeft > projectHide){
+        document.getElementById("categories").style.opacity = "1";
+        document.getElementById("categories2").style.opacity = "1";
+        const bouiboui = document.getElementsByClassName("project")
+        for (let i = 0; i < bouiboui.length; i++){
+        bouiboui[i].style.opacity = 1;}
+    } 
+    else{
+        document.getElementById("categories").style.opacity = "0"
+        document.getElementById("categories2").style.opacity = "0"
+        const bouiboui = document.getElementsByClassName("project")
+        for (let i = 0; i < bouiboui.length; i++){
+        bouiboui[i].style.opacity = 0;}
+    }
 
 })
 
@@ -181,13 +195,6 @@ scrollContainer.addEventListener('wheel', (evt) => {
 
   
 });
-
-
-function test(){
-    output.innerHTML = "oui"  
-}
-
-
 
 function descSpawn(x){
 
@@ -297,7 +304,7 @@ function projectSelect(x){
 
         }
 
-        if (x == 3){
+        if (projectValue == 3){
             null
             // window.location.href = "../objet/lampe-icosaedre/"
         }
@@ -340,41 +347,41 @@ function projectSelect(x){
             window.location.href = "../objet/vase-suspendu/"
         }
 
-        if (x == 13){
+        if (projectValue == 13){
             window.location.href = "../memoire/"
         }
 
-        if (x == 14){
+        if (projectValue == 14){
             window.location.href = "../mediation/pomme-de-terre/"
         }
 
-        if (x == 15){
+        if (projectValue == 15){
             window.location.href = "../illustration/carnets/"
         }
         
-        if (x == 16){
+        if (projectValue == 16){
             window.location.href = "../objet/Pol/"
         }
 
-        if (x == 17){
+        if (projectValue == 17){
             null
             // window.location.href = "../objet/ollas"
         }
 
-        if (x == 18){
+        if (projectValuex == 18){
             window.location.href = "../illustration/illustrations/"
         }
 
-        if (x == 19){
+        if (projectValue == 19){
             window.location.href = "../objet/mobilier-grillage/"
         }
 
-        if (x == 20){
+        if (projectValue == 20){
             null
             // window.location.href = "../objet/stellarium/"
         }
 
-        if (x == 21){
+        if (projectValue == 21){
             null
             // window.location.href = "../objet/charlette/"
         }
