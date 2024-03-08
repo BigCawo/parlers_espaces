@@ -13,15 +13,14 @@
 <body id ="corps" onresize="loadValues()">
     <div id="header">
  
-            <ul  id="categories" class="categories">
+            <ul id="categories" class="categories">
        
                 
                 <li><button id="buttonObjet" class="button" onclick="projectSort(1)" value ="off" >Objet</button></li>
                 <li><button id="buttonMediation" class="button" onclick="projectSort(2)" value ="off" >médiation</button></li>
                 <li><button id="buttonIllustration" class="button" onclick="projectSort(0)" value ="off" >illustration</button></li>
-                <li><button id="buttonMultimedia" class="button" onclick="projectSort(3)" value ="off" >multimedia</button></li>
-
-                <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
+                <li><button id="buttonMultimedia" class="button" onclick="projectSort(3)" value ="off" >multimédia</button></li>
+                <li><button class="buttonReset" onclick="shutDownBaaaa()"> X </button></li>
     
             </ul>
 
@@ -54,39 +53,8 @@
 
 
 
-
-            <div id="projects">
-                <button id="buttonDesc" style="opacity: 0;" onclick="descSpawn(0)"></button>
-               
-
-
-                <div id="spot">
-
-
-                    
-                    <div id="spotRight">
-                        <img  src="assets_accueil/spot_0000_Calque-12.png" alt="">
-                    </div>
-                    <div id="spotMiddle">
-                        <!-- <button id="buttonOut" onclick="test()">
-    
-                        </button> -->
-                    </div>
-                    <div id="spotLeft">
-                        <img src="assets_accueil/spot_0000_Calque-12.png" alt="">
-                    </div>
-
-
-    
-                </div>
-
-                <div id="entete">
-                    <h3>ELIOT BERNAUD</h3>
-                    <p>
-                        Design - Multimédia - Illustration - Médiation
-                    </p>
-                </div>
-                <!-- aPropos -->
+            <div id="accueil">
+                 <!-- aPropos -->
 
                 <!-- <img style="position: absolute; height: 100%;" src="assets_accueil/textes-info.png" alt=""> -->
 
@@ -125,7 +93,43 @@
 
 
 
+                </div>  
+                
+                <div id="entete">
+                    <h3>ELIOT BERNAUD</h3>
+                    <p>
+                        Design - Multimédia - Illustration - Médiation
+                    </p>
                 </div>
+                
+            </div>
+            <div id="projects">
+                <button id="buttonDesc" style="height: 100%;" onclick="descSpawn(0)"></button>
+               
+
+
+                <div id="spot">
+
+
+                    
+                    <div id="spotRight">
+                        <img  src="assets_accueil/spot_0000_Calque-12.png" alt="">
+                    </div>
+                    <div id="spotMiddle">
+                        <!-- <button id="buttonOut" onclick="test()">
+    
+                        </button> -->
+                    </div>
+                    <div id="spotLeft">
+                        <img src="assets_accueil/spot_0000_Calque-12.png" alt="">
+                    </div>
+
+
+    
+                </div>
+
+
+
 
 
                <!-- TerresLointaines -->
@@ -454,7 +458,7 @@
             <li><button id="buttonMediation2" class="button" onclick="projectSort(2)" value ="off" >MÉDIATION</button></li>
             <li><button id="buttonIllustration2" class="button" onclick="projectSort(0)" value ="off" >ILLUSTRATION</button></li>
             <li><button id="buttonMultimedia2" class="button" onclick="projectSort(3)" value ="off" >MULTIMÉDIA</button></li>
-
+            <li><button class="buttonReset" onclick="shutDownBaaaa()"> X </button></li>
             <!--<li><button id="buttonMemoire" class="button" onclick="test(3)" value ="off" >mémoire&nbsp;/&nbsp;diplôme</button></li>-->
 
         </ul>

@@ -35,42 +35,42 @@
     /* projects dimensions */
     --scaleFactor : 1;
 
-    --p-Ollas : calc(6846*var(--scaleFactor));
+    --p-Ollas : calc((6846 - 1826)*var(--scaleFactor));
     --w-Ollas : calc(288*var(--scaleFactor));
     --h-Ollas : calc(115*var(--scaleFactor));
     --o-Ollas : calc(287*var(--scaleFactor));
 
-    --p-chaiseAttache : calc(2677*var(--scaleFactor));
+    --p-chaiseAttache : calc((2677 - 1826)*var(--scaleFactor));
     --w-chaiseAttache : calc(245*var(--scaleFactor));
     --h-chaiseAttache : calc(350*var(--scaleFactor));
 
 
-    --p-Nasa : calc(3039*var(--scaleFactor));
+    --p-Nasa : calc((3039 - 1826)*var(--scaleFactor));
     --w-Nasa : calc(670*var(--scaleFactor));
     --h-Nasa : calc(380*var(--scaleFactor));
 
-    --p-MeubleBazar : calc(4744*var(--scaleFactor));
+    --p-MeubleBazar : calc((4744 - 1826)*var(--scaleFactor));
     --w-MeubleBazar : calc(420*var(--scaleFactor));
     --h-MeubleBazar : calc(395*var(--scaleFactor));
 
-    --p-Pol : calc(6787*var(--scaleFactor));
+    --p-Pol : calc((6787 - 1826)*var(--scaleFactor));
     --w-Pol : calc(401*var(--scaleFactor));
     --h-Pol : calc(294*var(--scaleFactor));
 
-    --p-TableBasse : calc(3822*var(--scaleFactor));
+    --p-TableBasse : calc((3822 - 1826)*var(--scaleFactor));
     --w-TableBasse : calc(505*var(--scaleFactor));
     --h-TableBasse : calc(155*var(--scaleFactor));
 
-    --p-MobilierGrillage : calc(7450*var(--scaleFactor));
+    --p-MobilierGrillage : calc((7450 - 1826)*var(--scaleFactor));
     --w-MobilierGrillage : calc(597*var(--scaleFactor));
     --h-MobilierGrillage : calc(386*var(--scaleFactor));
 
-    --p-LampeColette : calc(4087*var(--scaleFactor));
+    --p-LampeColette : calc((4087 - 1826)*var(--scaleFactor));
     --w-LampeColette : calc(189*var(--scaleFactor));
     --h-LampeColette : calc(93*var(--scaleFactor));
     --o-LampeColette : calc(700*var(--scaleFactor));
 
-    --p-LampeIcosaedre : calc(2530*var(--scaleFactor));
+    --p-LampeIcosaedre : calc((2530 - 1826)*var(--scaleFactor));
     --w-LampeIcosaedre : calc(302*var(--scaleFactor));
     --h-LampeIcosaedre : calc(361*var(--scaleFactor));
 
@@ -78,57 +78,57 @@
     --w-APropos : calc(772*var(--scaleFactor));
     --h-APropos : calc(576*var(--scaleFactor));
 
-    --p-LampeRessort : calc(3812*var(--scaleFactor));
+    --p-LampeRessort : calc((3812 - 1826)*var(--scaleFactor));
     --w-LampeRessort : calc(234*var(--scaleFactor));
     --h-LampeRessort : calc(460*var(--scaleFactor));
     --o-LampeRessort : calc(145*var(--scaleFactor));
 
-    --p-VaseSuspendu : calc(4765*var(--scaleFactor));
+    --p-VaseSuspendu : calc((4765 - 1826)*var(--scaleFactor));
     --w-VaseSuspendu : calc(257*var(--scaleFactor));
     --h-VaseSuspendu : calc(350*var(--scaleFactor));
     --o-VaseSuspendu : calc(392*var(--scaleFactor));
 
-    --p-ChmupTheDog : calc(4155*var(--scaleFactor));
+    --p-ChmupTheDog : calc((4155 - 1826)*var(--scaleFactor));
     --w-ChmupTheDog : calc(424*var(--scaleFactor));
     --h-ChmupTheDog : calc(386*var(--scaleFactor));
     --o-ChmupTheDog : calc(180*var(--scaleFactor));
 
-    --p-TerresLointaines : calc(1926*var(--scaleFactor));
+    --p-TerresLointaines : calc((1926 - 1826)*var(--scaleFactor));
     --w-TerresLointaines : calc(707*var(--scaleFactor));
     --h-TerresLointaines : calc(208*var(--scaleFactor));
-    --o-TerresLointaines : calc(300*var(--scaleFactor));
+    --o-TerresLointaines : calc(400*var(--scaleFactor));
 
-    --p-FabriqueABrac : calc(3081*var(--scaleFactor));
+    --p-FabriqueABrac : calc((3081 - 1826)*var(--scaleFactor));
     --w-FabriqueABrac : calc(652*var(--scaleFactor));
     --h-FabriqueABrac : calc(481*var(--scaleFactor));
     --o-FabriqueABrac : calc(370*var(--scaleFactor));
 
-    --p-ParlersEspace : calc(5092*var(--scaleFactor));
+    --p-ParlersEspace : calc((5092 - 1826)*var(--scaleFactor));
     --w-ParlersEspace : calc(837*var(--scaleFactor));
     --h-ParlersEspace : calc(532*var(--scaleFactor));
     --o-ParlersEspace : calc(500*var(--scaleFactor));
 
-    --p-PommeDeTerre : calc(5619*var(--scaleFactor));
+    --p-PommeDeTerre : calc((5619 - 1826)*var(--scaleFactor));
     --w-PommeDeTerre : calc(653*var(--scaleFactor));
     --h-PommeDeTerre : calc(586*var(--scaleFactor));
     --o-PommeDeTerre : calc(0*var(--scaleFactor));
 
-    --p-Carnets : calc(6417*var(--scaleFactor));
+    --p-Carnets : calc((6417 - 1826)*var(--scaleFactor));
     --w-Carnets : calc(238*var(--scaleFactor));
     --h-Carnets : calc(335*var(--scaleFactor));
     --o-Carnets : calc(370*var(--scaleFactor));
 
-    --p-Illustrations : calc(6813*var(--scaleFactor));
+    --p-Illustrations : calc((6813  - 1826)*var(--scaleFactor));
     --w-Illustrations : calc(657*var(--scaleFactor));
     --h-Illustrations : calc(442*var(--scaleFactor));
     --o-Illustrations : calc(450*var(--scaleFactor));
 
-    --p-Stellarium : calc(8184*var(--scaleFactor));
+    --p-Stellarium : calc((8184 - 1826)*var(--scaleFactor));
     --w-Stellarium : calc(882*var(--scaleFactor));
     --h-Stellarium : calc(598*var(--scaleFactor));
     --o-Stellarium : calc(0*var(--scaleFactor));
 
-    --p-Charlette : calc(9193*var(--scaleFactor));
+    --p-Charlette : calc((9193 - 1826)*var(--scaleFactor));
     --w-Charlette : calc(761*var(--scaleFactor));
     --h-Charlette : calc(589*var(--scaleFactor));
     --o-Charlette : calc(0*var(--scaleFactor));
@@ -209,7 +209,7 @@ button{
 }
 
 #buttonDesc{
-    position: relative;
+    position: fixed;
     cursor: pointer;
     
 }
@@ -227,8 +227,7 @@ button{
 }
 
 #projects{
-
-
+    margin-left: 100dvw ;
     animation-duration:  1s ;
     animation-name: popsIn ;
 
@@ -265,8 +264,8 @@ button{
 }
 
 #accueil{
+    position: absolute;
     height: 100%; width: 100vw;
-    display: inline-block
 }
 
 
@@ -281,6 +280,8 @@ button{
 }
 
 .project{
+    position: relative;
+    
     position: absolute;
     height: 100%; 
     width: auto;
@@ -651,18 +652,18 @@ button{
     
     }
     
-    
     #buttonDesc{
         position:  fixed; 
         top: var(--h-header); 
         left: 0; 
         visibility: hidden;
-        opacity: 1; 
+        opacity: 0; 
         width: 100dvw; 
 
         height: var(--h-center); 
         z-index: 12;  
     }
+
 
     /* #buttonOut{
         display: none;
@@ -701,7 +702,7 @@ button{
     /* ~~~~~~~~ barre navigation ~~~~~~~~ */
 
 
-.categories {background-color: rgba(127, 255, 212, 0);
+.categories {
 
     height: 100%;
     align-items: center;
@@ -733,6 +734,18 @@ button{
 	color: inherit;
 	border: none;
 
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.buttonReset{
+    background: none;
+	color: inherit;
+	border: none;
+    opacity: 0.25;
 	font: inherit;
     font-family: Fababrac-soustitre;
     font-size: 3dvh;
@@ -853,6 +866,8 @@ button{
 
 
 }
+
+
 
 #buttonLampeRessort{
 
@@ -1028,7 +1043,7 @@ p{
 
 #entete{
     width: 100dvw;
-    position: relative;
+    position: absolute;
     /* top : calc(-1* var(--h-header)); */
     padding-top: 5dvh;
     padding-left: 5dvh;

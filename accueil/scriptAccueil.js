@@ -6,7 +6,7 @@ function shutDownBaaaa() {
     let aa = buttonValue = document.getElementById("buttonIllustration").value;
     let bb = buttonValue = document.getElementById("buttonObjet").value;
     let cc = buttonValue = document.getElementById("buttonMediation").value;
-  /*  let dd = buttonValue = document.getElementById("buttonMultimedia").value; */
+    let dd = buttonValue = document.getElementById("buttonMultimedia").value; 
 
     if ( aa == "on" ){
         y = "Illustration"
@@ -29,20 +29,31 @@ function shutDownBaaaa() {
         a = "descMediation"
         
     }
- /*   
+   
     if ( dd == "on"){
         y = "Multimedia"
         z = "buttonMultimedia"
         a = "descMultimedia"
         
     }
-*/
+
     document.getElementById(z).value = "off"
     document.getElementById(z+"2").value = "off"
 
     document.getElementById(z).style.opacity = 1
     document.getElementById(z+"2").style.opacity = 1
     
+    const reset = document.getElementsByClassName("button");
+    for (let i = 0; i < reset.length; i++) {
+        reset[i].style.opacity = 1;
+
+    }
+
+    const resett = document.getElementsByClassName("buttonReset");            
+    for (let i = 0; i < resett.length; i++) {
+        resett[i].value = "off"
+        resett[i].style.opacity = 0.25
+    }
 
     const icons = document.getElementsByClassName("project");
     for (let i = 0; i < icons.length; i++) {
@@ -111,13 +122,18 @@ function projectSort(x) {
     
 
         if (buttonValue == "off") {
-
-            const reset = document.getElementsByClassName("button");
-
             
+            const reset = document.getElementsByClassName("button");       
             for (let i = 0; i < reset.length; i++) {
                 reset[i].value = "off"
                 reset[i].style.opacity = 0.25
+            }
+
+                        
+            const resett = document.getElementsByClassName("buttonReset");            
+            for (let i = 0; i < resett.length; i++) {
+                resett[i].value = "off"
+                resett[i].style.opacity = 1
             }
 
 
@@ -174,6 +190,12 @@ function projectSort(x) {
             for (let i = 0; i < reset.length; i++) {
                 reset[i].style.opacity = 1;
 
+            }
+
+            const resett = document.getElementsByClassName("buttonReset");            
+            for (let i = 0; i < resett.length; i++) {
+                resett[i].value = "off"
+                resett[i].style.opacity = 0.25
             }
             
             const icons = document.getElementsByClassName("project");

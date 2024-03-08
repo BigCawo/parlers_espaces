@@ -135,16 +135,17 @@ function loadValues() {
 
     if (Mq480.matches){
         projectCenter = -0.50
-        projectHide = WindowWidth/2
+        projectHide = WindowWidth/3
     }
     else {
         projectCenter = -0.25
-        projectHide = WindowWidth/4
+        projectHide = WindowWidth/6
     }  
 
 }; 
 
 window.onload = loadValues();
+
 
 
 
@@ -157,16 +158,16 @@ center.addEventListener("scroll", function(){
     if(this.scrollLeft > projectHide){
         document.getElementById("categories").style.opacity = "1";
         document.getElementById("categories2").style.opacity = "1";
-        const bouiboui = document.getElementsByClassName("project")
-        for (let i = 0; i < bouiboui.length; i++){
-        bouiboui[i].style.opacity = 1;}
+        // const bouiboui = document.getElementsByClassName("project")
+        // for (let i = 0; i < bouiboui.length; i++){
+        // bouiboui[i].style.opacity = 1;}
     } 
     else{
         document.getElementById("categories").style.opacity = "0"
         document.getElementById("categories2").style.opacity = "0"
-        const bouiboui = document.getElementsByClassName("project")
-        for (let i = 0; i < bouiboui.length; i++){
-        bouiboui[i].style.opacity = 0;}
+        // const bouiboui = document.getElementsByClassName("project")
+        // for (let i = 0; i < bouiboui.length; i++){
+        // bouiboui[i].style.opacity = 0;}
     }
 
 })
@@ -425,90 +426,90 @@ function projectSelect(x){
 function scrollTo(x){
 
     if(x == 1){
-        center.scrollTo(projectCenter*WindowWidth+(pAPropos+0.5*wAPropos), 0)
+        center.scrollTo("50dvw", 0)
     }
 
     if(x == 2){
-        center.scrollTo(projectCenter*WindowWidth+(pTerresLointaines+0.5*wTerresLointaines), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pTerresLointaines+0.5*wTerresLointaines), 0)
     }
 
     if(x == 3){
-        center.scrollTo(projectCenter*WindowWidth+(pLampeIcosaedre+0.5*wLampeIcosaedre), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pLampeIcosaedre+0.5*wLampeIcosaedre), 0)
     }
 
     if(x == 4){
-        center.scrollTo(projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pChaiseAttache+0.5*wChaiseAttache), 0);
     }
 
     if(x == 5){
-        center.scrollTo(projectCenter*WindowWidth+(pNasa+0.5*wNasa), 0);
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pNasa+0.5*wNasa), 0);
         // document.getElementById("nasa").getElementsByClassName("background")[0].style.opacity = 1;
     }
 
     if(x == 6){
-        center.scrollTo(projectCenter*WindowWidth+(pFabriqueABrac+0.5*wFabriqueABrac), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pFabriqueABrac+0.5*wFabriqueABrac), 0)
     }
 
     if(x == 7){
-        center.scrollTo(projectCenter*WindowWidth+(pTableBasse+0.5*wTableBasse), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pTableBasse+0.5*wTableBasse), 0)
     }
 
     if(x == 8){
-        center.scrollTo(projectCenter*WindowWidth+(pLampeRessort+0.5*wLampeRessort), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pLampeRessort+0.5*wLampeRessort), 0)
     }
 
     if(x == 9){
-        center.scrollTo(projectCenter*WindowWidth+(pLampeColette+0.5*wLampeColette), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pLampeColette+0.5*wLampeColette), 0)
     }
 
     if(x == 10){
-        center.scrollTo(projectCenter*WindowWidth+(pChmupTheDog+0.5*wChmupTheDog), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pChmupTheDog+0.5*wChmupTheDog), 0)
     }
 
     if(x == 11){
-        center.scrollTo(projectCenter*WindowWidth+(pMeubleBazar+0.5*wMeubleBazar), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pMeubleBazar+0.5*wMeubleBazar), 0)
     }
 
     if(x == 12){
-        center.scrollTo(projectCenter*WindowWidth+(pVaseSuspendu+0.5*wVaseSuspendu), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pVaseSuspendu+0.5*wVaseSuspendu), 0)
     }
 
     if(x == 13){
-        center.scrollTo(projectCenter*WindowWidth+(pParlersEspace+0.5*wParlersEspace), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pParlersEspace+0.5*wParlersEspace), 0)
     }
 
     if(x == 14){
-        center.scrollTo(projectCenter*WindowWidth+(pPommeDeTerre+0.5*wPommeDeTerre), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pPommeDeTerre+0.5*wPommeDeTerre), 0)
     }
 
     if(x == 15){
-        center.scrollTo(projectCenter*WindowWidth+(pCarnets+0.5*wCarnets), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pCarnets+0.5*wCarnets), 0)
     }
 
     if(x == 16){
-        center.scrollTo(projectCenter*WindowWidth+(pPol+0.5*wPol), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pPol+0.5*wPol), 0)
     }
 
     if(x == 17){
-        center.scrollTo(projectCenter*WindowWidth+(POllas+0.5*wOllas), 0);
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(POllas+0.5*wOllas), 0);
 
     }
 
     if(x == 18){
-        center.scrollTo(projectCenter*WindowWidth+(pIllustrations+0.5*wIllustrations), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pIllustrations+0.5*wIllustrations), 0)
     }
 
 
     if(x == 19){
-        center.scrollTo(projectCenter*WindowWidth+(pMobilierGrillage+0.5*wMobilierGrillage), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pMobilierGrillage+0.5*wMobilierGrillage), 0)
     }
 
     if(x == 20){
-        center.scrollTo(projectCenter*WindowWidth+(pStellarium+0.5*wStellarium), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pStellarium+0.5*wStellarium), 0)
     }
 
     if(x == 21){
-        center.scrollTo(projectCenter*WindowWidth+(pCharlette+0.5*wCharlette), 0)
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pCharlette+0.5*wCharlette), 0)
     }
 
 
