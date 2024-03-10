@@ -24,12 +24,36 @@ let projectImg = document.getElementById("ProjectImg")
 
 let b = 1000
 
+// let entete = document.getElementById("entete");
+// let header = document.getElementById("header");
+// let accueil = document.getElementById("accueil")
+
 //mediaqueries
 
 Mq480.addEventListener("change", function() {
-   
-    descSpawn(1);
+    // introElemPos(Mq480)
+    descSpawn(0);
 }); 
+
+
+
+// function introElemPos(Mq480) {
+//     if (Mq480.matches) {
+    
+
+//         header.insertBefore(entete, header.firstChild);
+    
+    
+    
+//     } else {
+
+//         accueil.insertBefore(entete, accueil.firstChild);
+    
+    
+//     }
+//     }
+    
+
 
 
 
@@ -142,27 +166,23 @@ function loadValues() {
         projectHide = WindowWidth/6
     }  
 
+    showHide();
+
 }; 
 
 window.onload = loadValues();
 
 
 center.addEventListener("touchmove", function() {
-   descSpawn(0);
+    
+    descSpawn(0)
 }); 
 
-
-center.addEventListener("scroll", function(){
-
-
-    // output2.innerHTML = projectHide;
-    // output.innerHTML = this.scrollLeft;
-    if(Mq480.matches && spotsVisible == 0.55)
-    {center.style.overflowX = "hidden" }
-
-    if(this.scrollLeft > projectHide){
+function showHide(){
+    if(center.scrollLeft > projectHide){
         document.getElementById("categories").style.opacity = "1";
         document.getElementById("categories2").style.opacity = "1";
+        document.getElementById("help").style.opacity = "0"
         // const bouiboui = document.getElementsByClassName("project")
         // for (let i = 0; i < bouiboui.length; i++){
         // bouiboui[i].style.opacity = 1;}
@@ -170,10 +190,29 @@ center.addEventListener("scroll", function(){
     else{
         document.getElementById("categories").style.opacity = "0"
         document.getElementById("categories2").style.opacity = "0"
+        document.getElementById("help").style.opacity = "0.55"
         // const bouiboui = document.getElementsByClassName("project")
         // for (let i = 0; i < bouiboui.length; i++){
         // bouiboui[i].style.opacity = 0;}
     }
+    if(center.scrollLeft == 0 ){
+        
+    }
+    else{
+        
+
+    }
+}
+
+center.addEventListener("scroll", function(){
+
+
+    // output2.innerHTML = projectHide;
+    // output.innerHTML = this.scrollLeft;
+    // if(Mq480.matches && spotsVisible == 0.55)
+    // {center.style.overflowX = "hidden" }
+    showHide();
+
 
 })
 
@@ -215,6 +254,13 @@ function descSpawn(x){
             document.getElementById("spot").style.visibility = "visible";
             document.getElementById("spot").style.opacity = "0.55";
             descContainer.scrollTop = "0";
+
+            const elements = document.getElementById("spot").getElementsByTagName("div")
+            elements[0].getElementsByTagName("img")[0].style.visibility = "initial"
+            elements[1].style.backgroundColor = "rgb(255, 255, 255)"
+            elements[2].getElementsByTagName("img")[0].style.visibility = "initial"
+    
+    
 
             // if(Mq480.matches)
             // {center.style.overflowX = "hidden" }
@@ -546,6 +592,17 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
         document.getElementById("ProjectName").innerHTML = "A propos"
         document.getElementById("ProjectText").innerHTML = "Incoming"
+
+        const elements = document.getElementById("spot").getElementsByTagName("div")
+        elements[0].getElementsByTagName("img")[0].style.visibility = "hidden"
+        elements[1].style.backgroundColor = "rgb(0, 0, 0)"
+        elements[2].getElementsByTagName("img")[0].style.visibility = "hidden"
+
+
+
+
+
+
         //projectImg.src=""
         // document.getElementById("buttonOut").style.height = b+"px"
     }

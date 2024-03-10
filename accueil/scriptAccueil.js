@@ -4,7 +4,7 @@
 
 function shutDownBaaaa() {
     descSpawn(0);
-    
+
     let aa = buttonValue = document.getElementById("buttonIllustration").value;
     let bb = buttonValue = document.getElementById("buttonObjet").value;
     let cc = buttonValue = document.getElementById("buttonMediation").value;
@@ -229,4 +229,9 @@ function projectSort(x) {
     
 
 
+
 }
+
+
+
+

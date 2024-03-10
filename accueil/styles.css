@@ -173,13 +173,39 @@ h3{
 #entete{
     position: absolute;
     width: 100dvw;
-    padding-top: 10dvh;
+    padding-top: 8dvh;
     padding-left: 10dvh;
 }
 #entete p{
     font-family: var(--ff-st);
     font-size: 3dvh;
 
+}
+
+#flecheProjet{
+    position: absolute;
+    right: 5dvh; 
+    display: flex; 
+    align-items: center;
+}
+
+#flecheProjet img{
+    height: 3.5dvh;
+}
+
+#flecheProjet p{
+    margin-right: 3dvh ; 
+    display: inline-block;
+    font-family: Fababrac-soustitre;
+}
+
+#help{
+    position: absolute;
+    padding-left: 1dvh; 
+    padding-top: 6dvh;
+    transition: opacity 0.5s ease;
+    font-size: 10%;
+    line-height: 1.25;
 }
 
 #header{
@@ -209,8 +235,16 @@ button{
 }
 
 #buttonDesc{
-    position: fixed;
+    position: absolute;
     cursor: pointer;
+    top: 0; 
+    left: -100dvw; 
+    visibility: hidden;
+    opacity: 0; 
+    width: calc(var(--w-proj)*var(--scaleFactor)); 
+    height: var(--h-center); 
+    z-index: 12;  
+
     
 }
 
@@ -269,6 +303,8 @@ button{
 }
 
 
+
+
 #projects{
     display: inline-block; 
     position: relative;
@@ -320,8 +356,9 @@ button{
 }
 
 #APropos img{
-    height: 100%; 
+    height: 50%; 
     position: absolute;
+    bottom: 0;
     z-index: 5;
 
 }
@@ -652,17 +689,7 @@ button{
     
     }
     
-    #buttonDesc{
-        position:  fixed; 
-        top: var(--h-header); 
-        left: 0; 
-        visibility: hidden;
-        opacity: 0; 
-        width: 100dvw; 
 
-        height: var(--h-center); 
-        z-index: 12;  
-    }
 
 
     /* #buttonOut{
@@ -1064,8 +1091,9 @@ p{
 #entete{
     width: 100dvw;
     position: absolute;
+    /* top: calc(-1* var(--h-header)); */
     /* top : calc(-1* var(--h-header)); */
-    padding-top: 5dvh;
+    padding-top: 4dvh;
     padding-left: 5dvh;
 }
 
@@ -1095,6 +1123,37 @@ p{
 
 #spot img{
     visibility: hidden;
+}
+
+#TitreSite{
+    position: relative;
+    top: -1dvh;
+}
+
+#help{
+    position: relative;
+    top: -1dvh;
+}
+
+#help p{    
+    
+   
+    padding-top: 0;
+    font-size: 2dvh;
+}
+
+#flecheProjet{
+    top: 17dvh;
+    right: 2dvh;
+
+}
+
+#flecheProjet p{
+    font-size: 2.3dvh;
+}
+
+#flecheProjet img{
+    max-height: 2.5dvh;
 }
 
 }
