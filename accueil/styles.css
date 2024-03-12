@@ -214,20 +214,19 @@ h3{
     background-color: rgba(0, 0, 0, 0.55) ;
     height: var(--h-header) ;
     border-bottom: 2px solid black;
+    transition: all 0.5s ease;
 }
 
 #center{
     
     scroll-behavior: smooth;
-
-
     position: relative;
     z-index: 0;
-
     height: var(--h-center); 
     width: 100vw;
     overflow-x: scroll; 
     overflow-y: hidden;
+    transition: all 0.5s ease;
 }
 
 button{

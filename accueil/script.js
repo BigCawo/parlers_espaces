@@ -61,6 +61,9 @@ Mq480.addEventListener("change", function() {
 
 function loadValues() {
     projectHilight(projectValue)
+    document.getElementById("center").style.opacity = "initial"
+    document.getElementById("header").style.opacity = "initial"
+    
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
     POllas = Number(document.getElementById("buttonOllas").offsetLeft);
@@ -344,9 +347,10 @@ function projectSelect(x){
     y = projectValue
 
     if (projectValue == x || x == -1){
-        document.getElementById("corps").style.opacity = "0"
+        document.getElementById("center").style.opacity = "0"
+        document.getElementById("header").style.opacity = "0"
         setTimeout(()=> {
-            document.getElementById("corps").style.opacity = "1"    
+             
 
         if (x == 1){
                 window.location.href = "../qui-suis-je/"
@@ -590,8 +594,8 @@ function projectHilight(x){
         document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
         document.getElementById("spotMiddle").style.width = a+"px"
-        document.getElementById("ProjectName").innerHTML = "A propos"
-        document.getElementById("ProjectText").innerHTML = "Incoming"
+        document.getElementById("ProjectName").innerHTML = "Bienvenue chez moi !"
+        document.getElementById("ProjectText").innerHTML = "Je suis un artiste designer polyvalent diplômé depuis 2023 en création industrielle à l'ENSCI Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain.<br><br>Clique pour en savoir plus sur moi !"
 
         const elements = document.getElementById("spot").getElementsByTagName("div")
         elements[0].getElementsByTagName("img")[0].style.visibility = "hidden"
@@ -654,7 +658,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Chaise Pol"
-        document.getElementById("ProjectText").innerHTML = "Cette assise reprend le principe d'assemblage d'une de mes autres projets."
+        document.getElementById("ProjectText").innerHTML = "Cette assise démontable réutilise le principe d'assemblage de Pol, un autre de mes projets."
         //projectImg.src=""
 
         // document.getElementById("buttonOut").style.height = b+"px"
@@ -674,7 +678,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Nasa"
-        document.getElementById("ProjectText").innerHTML = "Les Petits débrouillards, un réseau participant au renouveau permanent de l’éducation populaire, a consulté l’ENSCI pour réfléchir sur la création d’un module pour scooter. Celui-ci permettrait aux intervenants du réseau de proposer des activités scientifiques, créatives et ludiques aux les jeunes vivant dans des zones délaissées.<br><br> Avec Adèle Nyitrai, nous avons proposé un module déployable, servant à la fois de contenant au matériel nécessaire aux activités et de plan de travail pour les effectuer."
+        document.getElementById("ProjectText").innerHTML = "C'est un module déployable pour scooter qui permet à un intervenant de proposer des activités scientifiques, créatives et ludiques aux jeunes vivant dans des zones délaissées.<br><br> Réalisé avec Adèle Nyitrai, pour les Petits Débrouillards."
         //projectImg.src=""
 
 
@@ -695,7 +699,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "La Fabrique à Brac"
-        document.getElementById("ProjectText").innerHTML = "Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités.<br>Grâce à leur forme, leur matière, leur abondance, ils peuvent devenir d’excellentes ressources pour créer d’autres objets.<br><br>A travers la Fabrique à Brac, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité."
+        document.getElementById("ProjectText").innerHTML = "Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités.<br><br>A travers mon projet de deeplôme, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité"
         //projectImg.src=""
 
 
@@ -771,7 +775,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Chmup The Dog"
-        document.getElementById("ProjectText").innerHTML = "Chmup, chien fidèle aux pouvoirs télékinésiques, part à la recherche de son maitre fait prisonnier dans un repaire de scientifiques.<br><br>Ce projet personnel, jeu encore à l’état de prototype, est une sorte de souvenir nostalgique de mes heures passées à jouer. Il est né d’une envie de passer du côté de la production des jeux vidéos, de l’autre coté de l’écran."
+        document.getElementById("ProjectText").innerHTML = "Chmup, chien fidèle aux pouvoirs télékinésiques, part à la recherche de son maitre fait prisonnier dans un repaire de scientifiques."
         //projectImg.src=""
 
 
@@ -791,7 +795,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Meuble à bazar"
-        document.getElementById("ProjectText").innerHTML = "J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler.<br><br>Je l'ai conçu à partir de matière essentiellement récupérée, dont je disposais à proximité (volige et massif de peuplier, contreplaqué et vis récupérées)"
+        document.getElementById("ProjectText").innerHTML = "J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler. Je l'ai essentiellement conçu à partir de matière récupérée, dont je disposais à proximité."
         //projectImg.src=""
 
 
@@ -810,7 +814,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Vase Suspendu"
-        document.getElementById("ProjectText").innerHTML = "Ce projet de 2 semaines a été réalisé en collaboration avec Sidonie Couëdel.<br><br>Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet.<br><br> Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition."
+        document.getElementById("ProjectText").innerHTML = "Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet. Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition.<br><br>Réalisé avec Sidonie Couëdel."
         //projectImg.src=""
 
 
@@ -829,7 +833,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Parlers Espace"
-        document.getElementById("ProjectText").innerHTML = "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires.<br><br>Dans ce mémoire, je pars à l'exploration de ces 'parlers espace' qui me fascinent. J'en propose une lecture tridimensionnelle puis je tente de montrer l'importance de poser un regard défigé sur ce qui compose nos quotidiens. Pour mieux les faire nôtres et pour cultiver notre autonomie et notre individualité dans notre vie de tous les jours."
+        document.getElementById("ProjectText").innerHTML = "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires."
         //projectImg.src=""
 
 
@@ -848,7 +852,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Pomme de terre"
-        document.getElementById("ProjectText").innerHTML = "Une pomme de terre nostalgique du passé se réveille dans une caisse. Elle espère être cuisinée comme ses aïeules, mais le monde de la cuisine a bien changé...<br><br>Ce court métrage d’animation, réalisé avec Théophile Perrot lors d’un projet libre de 3 semaines, tente d’interroger le spectateur sur le lien qu’il entretient avec la production de ce qu’il consomme. Après avoir vu le traitement que subissent ses plats préparés, ne devrait il pas prendre le temps de cuisiner lui même ses repas ?<br><br>durée 3’45 "
+        document.getElementById("ProjectText").innerHTML = "Une pomme de terre nostalgique du passé se réveille dans une caisse. Elle espère être cuisinée comme ses aïeules, mais le monde de la cuisine a bien changé...<br><br>Réalisé avec Théophile Perrot."
         //projectImg.src=""
 
 
@@ -905,7 +909,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Ollas"
-        document.getElementById("ProjectText").innerHTML = "J'ai imaginé cette ollas en terre cuite dans le cadre de mon stage chez les Transfarmers. "
+        document.getElementById("ProjectText").innerHTML = "Ollas en terre cuite, dessinée dans le cadre de mon stage chez les Transfarmers. "
         //projectImg.src=""
 
 
@@ -962,7 +966,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Stellarium"
-        document.getElementById("ProjectText").innerHTML = "Cet observatoire stellaire, qui est un de mes premiers projets, a été réalisé dans les cadre des Travaux Personnels Encadrés de première. <br><br> Celui ci propose au spectateur une visite guidée des exoplanètes potentiellement habitables proches de la terre."
+        document.getElementById("ProjectText").innerHTML = "Cet observatoire stellaire est un de mes premiers projets.<br><br> J'y propose au spectateur une visite guidée de la voie lactée et des exoplanètes potentiellement habitables proches de la terre."
         //projectImg.src=""
 
 
@@ -981,7 +985,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Charlette"
-        document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation du premier prototype."
+        document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype."
         //projectImg.src=""
 
 
