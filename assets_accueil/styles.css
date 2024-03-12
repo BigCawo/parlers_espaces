@@ -1,0 +1,1159 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+/* html{scroll-behavior: smooth;} */
+
+@font-face { font-family: Fababrac-titre; src: url('../assets/fonts/Fababrac-GTitre.otf'); } 
+@font-face { font-family: Fababrac; src: url('../assets/fonts/Fababrac-Minuscule.otf'); } 
+@font-face { font-family: Fababrac-soustitre; src: url('../assets/fonts/Fababrac-Soustitre.otf'); } 
+
+
+
+:root{
+
+    /* general */
+
+    --ff-t:Fababrac-titre;
+    --ff-st:Fababrac;
+    --ff-p:Roboto;
+    --ff-c:Gabarito;
+    --fs-t: 2dvw;
+    --fs-st : 1.25dvw;
+    --fs-p : 1dvw;
+    --fs-c : 1em;
+
+    /* accueil */
+
+    --w-proj : 12000px;
+    --w-projAbs : 6000;
+    --h-proj : 1084px;
+    --h-projAbs : 1084;
+    --h-center : 90dvh;
+    --h-header : 5dvh;
+    --projRatio: calc(var(--w-projAbs)/var(--h-projAbs));
+    --w-desc : 35dvw;
+
+    /* projects dimensions */
+    --scaleFactor : 1;
+
+    --p-Ollas : calc((6846 - 1826)*var(--scaleFactor));
+    --w-Ollas : calc(288*var(--scaleFactor));
+    --h-Ollas : calc(115*var(--scaleFactor));
+    --o-Ollas : calc(287*var(--scaleFactor));
+
+    --p-chaiseAttache : calc((2677 - 1826)*var(--scaleFactor));
+    --w-chaiseAttache : calc(245*var(--scaleFactor));
+    --h-chaiseAttache : calc(350*var(--scaleFactor));
+
+
+    --p-Nasa : calc((3039 - 1826)*var(--scaleFactor));
+    --w-Nasa : calc(670*var(--scaleFactor));
+    --h-Nasa : calc(380*var(--scaleFactor));
+
+    --p-MeubleBazar : calc((4744 - 1826)*var(--scaleFactor));
+    --w-MeubleBazar : calc(420*var(--scaleFactor));
+    --h-MeubleBazar : calc(395*var(--scaleFactor));
+
+    --p-Pol : calc((6787 - 1826)*var(--scaleFactor));
+    --w-Pol : calc(401*var(--scaleFactor));
+    --h-Pol : calc(294*var(--scaleFactor));
+
+    --p-TableBasse : calc((3822 - 1826)*var(--scaleFactor));
+    --w-TableBasse : calc(505*var(--scaleFactor));
+    --h-TableBasse : calc(155*var(--scaleFactor));
+
+    --p-MobilierGrillage : calc((7450 - 1826)*var(--scaleFactor));
+    --w-MobilierGrillage : calc(597*var(--scaleFactor));
+    --h-MobilierGrillage : calc(386*var(--scaleFactor));
+
+    --p-LampeColette : calc((4087 - 1826)*var(--scaleFactor));
+    --w-LampeColette : calc(189*var(--scaleFactor));
+    --h-LampeColette : calc(93*var(--scaleFactor));
+    --o-LampeColette : calc(700*var(--scaleFactor));
+
+    --p-LampeIcosaedre : calc((2530 - 1826)*var(--scaleFactor));
+    --w-LampeIcosaedre : calc(302*var(--scaleFactor));
+    --h-LampeIcosaedre : calc(361*var(--scaleFactor));
+
+    --p-APropos : calc(250*var(--scaleFactor));
+    --w-APropos : calc(772*var(--scaleFactor));
+    --h-APropos : calc(576*var(--scaleFactor));
+
+    --p-LampeRessort : calc((3812 - 1826)*var(--scaleFactor));
+    --w-LampeRessort : calc(234*var(--scaleFactor));
+    --h-LampeRessort : calc(460*var(--scaleFactor));
+    --o-LampeRessort : calc(145*var(--scaleFactor));
+
+    --p-VaseSuspendu : calc((4765 - 1826)*var(--scaleFactor));
+    --w-VaseSuspendu : calc(257*var(--scaleFactor));
+    --h-VaseSuspendu : calc(350*var(--scaleFactor));
+    --o-VaseSuspendu : calc(392*var(--scaleFactor));
+
+    --p-ChmupTheDog : calc((4155 - 1826)*var(--scaleFactor));
+    --w-ChmupTheDog : calc(424*var(--scaleFactor));
+    --h-ChmupTheDog : calc(386*var(--scaleFactor));
+    --o-ChmupTheDog : calc(180*var(--scaleFactor));
+
+    --p-TerresLointaines : calc((1926 - 1826)*var(--scaleFactor));
+    --w-TerresLointaines : calc(707*var(--scaleFactor));
+    --h-TerresLointaines : calc(208*var(--scaleFactor));
+    --o-TerresLointaines : calc(400*var(--scaleFactor));
+
+    --p-FabriqueABrac : calc((3081 - 1826)*var(--scaleFactor));
+    --w-FabriqueABrac : calc(652*var(--scaleFactor));
+    --h-FabriqueABrac : calc(481*var(--scaleFactor));
+    --o-FabriqueABrac : calc(370*var(--scaleFactor));
+
+    --p-ParlersEspace : calc((5092 - 1826)*var(--scaleFactor));
+    --w-ParlersEspace : calc(837*var(--scaleFactor));
+    --h-ParlersEspace : calc(532*var(--scaleFactor));
+    --o-ParlersEspace : calc(500*var(--scaleFactor));
+
+    --p-PommeDeTerre : calc((5619 - 1826)*var(--scaleFactor));
+    --w-PommeDeTerre : calc(653*var(--scaleFactor));
+    --h-PommeDeTerre : calc(586*var(--scaleFactor));
+    --o-PommeDeTerre : calc(0*var(--scaleFactor));
+
+    --p-Carnets : calc((6417 - 1826)*var(--scaleFactor));
+    --w-Carnets : calc(238*var(--scaleFactor));
+    --h-Carnets : calc(335*var(--scaleFactor));
+    --o-Carnets : calc(370*var(--scaleFactor));
+
+    --p-Illustrations : calc((6813  - 1826)*var(--scaleFactor));
+    --w-Illustrations : calc(657*var(--scaleFactor));
+    --h-Illustrations : calc(442*var(--scaleFactor));
+    --o-Illustrations : calc(450*var(--scaleFactor));
+
+    --p-Stellarium : calc((8184 - 1826)*var(--scaleFactor));
+    --w-Stellarium : calc(882*var(--scaleFactor));
+    --h-Stellarium : calc(598*var(--scaleFactor));
+    --o-Stellarium : calc(0*var(--scaleFactor));
+
+    --p-Charlette : calc((9193 - 1826)*var(--scaleFactor));
+    --w-Charlette : calc(761*var(--scaleFactor));
+    --h-Charlette : calc(589*var(--scaleFactor));
+    --o-Charlette : calc(0*var(--scaleFactor));
+
+
+
+
+}
+
+/* general */
+
+body{
+    font-size: 100%;
+
+}
+
+p{  
+    padding-top: var(--spaces) ;
+    padding-bottom: var(--spaces);
+    background-color: rgba(137, 43, 226, 0);
+    font-size: var(--fs-p);
+    font-family: var(--ff-p);
+    line-height: 150%;
+}
+
+h1{
+    font-family: var(--ff-t);
+    font-size: var(--fs-t);
+}
+
+h2{
+    font-family: var(--ff-t);
+    font-size: var(--fs-st);
+}
+
+h3{
+    font-family: var(--ff-t);
+    font-size: 7dvh;
+}
+
+
+#entete{
+    position: absolute;
+    width: 100dvw;
+    padding-top: 8dvh;
+    padding-left: 10dvh;
+}
+#entete p{
+    font-family: var(--ff-st);
+    font-size: 3dvh;
+
+}
+
+#flecheProjet{
+    position: absolute;
+    right: 5dvh; 
+    display: flex; 
+    align-items: center;
+}
+
+#flecheProjet img{
+    height: 3.5dvh;
+}
+
+#flecheProjet p{
+    margin-right: 3dvh ; 
+    display: inline-block;
+    font-family: Fababrac-soustitre;
+}
+
+#help{
+    position: absolute;
+    padding-left: 1dvh; 
+    padding-top: 6dvh;
+    transition: opacity 0.5s ease;
+    font-size: 10%;
+    line-height: 1.25;
+}
+
+#header{
+    position: relative;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.55) ;
+    height: var(--h-header) ;
+    border-bottom: 2px solid black;
+    transition: all 0.5s ease;
+}
+
+#center{
+    
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 0;
+    height: var(--h-center); 
+    width: 100vw;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    transition: all 0.5s ease;
+}
+
+button{
+    cursor: zoom-in;
+}
+
+#buttonDesc{
+    position: absolute;
+    cursor: pointer;
+    top: 0; 
+    left: -100dvw; 
+    visibility: hidden;
+    opacity: 0; 
+    width: calc(var(--w-proj)*var(--scaleFactor)); 
+    height: var(--h-center); 
+    z-index: 12;  
+
+    
+}
+
+
+#footer{
+    background-color: rgba(0, 0, 0, 0.50) ;
+    position: relative;
+    z-index: 5;
+    height: calc(100dvh - var(--h-header) - var(--h-center) ) ;
+    /* max-height:  calc((96dvh - var(--h-center)) - var(--h-header)); */
+    /* overflow: hidden; */
+    /* margin: 1dvh; */
+    border-top: 2px solid black;
+}
+
+#projects{
+    margin-left: 100dvw ;
+    animation-duration:  1s ;
+    animation-name: popsIn ;
+
+}
+
+@keyframes popsIn {
+    0%{
+        bottom : var(--h-center);
+        opacity: 0;
+    }
+
+    33%{
+        bottom: calc(1/2* var(--h-center));
+        opacity: 0;
+    }
+
+    100%{
+        bottom: initial;
+        opacity: 1;
+    }
+}
+
+    /* ~~~~~~~~ projects ~~~~~~~~ */
+
+
+#maison{
+    left: 100dvw;
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color ease 0.25s;
+    height: 100%; 
+    width: calc((var(--projRatio)*var(--h-center))*2);
+
+}
+
+#accueil{
+    position: absolute;
+    height: 100%; width: 100vw;
+}
+
+
+
+
+#projects{
+    display: inline-block; 
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    height: calc(var(--scaleFactor)*100%);
+}
+
+.project{
+    position: relative;
+    
+    position: absolute;
+    height: 100%; 
+    width: auto;
+    z-index: 5;
+    transition: opacity 0.35s ease;
+}
+
+
+
+/* #filter{
+    z-index: -5;
+    opacity: 0;
+} */
+
+    /* ~~~~~~~~ visuels projectS ~~~~~~~~ */
+
+.project img{
+    height: 100%; 
+    position: absolute;
+    z-index: 5;
+
+}
+
+
+
+#APropos{
+    position: absolute;
+    height: 100%; 
+    width: auto;
+    z-index: 5;
+    transition: opacity 0.35s ease;
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#APropos img{
+    height: 50%; 
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+
+}
+
+
+
+#chaiseAttache{
+
+    bottom: 0;
+    left: calc((var(--p-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+    
+
+
+}
+
+#nasa{
+
+    bottom: 0;
+    left: calc((var(--p-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+#meubleBazar{
+
+    left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: 0;
+}
+
+
+#Pol{
+
+    bottom: 0;
+    left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#TableBasse{
+
+    bottom: 0;
+    left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#MobilierGrillage{
+
+    bottom: 0;
+    left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#LampeColette{
+
+    bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#LampeIcosaedre{
+
+    top: calc((-730/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+
+#LampeRessort{
+    bottom: calc((var(--o-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+    left: calc((var(--p-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#VaseSuspendu{
+    bottom: 0;
+    left: calc((var(--p-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    bottom: calc((var(--o-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#Ollas{
+
+    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#ChmupTheDog{
+
+    bottom: calc((var(--o-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#TerresLointaines{
+
+    bottom: calc((var(--o-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#FabriqueABrac{
+
+    bottom: calc((var(--o-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#ParlersEspace{
+
+    bottom: calc((var(--o-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#PommeDeTerre{
+
+    bottom: calc((var(--o-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Carnets{
+
+    bottom: calc((var(--o-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Illustrations{
+
+    bottom: calc((var(--o-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Stellarium{
+
+    bottom: calc((var(--o-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#Charlette{
+
+    bottom: calc((var(--o-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+
+/* .shadow{
+    opacity: 0.35;
+} */
+
+.backgroundColor{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+}
+
+.backgroundColor2{
+    opacity: 0;
+    transition: opacity ease 0.35s;
+}
+
+.background{
+    transition: opacity ease 0.2s;
+}
+
+
+    /* ~~~~~~~~ visuels GENERAUX ~~~~~~~~ */
+
+#corps{
+    position: relative; 
+    transition: all ease 0.35s;
+}
+#spot{
+    
+    position: fixed; 
+    overflow: hidden;
+    left: 0;
+    width: 100dvw; 
+    height: var(--h-center); 
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    z-index: 9;
+}
+
+/* #spot img{
+    opacity: 1;
+
+} */
+
+#babababaaa{
+    position: relative;
+    z-index: 10;
+    bottom : 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+}
+
+#spotRight{
+    position: absolute;
+
+    transform-origin: 0 0;
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spotLeft{
+    position: absolute;
+ 
+    transform-origin: 0 0;
+    transform: scale(-1,1);
+    transition: all ease 0.25s;
+    transition: opacity ease 0.25s;
+    height: 100%; 
+    width: 100dvw;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+#spot img{
+    height: var(--h-center);
+}
+
+
+
+#spotMiddle{
+    overflow: hidden;
+    position: absolute;
+
+    bottom: 0;
+    width: 100%; 
+    height: var(--h-center);
+    transition: opacity ease 0.25s;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    z-index: -1;
+    
+
+}
+
+
+/* #wall{
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+/* #filter{
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+
+    height: 100%;
+    width: auto;
+} */
+
+
+
+    /* ~~~~~~~~ projects DESCRIPTION ~~~~~~~~ */
+
+
+    #projectInformations{
+    
+        position: fixed;    
+        right: calc(-1*var(--w-desc));
+        transition: left ease 0.4s;
+        top: calc(var(--h-header) + 2dvh);
+        z-index: 51;
+        background-color: rgba(255, 255, 255, 0.856);
+        max-height: calc(var(--h-center) - 4dvh);
+        width: var(--w-desc);
+        border: 2px solid black ;
+        border-right: 0;
+        border-radius: 5px 0 0 5px;
+
+        overflow: hidden;
+        transition: all ease 0.25s;
+    } 
+
+    #descContainer{
+        padding: 2dvh;
+        padding-top: 1.5dvh;
+    }
+
+    #projectAnimation{
+        position: fixed;            
+        transition: left ease 0.4s;
+        z-index: 51;
+        height: var(--h-center);
+        width: 50dvw;
+        visibility: hidden;
+        overflow: hidden;
+    
+        /* visibility: hidden;
+        opacity: 0;
+        transition: all ease 0.25s;
+        transition: opacity ease 0.25s; */
+    
+    }
+
+    #ProjectName{
+        padding: 1dvh;
+    }
+    
+    .animations{
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: 25%;
+        height: calc((var(--w-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));;
+    
+    
+    }
+    
+
+
+
+    /* #buttonOut{
+        display: none;
+        position: relative;
+        background-color: aqua;
+        bottom: 0;
+        width: 100%;
+        height: 150px; 
+
+    } */
+
+
+    /* 
+    #imgContainer{
+        display: inline-block;
+    }
+    
+    #imgContainer img{
+        position: relative;
+        padding-left: 3dvw;
+        
+        background-color: rgba(0, 0, 255, 0);
+        max-height: calc((96dvh - var(--h-center)) - var(--h-header));
+        width: auto;
+    } */
+    
+    /* #descContainer{
+    
+        position: relative;
+        background-color: rgba(137, 43, 226, 0);
+        display: inline-block;
+        max-height: inherit;
+        overflow-y: scroll;
+    } */
+    
+    /* ~~~~~~~~ barre navigation ~~~~~~~~ */
+
+
+.categories {
+
+    height: 100%;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto ;
+    opacity: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    list-style-type: none;
+    transition: all 0.5s ease;
+    
+}
+
+#categories li{
+    margin-left: 3dvh;
+    margin-right: 3dvh;
+    /* text-transform: uppercase; */
+}
+
+#footer ul{
+    display: none;
+}
+
+.button{
+    background: none;
+	color: inherit;
+	border: none;
+
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.buttonReset{
+    background: none;
+	color: inherit;
+	border: none;
+    opacity: 0.25;
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+}
+
+    /* ~~~~~~~~ boutons ~~~~~~~~ */
+
+.buttonProject{
+    opacity: 0;
+    position: absolute; 
+    z-index: 50;
+
+}
+
+#buttonOllas{
+
+    width: calc((var(--w-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonChaiseAttache{
+
+    width: calc((var(--w-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-chaiseAttache)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+    
+
+
+}
+
+#buttonNasa{
+
+    width: calc((var(--w-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+
+#buttonMeubleBazar{
+
+    width: calc((var(--w-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MeubleBazar)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    /* left: calc(1555/var(--w-projAbs)*(var(--projRatio)*var(--h-center))); */
+
+
+}
+
+#buttonPol{
+
+    width: calc((var(--w-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    bottom: 0;
+    left: calc((var(--p-Pol)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonTableBasse{
+
+    width: calc((var(--w-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-TableBasse)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonMobilierGrillage{
+
+    width: calc((var(--w-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-MobilierGrillage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeColette{
+
+    width: calc((var(--w-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    bottom: calc((var(--o-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeColette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonLampeIcosaedre{
+
+    width: calc((var(--w-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    top: 0;
+    left: calc((var(--p-LampeIcosaedre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonAPropos{
+
+    width: calc((var(--w-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: 0;
+    left: calc((var(--p-APropos)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+
+
+#buttonLampeRessort{
+
+    width: calc((var(--w-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-LampeRessort)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonVaseSuspendu{
+
+    width: calc((var(--w-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--h-Nasa)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-VaseSuspendu)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonChmupTheDog{
+
+    width: calc((var(--w-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-ChmupTheDog)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonTerresLointaines{
+
+    width: calc((var(--w-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-TerresLointaines)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonFabriqueABrac{
+
+    width: calc((var(--w-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-FabriqueABrac)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonParlersEspace{
+
+    width: calc((var(--w-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-ParlersEspace)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonPommeDeTerre{
+
+    width: calc((var(--w-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-PommeDeTerre)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonCarnets{
+
+    width: calc((var(--w-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Carnets)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonIllustrations{
+
+    width: calc((var(--w-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Illustrations)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonStellarium{
+
+    width: calc((var(--w-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Stellarium)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+#buttonCharlette{
+
+    width: calc((var(--w-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+
+ :root{
+    /* --scaleFactor : 0.66; */
+    --w-desc : 98dvw;
+    --h-center : 58dvh;
+    --h-header : 37dvh;
+    --p-APropos: 20 ;
+    
+}
+
+body{
+    font-size: 4.5vw;
+}
+h1{font-size: 200%;}
+
+p{
+    font-size: 80%;
+}
+
+#projectInformations{
+    right: calc(-1*var(--w-desc));
+    top: 1dvh;
+    max-height: calc(var(--h-header) - 2dvh);
+    width: var(--w-desc);
+    border: 2px solid black ;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 0.75dvh;
+    padding-top: 0.5dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all ease 0.25s;
+
+  
+} 
+
+.closeButton{
+    
+    padding-right: 0.75dvh;
+    background: none;
+	color: inherit;
+	border: none;
+    opacity: 0.75;
+	font: inherit;
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+    height: 20%; 
+    position: fixed; 
+    bottom: 0;
+    /* top: calc((1dvh - var(--h-header)));  */
+    right: 0;
+}
+
+#footer ul{
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    justify-content: space-around;
+
+}
+
+#footer ul li button{
+    font-family: fababrac;
+    padding-left: 2dvw;
+    padding-right: 1dvw;
+}
+
+#header ul{
+    display: none;
+
+}
+
+#entete{
+    width: 100dvw;
+    position: absolute;
+    /* top: calc(-1* var(--h-header)); */
+    /* top : calc(-1* var(--h-header)); */
+    padding-top: 4dvh;
+    padding-left: 5dvh;
+}
+
+/* #projects{
+    top: 34%;
+} */
+
+#projectAnimation{
+    left: 0;
+
+}
+
+.animations{
+    top: 50%;
+    height: 50%;
+
+
+}
+
+#ProjectName{
+    padding: 0.5dvh;
+}
+
+#spotMiddle{
+    background-color: rgb(0, 0, 0);
+}
+
+#spot img{
+    visibility: hidden;
+}
+
+#TitreSite{
+    position: relative;
+    top: -1dvh;
+}
+
+#help{
+    position: relative;
+    top: -1dvh;
+}
+
+#help p{    
+    
+   
+    padding-top: 0;
+    font-size: 2dvh;
+}
+
+#flecheProjet{
+    top: 17dvh;
+    right: 2dvh;
+
+}
+
+#flecheProjet p{
+    font-size: 2.3dvh;
+}
+
+#flecheProjet img{
+    max-height: 2.5dvh;
+}
+
+}
+
