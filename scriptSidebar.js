@@ -2,54 +2,56 @@
 
 // ~~~~ Sidebar ~~~~ //
 let Sidebar = document.getElementById("sidebar")
-
-
+let lastScrollTop = 0;
+let initScrollTop = 50;
 
 
 
 window.addEventListener("scroll", function(){
-    
-    if(Mq480.matches){
 
-        if (scrollY < 5){
-            Sidebar.style.bottom= "-10px"
-        }
 
-        else{
-            Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
-        }
-        }
+var st =  this.window.scrollY;
 
-})
+if (st > lastScrollTop) {
+    Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
+   } 
+   
+else 
+    Sidebar.style.bottom= "0"
+    // else was horizontal scroll
 
-Mq480.addEventListener("change", function() {
-    if(Mq480.matches){
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 
-        Sidebar.style.bottom= "-10px"
-        }
-        else{
-            Sidebar.style.bottom= "0px"
-        }
-}); 
+
+})     
+
+
 
 function bwyuu(){
     document.getElementById("output").innerHTML = scrollTop
 }
 
 document.body.addEventListener("scroll", function(){
+
+
+
+sst = document.body.scrollTop
+// document.getElementById("output").innerHTML = document.body.scrollTop
+
+
+        
+if (sst > initScrollTop) {
+    Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
+    } 
     
+else 
+    Sidebar.style.bottom= "0"
+    // else was horizontal scroll
 
-    if(Mq480.matches){
+    initScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 
-        if (document.body.scrollTop < 5){
-            Sidebar.style.bottom= "-10px"
-        }
 
-        else{
-            Sidebar.style.bottom= "calc(-1*var(--h-sidebar))"
-        }
-        }
-
+        
 
 })
 

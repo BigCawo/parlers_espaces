@@ -1,74 +1,66 @@
 
 
-// ~~~~ Header ~~~~ //
-let Header = document.getElementById("header")
-
-
-
-window.addEventListener("scroll", function(){
-    if(Mq480.matches){
-        if (scrollY < 25){
-            Header.style.bottom= "45px"
-            Header.style.transition= "all 0.5s ease"
-            
-        }
-
-        else{
-            Header.style.bottom= "0"
-            Header.style.transition= "all 0.5s ease"
-
-        }
-    }
-
-})
-
 // ~~~~ Accueil ~~~~ //
 
 function shutDownBaaaa() {
-    let aa = buttonValue = document.getElementById("buttonDessin").value;
+    descSpawn(0);
+
+    let aa = buttonValue = document.getElementById("buttonIllustration").value;
     let bb = buttonValue = document.getElementById("buttonObjet").value;
-    let cc = buttonValue = document.getElementById("buttonFiction").value;
-  /*  let dd = buttonValue = document.getElementById("buttonMemoire").value; */
+    let cc = buttonValue = document.getElementById("buttonMediation").value;
+    let dd = buttonValue = document.getElementById("buttonMultimedia").value; 
 
     if ( aa == "on" ){
-        y = "dessin"
-        z = "buttonDessin"
-        a = "descDessin"
+        y = "Illustration"
+        z = "buttonIllustration"
+        a = "descIllustration"
 
 
     }
 
     if ( bb == "on"){
-        y = "objet"
+        y = "Objet"
         z = "buttonObjet"
         a = "descObjet"
 
     }
 
     if ( cc == "on"){
-        y = "fiction"
-        z = "buttonFiction"
-        a = "descFiction"
+        y = "Mediation"
+        z = "buttonMediation"
+        a = "descMediation"
         
     }
- /*   
+   
     if ( dd == "on"){
-        y = "memoire"
-        z = "buttonMemoire"
-        a = "descMemoire"
+        y = "Multimedia"
+        z = "buttonMultimedia"
+        a = "descMultimedia"
         
     }
-*/
+
     document.getElementById(z).value = "off"
+    document.getElementById(z+"2").value = "off"
 
-    document.getElementById(z).style.fontSize = "100%"
-    document.getElementById(z).style.fontWeight = "300"
-    document.getElementById("categories").style.height = "var(--h-sidebar)"
+    document.getElementById(z).style.opacity = 1
+    document.getElementById(z+"2").style.opacity = 1
     
+    const reset = document.getElementsByClassName("button");
+    for (let i = 0; i < reset.length; i++) {
+        reset[i].style.opacity = 1;
 
-    const icons = document.getElementsByClassName("icons");
+    }
+
+    const resett = document.getElementsByClassName("buttonReset");            
+    for (let i = 0; i < resett.length; i++) {
+        resett[i].value = "off"
+        resett[i].style.opacity = 0.25
+    }
+
+    const icons = document.getElementsByClassName("project");
     for (let i = 0; i < icons.length; i++) {
-        icons[i].style.display = "inline";
+        icons[i].style.opacity = 1;
+        icons[i].style.zIndex = 5;
         
     }
     //descriptions
@@ -78,7 +70,7 @@ function shutDownBaaaa() {
     const resetDesc = document.getElementsByClassName("desc");
     
     for (let i = 0; i < resetDesc.length; i++) {
-        resetDesc[i].style.display = "block"
+        resetDesc[i].style.opacity = "block"
         resetDesc[i].style.opacity = "0%"
     } 
 
@@ -94,85 +86,92 @@ function shutDownBaaaa() {
 }
 
 
-function test(x) {
+function projectSort(x) {
 
- 
+    descSpawn(0);
     
     
 
 
     if ( x == 0){
-        y = "dessin"
-        z = "buttonDessin"
-        a = "descDessin"
-        buttonValue = document.getElementById("buttonDessin").value
+        y = "Illustration"
+        z = "buttonIllustration"
+        a = "descIllustration"
+        buttonValue = document.getElementById("buttonIllustration").value
 
     }
 
     if ( x == 1){
-        y = "objet"
+        y = "Objet"
         z = "buttonObjet"
         a = "descObjet"
         buttonValue = document.getElementById("buttonObjet").value
     }
 
     if ( x == 2){
-        y = "fiction"
-        z = "buttonFiction"
-        a = "descFiction"
-        buttonValue = document.getElementById("buttonFiction").value
+        y = "Mediation"
+        z = "buttonMediation"
+        a = "descMediation"
+        buttonValue = document.getElementById("buttonMediation").value
     }
     
     if ( x == 3){
-        y = "memoire"
-        z = "buttonMemoire"
-        a = "descMemoire"
-        buttonValue = document.getElementById("buttonMemoire").value
+        y = "Multimedia"
+        z = "buttonMultimedia"
+        a = "descMultimedia"
+        buttonValue = document.getElementById("buttonMultimedia").value
     }
     
 
         if (buttonValue == "off") {
-
-            const reset = document.getElementsByClassName("button");
-
             
+            const reset = document.getElementsByClassName("button");       
             for (let i = 0; i < reset.length; i++) {
                 reset[i].value = "off"
-                reset[i].style.fontSize = "100%"
-                reset[i].style.fontWeight = "300"
+                reset[i].style.opacity = 0.25
+            }
+
+                        
+            const resett = document.getElementsByClassName("buttonReset");            
+            for (let i = 0; i < resett.length; i++) {
+                resett[i].value = "off"
+                resett[i].style.opacity = 1
             }
 
 
             document.getElementById(z).value = "on"
-            document.getElementById(z).style.fontSize = "125%"
-            document.getElementById(z).style.fontWeight = "900"
+            document.getElementById(z+"2").value = "on"
+            document.getElementById(z).style.opacity = 1
+            document.getElementById(z+"2").style.opacity = 1
+
                 // document.getElementById("categories").style.height = "calc( var(--h-sidebar) * 1.5 )"
-            const icons = document.getElementsByClassName("icons");
+            const icons = document.getElementsByClassName("project");
             for (let i = 0; i < icons.length; i++) {
-                icons[i].style.display = "none";
+                icons[i].style.opacity = 0.25;
+                // icons[i].style.zIndex = 51;
             }
             //descriptions
             /**/
-            const resetDesc = document.getElementsByClassName("desc");
+            // const resetDesc = document.getElementsByClassName("desc");
 
-            for (let i = 0; i < resetDesc.length; i++) {
-                resetDesc[i].style.display = "none"
-                resetDesc[i].style.opacity = "100%"
+            // for (let i = 0; i < resetDesc.length; i++) {
+            //     resetDesc[i].style.opacity = 0.25
+            //     resetDesc[i].style.opacity = "100%"
 
                 
-            }
-            document.getElementById(a).style.display = "block"
+            // }
+            // document.getElementById(a).style.opacity = "block"
             
-            document.getElementById(a).style.maxHeight = "calc( 80vh - var(--h-sidebar) )"
+            // document.getElementById(a).style.maxHeight = "calc( 80vh - var(--h-sidebar) )"
             
 
-            //descriptions
+            // //descriptions
 
 
             const selection = document.getElementsByClassName(y);
             for (let i = 0; i < selection.length; i++) {
-                selection[i].style.display = "inline";
-            
+                selection[i].style.opacity = 1;
+                // selection[i].style.zIndex = 5;
             }       
         } 
 
@@ -181,35 +180,46 @@ function test(x) {
 
 
             document.getElementById(z).value = "off"
+            document.getElementById(z+"2").value = "off"
 
-            document.getElementById(z).style.fontSize = "100%"
-            document.getElementById(z).style.fontWeight = "300"
+            document.getElementById(z).style.opacity = 1
+            document.getElementById(z+"2").style.opacity = 1
             // document.getElementById("categories").style.height = "var(--h-sidebar)"
 
             
 
-            const icons = document.getElementsByClassName("icons");
+            const reset = document.getElementsByClassName("button");
+            for (let i = 0; i < reset.length; i++) {
+                reset[i].style.opacity = 1;
+
+            }
+
+            const resett = document.getElementsByClassName("buttonReset");            
+            for (let i = 0; i < resett.length; i++) {
+                resett[i].value = "off"
+                resett[i].style.opacity = 0.25
+            }
+            
+            const icons = document.getElementsByClassName("project");
             for (let i = 0; i < icons.length; i++) {
-                icons[i].style.display = "inline";
+                icons[i].style.opacity = 1;
+                // icons[i].style.zIndex = 5;
                 
             }
             //descriptions
             /**/
 
 
-            const resetDesc = document.getElementsByClassName("desc");
+            // const resetDesc = document.getElementsByClassName("desc");
             
-            for (let i = 0; i < resetDesc.length; i++) {
-                resetDesc[i].style.display = "block"
-                resetDesc[i].style.opacity = "0%"
-            } 
+            // for (let i = 0; i < resetDesc.length; i++) {
+            //     resetDesc[i].style.opacity = "block"
+            //     resetDesc[i].style.opacity = "0%"
+            // } 
 
 
-            for (let i = 0; i < resetDesc.length; i++) {
-                resetDesc[i].style.maxHeight = "0"
-            }
 
-            document.getElementById(a).style.opacity = "100%"
+            // document.getElementById(a).style.opacity = "100%"
 
             
             //descriptions
@@ -219,4 +229,9 @@ function test(x) {
     
 
 
+
 }
+
+
+
+

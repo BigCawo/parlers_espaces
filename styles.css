@@ -1,17 +1,22 @@
 /* ~~~~ variables ~~~~ */
 
+@font-face { font-family: Fababrac-titre; src: url('assets/fonts/Fababrac-GTitre.otf'); } 
+@font-face { font-family: Fababrac; src: url('assets/fonts/Fababrac-Minuscule.otf'); } 
+@font-face { font-family: Fababrac-soustitre; src: url('assets/fonts/Fababrac-Soustitre.otf'); } 
+
+
 :root {
 
     /* général */
 
     --w-sidebar:50px;
-    --h-sidebar: 55px;
+    --h-sidebar: 5dvh;
     --spaces: 20px;
-    --ff-t:Gabarito;
+    --ff-t:Fababrac;
     --ff-st:Roboto;
     --ff-p:Roboto;
     --ff-c:Gabarito;
-    --fs-t:1.5em;
+    --fs-t:2.5em;
     --fs-st : 1.25em;
     --fs-p : 0.75em;
     --fs-c : 1em;
@@ -100,67 +105,73 @@ a:link { text-decoration: none; color: black;}
   
 a:visited {text-decoration: none; color: black;}
 
-a:hover {color: rgb(228, 54, 54);}
+a:hover {color: rgb(255, 255, 255);}
 
 a:active {color: rgb(0, 0, 0);}
 
 /* ~~~~  sidebar  ~~~~ */
 
-#sidebar{background-color: rgb(228, 54, 54);
+#sidebar{background-color: rgb(140, 140, 140) ;
 
-    width: var(--w-sidebar);
-    height: 100vh;
-    position: fixed;
     transition: all 0.5s ease;
 
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 5dvh;
+    border-top: 2px solid black;
+    bottom: 0;
+
+}
+
+#categories{
+    height: 5dvh;
+    margin: auto;
+    max-width: 100dvw ;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
+#categories p{
 
-
-#sidebar ul{background-color: rgba(0, 255, 255, 0);
-    display: inline-block;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    flex-basis: content;
-}
-
-
-
-#sidebar h1{background-color: rgba(0, 255, 255, 0);
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-
-    font-family: var(--ff-t); 
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-
-    padding: 8px 0px;
     text-align: center;
-    
+    font-family: Fababrac-soustitre;
+    font-size: 3dvh;
+	cursor: pointer;
+	outline: inherit;
+    line-height: 0;
+
+
+
 }
 
-#sidebar li{background-color: rgba(0, 255, 255, 0);
-    
-    font-family: var(--ff-t);
-    letter-spacing: 0.5px;
-    font-size: 15px;
-    font-weight: 500;
-   
-    padding: 8px 0px;
-    text-align: center;
+
+
+
+
+@keyframes fadeIn {
+    0%{
  
+        opacity: 0;
+    }
+
+    100%{
+
+        opacity: 1;
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -182,6 +193,8 @@ a:active {color: rgb(0, 0, 0);}
     margin: auto;
     margin-bottom: 0;
     left: calc( var(--w-sidebar) /2) ;
+    animation-duration:  1s ;
+    animation-name: fadeIn;
     
 
 }
@@ -514,7 +527,7 @@ background-color: rgba(0, 0, 0, 0.8);
 
     transition: margin-bottom 0.5s ease;
     overflow: scroll;
-    max-height: calc( 35vh - var(--h-sidebar) );
+    max-height: calc( 35dvh - var(--h-sidebar) );
     width: 100%;
     background-color: rgba(0, 255, 255, 0);
     border-bottom-style: solid;
@@ -548,32 +561,7 @@ background-color: rgba(0, 0, 0, 0.8);
     */
 }
 
-#categories {background-color: rgba(127, 255, 212, 0);
-    height: 40px;
-    transition: height 0.25s ease;
-    align-items: center;
-    z-index: 10;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto ;
-    
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 
-}
-
-#categories::-webkit-scrollbar {
-    display: none;
-  }
-
-
-#categories > li {
-
-    margin: 0;
-    padding: 0;
-
-}
 
 button{
     font-family: var(--ff-c);
@@ -591,7 +579,6 @@ button{
 
 }
 
-#categories > li:last-child > button {margin-right: 0;}
 
 button:hover {  
     text-decoration: underline;
@@ -898,29 +885,15 @@ body{
 }
 
 
-#sidebar{
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    height: var(--h-sidebar);
-    bottom: -10px;
-    flex-direction: row;
+
+
+
+#categories{
+
+    max-width: var(--w-main) ;
+
     justify-content: space-around;
 }
-
-#sidebar ul > li{ 
-    writing-mode:horizontal-tb;
-    height: 100%; padding: 22.5px 0; 
-    line-height: 0;}
-
-#sidebar h1{ 
-    writing-mode:horizontal-tb;
-    height: 100%; 
-    padding: 22.5px 0; 
-    line-height: 0;}
-
-
-
 
 /*accueil*/
 
@@ -957,17 +930,7 @@ body{
     width: 100%;
 }
 
-#categories{
-    position: sticky;
-    justify-content: space-between;
-    top: 0;
-}
 
-#categories > li > button{
-    margin: 0;
-    padding: 12px 2px ;
-    font-size: var(--ff-t);
-}
 
 
 
