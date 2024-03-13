@@ -66,7 +66,8 @@ function loadValues() {
     
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
-    POllas = Number(document.getElementById("buttonOllas").offsetLeft);
+    p
+    pOllas = Number(document.getElementById("buttonOllas").offsetLeft);
     wOllas = Number(document.getElementById("buttonOllas").offsetWidth);
     hOllas = Number(document.getElementById("buttonOllas").offsetHeight);
 
@@ -342,8 +343,9 @@ function descSpawn(x){
 }
 
 function hideCenter(x){
-    document.getElementById("center").style.opacity = "0"
-    document.getElementById("header").style.opacity = "0"
+    null
+    //document.getElementById("center").style.opacity = "0"
+    //document.getElementById("header").style.opacity = "0"
 }
 
 function projectSelect(x){
