@@ -292,7 +292,8 @@ button{
     background-color: rgba(0, 0, 0, 0.2);
     transition: background-color ease 0.25s;
     height: 100%; 
-    width: calc((var(--projRatio)*var(--h-center))*2);
+    width: calc((var(--projRatio)*var(--h-center))*2.1);
+    overflow: hidden;
 
 }
 
@@ -534,7 +535,7 @@ button{
     transition: all ease 0.35s;
 }
 #spot{
-    
+
     position: fixed; 
     overflow: hidden;
     left: 0;
@@ -791,7 +792,7 @@ button{
 #buttonOllas{
 
     width: calc((var(--w-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
-    height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    height: calc((var(--h-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
     bottom: calc((var(--o-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-Ollas)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 
