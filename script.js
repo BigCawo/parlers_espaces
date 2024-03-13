@@ -43,6 +43,7 @@ let wDesc = Number(style.getPropertyValue('--w-desc'));
 let w = projectValue
 let descContainer = document.getElementById("projectInformations")
 let projectImg = document.getElementById("ProjectImg")
+let y = 0
 
 let b = 1000
 
@@ -205,8 +206,11 @@ center.addEventListener("touchmove", function() {
     
 }); 
 
+
+
 function showHide(){
     if(center.scrollLeft > projectHide){
+        
         document.getElementById("categories").style.opacity = "1";
         document.getElementById("categories2").style.opacity = "1";
         document.getElementById("help").style.opacity = "0"
@@ -509,8 +513,8 @@ function projectSelect(x){
         }
 
         if (projectValue == 21){
-            null
-            // window.location.href = "objet/charlette/"
+            
+            window.open('https://veloma.org/2024/02/16/charlette-charrette-palette/', '_blank');
         }
 
 
