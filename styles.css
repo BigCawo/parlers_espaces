@@ -487,10 +487,7 @@ background-color: rgba(0, 0, 0, 0.8);
 .illusfin{
     height: 100%;
     z-index: -10;
-    position: relative;
-    width: calc( 100vw - var(--w-sidebar) );
-    
-    left: calc( var(--test) + (var(--w-sidebar)) /2 ) ; 
+    width: 100% ; 
 
 
     background-color: rgba(6, 6, 204, 0);
@@ -995,7 +992,9 @@ body{
 .background{left: -5vw;}
 
 
-.illusfin{ left:-5vw ;
+.illusfin{
+position: relative;
+left:-5vw ;
 width: 100vw;
 
 }
