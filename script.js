@@ -66,7 +66,7 @@ function loadValues() {
     
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
-    p
+    
     pOllas = Number(document.getElementById("buttonOllas").offsetLeft);
     wOllas = Number(document.getElementById("buttonOllas").offsetWidth);
     hOllas = Number(document.getElementById("buttonOllas").offsetHeight);
