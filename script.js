@@ -31,7 +31,7 @@ let b = 1000
 //mediaqueries
 
 Mq480.addEventListener("change", function() {
-    // introElemPos(Mq480)
+    introElemPos();
     descSpawn(0);
 }); 
 
@@ -66,7 +66,6 @@ function loadValues() {
     
     scaleFactor = Number(style.getPropertyValue('--scaleFactor'));
 
-    
     pOllas = Number(document.getElementById("buttonOllas").offsetLeft);
     wOllas = Number(document.getElementById("buttonOllas").offsetWidth);
     hOllas = Number(document.getElementById("buttonOllas").offsetHeight);
@@ -178,8 +177,10 @@ window.onload = loadValues();
 
 
 center.addEventListener("touchmove", function() {
+    if(document.getElementById("buttonDesc").style.visibility == "visible"){
+     descSpawn(0);
+    }
     
-    descSpawn(0)
 }); 
 
 function showHide(){
@@ -343,9 +344,8 @@ function descSpawn(x){
 }
 
 function hideCenter(x){
-    null
-    //document.getElementById("center").style.opacity = "0"
-    //document.getElementById("header").style.opacity = "0"
+    document.getElementById("center").style.opacity = "0"
+    document.getElementById("header").style.opacity = "0"
 }
 
 function projectSelect(x){
@@ -594,7 +594,7 @@ function scrollTo(x){
     }
 
     if(x == 17){
-        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(POllas+0.5*wOllas), 0);
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pOllas+0.5*wOllas), 0);
 
     }
 
@@ -1464,4 +1464,24 @@ buttonCharlette.addEventListener("mouseout", function(){
 
 
 })
+
+let Mq1300 = window.matchMedia("(max-width: 1300px)")
+let Mq900 = window.matchMedia("(max-width: 900px)")
+let Mq480 = window.matchMedia("(max-width: 480px)")
+
+
+
+// Listener function on state changes
+
+Mq1300.addEventListener("change", function() {
+    null;
+}); 
+
+Mq900.addEventListener("change", function() {
+    introElemPos(Mq900);
+}); 
+
+Mq480.addEventListener("change", function() {
+    null;
+}); 
 

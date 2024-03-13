@@ -16,8 +16,8 @@
     --ff-st:Roboto;
     --ff-p:Roboto;
     --ff-c:Gabarito;
-    --fs-t:2.5em;
-    --fs-st : 1.25em;
+    --fs-t:3em;
+    --fs-st : 1.75em;
     --fs-p : 0.75em;
     --fs-c : 1em;
     --w-main: 60vw;
@@ -868,7 +868,7 @@ html{
 
     :root{
         --w-main: 90vw;
-        --fs-t:1.25em;
+        --fs-t:2em;
         --fs-st : 1em;
         --fs-p : 0.75em;
     }
@@ -1029,6 +1029,10 @@ width: 100vw;
 
 #hiddenSpace{
     display: none;
+}
+
+#intro h1{
+    padding-top: 3dvw;
 }
 
 }
