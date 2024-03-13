@@ -1,5 +1,27 @@
 // index.js
 
+// ~~~~ MediaQueries ~~~~ //
+
+// MediaQueryList variables//
+let Mq1300 = window.matchMedia("(max-width: 1300px)")
+let Mq900 = window.matchMedia("(max-width: 900px)")
+let Mq480 = window.matchMedia("(max-width: 480px)")
+
+
+
+// Listener function on state changes
+
+Mq1300.addEventListener("change", function() {
+    null;
+}); 
+
+Mq900.addEventListener("change", function() {
+    null;
+}); 
+
+Mq480.addEventListener("change", function() {
+    null;
+}); 
 
 
 
@@ -31,7 +53,7 @@ let b = 1000
 //mediaqueries
 
 Mq480.addEventListener("change", function() {
-    introElemPos();
+    // introElemPos(Mq480)
     descSpawn(0);
 }); 
 
@@ -1465,23 +1487,5 @@ buttonCharlette.addEventListener("mouseout", function(){
 
 })
 
-let Mq1300 = window.matchMedia("(max-width: 1300px)")
-let Mq900 = window.matchMedia("(max-width: 900px)")
-let Mq480 = window.matchMedia("(max-width: 480px)")
 
-
-
-// Listener function on state changes
-
-Mq1300.addEventListener("change", function() {
-    null;
-}); 
-
-Mq900.addEventListener("change", function() {
-    introElemPos(Mq900);
-}); 
-
-Mq480.addEventListener("change", function() {
-    null;
-}); 
 
