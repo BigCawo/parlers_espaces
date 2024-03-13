@@ -257,12 +257,13 @@ function descSpawn(x){
             document.getElementById("spot").style.visibility = "visible";
             document.getElementById("spot").style.opacity = "0.55";
             descContainer.scrollTop = "0";
-
+            if (Mq480.matches){null}
+            else{
             const elements = document.getElementById("spot").getElementsByTagName("div")
             elements[0].getElementsByTagName("img")[0].style.visibility = "initial"
             elements[1].style.backgroundColor = "rgb(255, 255, 255)"
             elements[2].getElementsByTagName("img")[0].style.visibility = "initial"
-    
+            }
     
 
             // if(Mq480.matches)
@@ -340,26 +341,31 @@ function descSpawn(x){
     }
 }
 
-
+function hideCenter(x){
+    document.getElementById("center").style.opacity = "0"
+    document.getElementById("header").style.opacity = "0"
+}
 
 function projectSelect(x){
 
     y = projectValue
 
     if (projectValue == x || x == -1){
-        document.getElementById("center").style.opacity = "0"
-        document.getElementById("header").style.opacity = "0"
-        setTimeout(()=> {
-             
+
+
 
         if (x == 1){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "qui-suis-je/"
-
+        },350)
         }
 
         if (projectValue == 2){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "mediation/terres-lointaines/"
-
+        },350)
         }
 
         if (projectValue == 3){
@@ -373,11 +379,17 @@ function projectSelect(x){
         }
 
         if (projectValue == 5){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/nasa/"
+        },350)
         }
 
         if (projectValue == 6){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "diplôme/"
+        },350)
         }
 
         if (projectValue == 7){
@@ -386,39 +398,66 @@ function projectSelect(x){
         }
 
         if (projectValue == 8){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/lampe-ressort/"
+        },350)
         }
 
         if (projectValue == 9){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/lampe-double-clip/"
+        },350)
         }
 
         if (projectValue == 10){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "mediation/chmup-the-dog"
+        },350)
         }
 
         if (projectValue == 11){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/meuble-a-bazar/"
+        },350)
         }
 
         if (projectValue == 12){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/vase-suspendu/"
+        },350)
         }
 
         if (projectValue == 13){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "memoire/"
+        },350)
         }
 
         if (projectValue == 14){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "mediation/pomme-de-terre/"
+        },350)
         }
 
         if (projectValue == 15){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "illustration/carnets/"
+        },350)
         }
         
         if (projectValue == 16){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/Pol/"
+        },350)
         }
 
         if (projectValue == 17){
@@ -426,12 +465,18 @@ function projectSelect(x){
             // window.location.href = "objet/ollas"
         }
 
-        if (projectValuex == 18){
+        if (projectValue == 18){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "illustration/illustrations/"
+        },350)
         }
 
         if (projectValue == 19){
+            hideCenter();
+            setTimeout(()=> {
             window.location.href = "objet/mobilier-grillage/"
+        },350)
         }
 
         if (projectValue == 20){
@@ -445,8 +490,7 @@ function projectSelect(x){
         }
 
 
-        }
-        ,350);
+        ;
 
 
     }
@@ -579,6 +623,8 @@ function scrollTo(x){
 }
 
 function projectHilight(x){
+
+
 
     if(x == 1){
         a = wAPropos;
