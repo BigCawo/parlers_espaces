@@ -198,13 +198,13 @@ function showHide(){
         // for (let i = 0; i < bouiboui.length; i++){
         // bouiboui[i].style.opacity = 0;}
     }
-    if(center.scrollLeft == 0 ){
+    // if(center.scrollLeft == 0 ){
         
-    }
-    else{
+    // }
+    // else{
         
 
-    }
+    // }
 }
 
 center.addEventListener("scroll", function(){
