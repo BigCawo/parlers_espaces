@@ -485,7 +485,7 @@ function projectSelect(x){
         if (projectValue == 16){
             hideCenter();
             setTimeout(()=> {
-            window.location.href = "objet/Pol/"
+            window.location.href = "objet/pol/"
         },350)
         }
 
