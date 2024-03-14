@@ -198,6 +198,10 @@ function loadValues() {
 
 window.onload = loadValues();
 
+window.addEventListener('load', function () {
+    loadValues();
+  })
+
 
 center.addEventListener("touchmove", function() {
     if(document.getElementById("buttonDesc").style.visibility == "visible"){
