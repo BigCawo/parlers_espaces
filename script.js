@@ -370,9 +370,9 @@ function descSpawn(x){
 }
 
 function hideCenter(x){
-    null
-    //document.getElementById("center").style.opacity = "0"
-    //document.getElementById("header").style.opacity = "0"
+    
+    document.getElementById("center").style.opacity = "0"
+    document.getElementById("header").style.opacity = "0"
 }
 
 function projectSelect(x){
