@@ -224,6 +224,14 @@ a:active {color: rgb(0, 0, 0);}
 
 .imgmobile{display: none;}
 
+.flexmobile{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
 .triptique img{
     width: 33%;
 }
@@ -806,8 +814,10 @@ html{
     flex-direction: column;
 }
 
+.flexscreen{display: none;}
 .imgscreen{display: none;}
 
+.flexmobile{display: flex;}
 .imgmobile{display: inline-block;}
 
 /*illustrations*/
@@ -951,9 +961,10 @@ body{
 }
 
 
-
+.flexscreen{display: none;}
 .imgscreen{display: none;}
 
+.flexmobile{display: flex;}
 .imgmobile{display: inline-block;}
 
 /* illustrations */
