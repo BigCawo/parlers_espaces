@@ -39,17 +39,15 @@
 
             <p class="texta">Pol est un ensemble de structures réutilisables, pouvant être modulé pour créer un grand nombre de dispositions possibles.</p>
             <img loading="lazy"  class ="d imgscreen" style="max-width: 50%" src="../../assets/pol-sceno3b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno3.jpg" alt="e">
+            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno.gif" alt="e">
 
         </div>
         <div class="espaceImg"></div>
-        <div class="flexcontainer">
+        <div class="flexcontainer flexscreen">
 
             <img loading="lazy"  class ="d imgscreen" src="../../assets/pol-sceno2b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno2.jpg" alt="e">
             <div class="espaceImg"></div>
             <img loading="lazy"  class ="d imgscreen" src="../../assets/pol-sceno1b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno1.jpg" alt="e">
 
         </div>
 
@@ -62,7 +60,7 @@
 
         <p class="texta"> Une plaque d’acier de 4mm d’épaisseur est découpée, pliée puis soudée pour former l’attache. Celle-ci, par une simple logique d’encastrement et de vissage, vient servir de pièce de liaison aux tasseaux de bois. </p>
 
-        <div class="flexcontainer triptique">
+        <div class="flexcontainer flexscreen triptique">
             <img loading="lazy" src="../../assets/pol-tript1.jpg" alt="e"> 
             <div class="espaceImg"></div>
             <img loading="lazy" src="../../assets/pol-tript2.jpg" alt="e"> 
@@ -70,11 +68,15 @@
             <img loading="lazy" src="../../assets/pol-tript3.jpg" alt="e"> 
         </div>
 
+        <div class="flexmobile">
+            <img src="../../assets/pol-tript.gif" alt="">
+        </div>
+
         <div class="espace"></div>
 
         
 
-        <div id="carousel">
+        <!-- <div id="carousel">
             <div id="carouselContainer">
             </div>
 
@@ -84,14 +86,14 @@
         </div>
     
         <img loading="lazy" style="visibility: hidden;" src="../../assets/pol-dossiertechnique/dossier technique-01.svg" alt="">    
-    
+     -->
         <script>
 
 
 
         
-        function myFunction(x) {
-        if (x.matches) { // If media query matches
+        function checkWSize(w) {
+        if (w.matches) { // If media query matches
             ScaleFactor = 1;
         } else {
             ScaleFactor = 2;
@@ -99,24 +101,24 @@
         }
 
         // Create a MediaQueryList object
-        let x = window.matchMedia("(max-width: 480px)")
+        let w = window.matchMedia("(max-width: 480px)")
 
         // Call listener function at run time
-        myFunction(x);
+        checkWSize(w);
 
         // Attach listener function on state changes
-        x.addEventListener("change", function() {
-        myFunction(x);
-        resize();
+        w.addEventListener("change", function() {
+        checkWSize(w);
+        resizeCaroussel();
         }); 
 
 
 
-        function resize(){
+        function resizeCaroussel(){
         
         
 /*
-        if (x.matches) { 
+        if (w.matches) { 
 
             sw = document.getElementById('main').clientWidth
             factor = sw/420
@@ -132,24 +134,24 @@
         factor = sw/420
         carousselWidth = document.getElementById("carousel")
         carousselWidth.style.transform = "scale("+factor/ScaleFactor+")"   
-        myFunction(x);
+        checkWSize(w);
 
 
         }
 
 
-        resize();
+        resizeCaroussel();
 
         window.onresize=function(){
             
-            resize();
+            resizeCaroussel();
 
         }
 
 
     
             document.body.onload=function(){
-                resize();
+                resizeCaroussel();
                 nbr = 8;
                 p = 0;
     
