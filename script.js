@@ -45,6 +45,9 @@ let descContainer = document.getElementById("projectInformations")
 let projectImg = document.getElementById("ProjectImg")
 let y = 0
 
+let Ta = "projet personnel"
+let Tb = "projet d'école"
+
 let b = 1000
 
 // let entete = document.getElementById("entete");
@@ -485,7 +488,7 @@ function projectSelect(x){
         if (projectValue == 16){
             hideCenter();
             setTimeout(()=> {
-            window.location.href = "objet/pol/"
+            window.location.href = "objet/Pol/"
         },350)
         }
 
@@ -671,6 +674,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
         document.getElementById("ProjectName").innerHTML = "Bienvenue chez moi !"
         document.getElementById("ProjectText").innerHTML = "Je suis un artiste designer polyvalent diplômé depuis 2023 en création industrielle à l'ENSCI Les Ateliers. Mon approche du design et de la création est à la fois poétique, rêveuse ; et réaliste, consciente des enjeux sociétaux, écologiques et techniques de demain.<br><br>Clique pour en savoir plus sur moi !"
+        document.getElementById("ProjectType").innerHTML = ""
 
         const elements = document.getElementById("spot").getElementsByTagName("div")
         elements[0].getElementsByTagName("img")[0].style.visibility = "hidden"
@@ -699,6 +703,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Terres lointaines"
         document.getElementById("ProjectText").innerHTML = "Ce court métrage, inspiré du 'Monde d'Edena' écrit et dessiné par Moebius, raconte l'histoire d'un être humanoïde échoué sur une terre inconnue, qu'il va devoir arpenter et découvrir."
+        document.getElementById("ProjectType").innerHTML = Tb
         //projectImg.src=""
         
         // document.getElementById("buttonOut").style.height = b+"px"
@@ -717,6 +722,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Lampe Icosaèdre"
         document.getElementById("ProjectText").innerHTML = "Fabriquée à partir d'une ancienne maquette de projet. <br>Sa lumière diffuse est idéale pour le travail de bureau !"
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
         // document.getElementById("buttonOut").style.height = b+"px"
     }
@@ -734,6 +740,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Chaise Pol"
         document.getElementById("ProjectText").innerHTML = "Cette assise démontable réutilise le principe d'assemblage de Pol, un autre de mes projets."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
         // document.getElementById("buttonOut").style.height = b+"px"
@@ -754,6 +761,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Nasa"
         document.getElementById("ProjectText").innerHTML = "C'est un module déployable pour scooter qui permet à un intervenant de proposer des activités scientifiques, créatives et ludiques aux jeunes vivant dans des zones délaissées.<br><br> Réalisé avec Adèle Nyitrai, pour les Petits Débrouillards."
+        document.getElementById("ProjectType").innerHTML = Tb
         //projectImg.src=""
 
 
@@ -775,7 +783,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "La Fabrique à Brac"
         document.getElementById("ProjectText").innerHTML = "Les objets industriels qui nous entourent possèdent des potentiels d’usage intéressants et souvent inexploités.<br><br>A travers mon projet de deeplôme, j'explore différentes pistes de projet pour inciter les gens à regarder les objets industriels avec curiosité et ingéniosité"
-        //projectImg.src=""
+        document.getElementById("ProjectType").innerHTML = "projet de diplôme"
 
 
         // document.getElementById("buttonOut").style.height = b+"px"
@@ -794,6 +802,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Table Basse"
         document.getElementById("ProjectText").innerHTML = "Petite table fabriquée à partir d'un ancien meuble recyclé"
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -813,6 +822,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Lampe Ressort"
         document.getElementById("ProjectText").innerHTML = "Ce projet est un objet manifeste, un prototype de lampe d’architecte dont les principes de fonctionnement sont mis en valeur. L’objectif est de rendre l’objet plus compréhensible et tangible pour l’utilisateur."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -832,6 +842,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Lampe Colette"
         document.getElementById("ProjectText").innerHTML = "Cette applique murale orientable est conçue autour de la pince à dessin, objet industriel que j’ai détourné de son utilisation principale pour en faire une pièce d’assemblage à multiples facettes."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -851,6 +862,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Chmup The Dog"
         document.getElementById("ProjectText").innerHTML = "Chmup, chien fidèle aux pouvoirs télékinésiques, part à la recherche de son maitre fait prisonnier dans un repaire de scientifiques."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -871,6 +883,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Meuble à bazar"
         document.getElementById("ProjectText").innerHTML = "J'ai fabriqué ce meuble pour ranger efficacement et de manière économe en place mes dessins et les objets que je collecte pour bricoler. Je l'ai essentiellement conçu à partir de matière récupérée, dont je disposais à proximité."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -890,6 +903,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Vase Suspendu"
         document.getElementById("ProjectText").innerHTML = "Dans ce vase, les fleurs sont placées individuellement, avec attention et conscience du geste, dans les trous du plateau prévus à cet effet. Un autre regard peut alors se poser sur la fleur, à la fois comme objet unique de contemplation ou comme partie intégrante d’une composition.<br><br>Réalisé avec Sidonie Couëdel."
+        document.getElementById("ProjectType").innerHTML = Tb
         //projectImg.src=""
 
 
@@ -909,6 +923,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Parlers Espace"
         document.getElementById("ProjectText").innerHTML = "Dans le monde matériel auquel nous appartenons, notre personnalité transparaît à travers nos espaces. Des langages, propres à chacun émergent des aménagements, des objets avec lesquels nous bâtissons nos quotidiens. A travers l'appropriation de ces espaces, nous racontons des histoires."
+        document.getElementById("ProjectType").innerHTML = "mémoire"
         //projectImg.src=""
 
 
@@ -928,6 +943,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Pomme de terre"
         document.getElementById("ProjectText").innerHTML = "Une pomme de terre nostalgique du passé se réveille dans une caisse. Elle espère être cuisinée comme ses aïeules, mais le monde de la cuisine a bien changé...<br><br>Réalisé avec Théophile Perrot."
+        document.getElementById("ProjectType").innerHTML = Tb
         //projectImg.src=""
 
 
@@ -947,6 +963,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Carnets"
         document.getElementById("ProjectText").innerHTML = "Mes carnets m'accompagnent partout où je vais. En voyage, dans la rue, dans le métro, chez moi, chez mes amis...<br><br>J'y dessine et j'y écrit ce que je vois, pense et imagine, sans but particulier. Ils évoluent avec moi. "
+        document.getElementById("ProjectType").innerHTML = ""
         //projectImg.src=""
 
 
@@ -966,6 +983,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Pol"
         document.getElementById("ProjectText").innerHTML = "Peut-on imaginer des scénographies temporaires qui ne soient pas génératrices de grandes quantités de déchets ?<br><br>Issu d’un partenariat avec la galerie d’art Bertrand Grimont, ce projet est une tentative de contrepied à la tendance actuelle des scénographies jetables."
+        document.getElementById("ProjectType").innerHTML = Tb
         //projectImg.src=""
 
 
@@ -985,6 +1003,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Ollas"
         document.getElementById("ProjectText").innerHTML = "Ollas en terre cuite, dessinée dans le cadre de mon stage chez les Transfarmers. "
+        document.getElementById("ProjectType").innerHTML = "projet de stage"
         //projectImg.src=""
 
 
@@ -1004,6 +1023,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Illustrations"
         document.getElementById("ProjectText").innerHTML = ""
+        document.getElementById("ProjectType").innerHTML = ""
         //projectImg.src=""
 
 
@@ -1023,6 +1043,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Mobilier Grillagé"
         document.getElementById("ProjectText").innerHTML = "Quoi de plus pérenne que de fabriquer les objets qui nous entourent en utilisant des matières réemployées ?<br><br>C’est dans cette optique que j’ai imaginé ce mobilier de jardin, fabriqué à partir d’un gisement de matière récupérée, le panneau grillagé rigide."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -1042,6 +1063,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Stellarium"
         document.getElementById("ProjectText").innerHTML = "Cet observatoire stellaire est un de mes premiers projets.<br><br> J'y propose au spectateur une visite guidée de la voie lactée et des exoplanètes potentiellement habitables proches de la terre."
+        document.getElementById("ProjectType").innerHTML = Ta
         //projectImg.src=""
 
 
@@ -1061,6 +1083,7 @@ function projectHilight(x){
 
         document.getElementById("ProjectName").innerHTML = "Charlette"
         document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype."
+        document.getElementById("ProjectType").innerHTML = ""
         //projectImg.src=""
 
 
