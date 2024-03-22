@@ -192,7 +192,6 @@ a:active {color: rgb(0, 0, 0);}
     width: var(--w-main);
     margin: auto;
     margin-bottom: 0;
-    left: calc( var(--w-sidebar) /2) ;
     animation-duration:  1s ;
     animation-name: fadeIn;
     
@@ -288,7 +287,12 @@ a:active {color: rgb(0, 0, 0);}
 
 .carton h1{padding-bottom: 5px;}
 
-.carton .typeProjet{font-size: var(--fs-p); display: inline-block;}
+.carton .typeProjet{
+    font-size: var(--fs-p); 
+    /* display: inline-block; */
+    display: none;
+
+}
 
 .espace{background-color: rgba(0, 255, 255, 0);
     height: 100px;}
@@ -473,6 +477,19 @@ background-color: rgba(0, 0, 0, 0.8);
     /*padding-right: 25px ;*/
 }
 
+/*(terres lointaines)*/
+
+.background2{
+    z-index: -10;
+    position: relative;
+    width: 100vw;
+    background-image: url(assets/scene_05.png);
+    background-repeat: repeat-x;
+    background-size: 70vh;
+    left: var(--test); 
+
+}
+
 /*(mobilier grillage)*/
 
 .background{
@@ -488,9 +505,13 @@ background-color: rgba(0, 0, 0, 0.8);
 }
 
 
+
+
 .img50pc{
     max-width: 50%;
 }
+
+
 
 .illusfin{
     height: 100%;
@@ -1005,7 +1026,7 @@ body{
 
 .illusfin{
 position: relative;
-left:-5vw ;
+/* left:-5vw ; */
 width: 100vw;
 
 }
