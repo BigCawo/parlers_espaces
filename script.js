@@ -492,9 +492,11 @@ function projectSelect(x){
         },350)
         }
 
-        if (projectValue == 17){
-            null
-            // window.location.href = "objet/ollas"
+        if (projectValue == 17){            
+            hideCenter();
+            setTimeout(()=> {
+            window.location.href = "objet/ollas"
+        },350)
         }
 
         if (projectValue == 18){
