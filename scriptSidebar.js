@@ -49,7 +49,7 @@ else
     Sidebar.style.bottom= "0"
     // else was horizontal scroll
 
-    initScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    initScrollTop = sst <= 0 ? 0 : sst; // For Mobile or negative scrolling
 
 
         
