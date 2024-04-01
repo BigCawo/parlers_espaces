@@ -111,7 +111,7 @@ a:active {color: rgb(0, 0, 0);}
 
 /* ~~~~  sidebar  ~~~~ */
 
-#sidebar{background-color: rgba(0, 0, 0, 0.35) ;
+#sidebar{background-color: rgb(140, 140, 140) ;
 
     transition: all 0.5s ease;
 

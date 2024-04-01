@@ -61,30 +61,6 @@ Mq480.addEventListener("change", function() {
     descSpawn(0);
 }); 
 
-
-
-// function introElemPos(Mq480) {
-//     if (Mq480.matches) {
-    
-
-//         header.insertBefore(entete, header.firstChild);
-    
-    
-    
-//     } else {
-
-//         accueil.insertBefore(entete, accueil.firstChild);
-    
-    
-//     }
-//     }
-    
-
-
-
-
-
-
 function loadValues() {
     projectHilight(projectValue)
     document.getElementById("center").style.opacity = "initial"
@@ -201,7 +177,6 @@ function loadValues() {
 
 window.onload = loadValues();
 
-
 center.addEventListener("touchmove", function() {
     if(document.getElementById("buttonDesc").style.visibility == "visible"){
      descSpawn(0);
@@ -209,6 +184,10 @@ center.addEventListener("touchmove", function() {
     
 }); 
 
+function goToProject(){
+    
+    document.getElementById('center').scrollLeft = WindowWidth
+}
 
 
 function showHide(){
