@@ -32,6 +32,8 @@ SliderDetector.oninput = function() {
 
 }
 
+
+
 document.body.onload=function(){
 
 
@@ -50,6 +52,7 @@ document.body.onload=function(){
         div = document.createElement("div");
         div.className="carouselPhotoA"
         div.style.backgroundImage="url('../../assets/carnets/2023_10_A4/"+(i-1)+".jpg')";
+        div.style.scrollSnapAlign = "start"
         carouselContainer.appendChild(div);
     }
     affichermasquer();
@@ -64,6 +67,8 @@ sh = window.innerHeight
 sw = window.innerWidth
 
 t = (mainW - ((wA/hA)*0.8*sh))/2
+
+// document.getElementById("input").innerHTML= document.getElementById("carouselA").scrollLeft
 
 
 

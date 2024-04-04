@@ -1,13 +1,3 @@
-/* 
-body{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-.fullscreen{
-    scroll-snap-align: center;
-} */
 
 :root{
     --Wcarnet : 1920px; 
@@ -48,7 +38,7 @@ body{
     height: var(--Hcarnet);
 
     /*border: solid 1px black;*/
-    overflow: hidden;
+    overflow: scroll;
     margin: 0;
     transform-origin: top left ;
     z-index: -10;
@@ -58,6 +48,7 @@ body{
 }
 
 #carouselContainerA{
+    overflow: scroll;
     z-index: -10;
     position: relative;
     height: var(--Hcarnet);
@@ -93,7 +84,10 @@ body{
     
 }
 
-
+.bouton{
+    opacity: 1;
+}
+   
 
 
 
@@ -105,7 +99,10 @@ body{
 @media screen and (max-width: 480px) {
 
 
-
+    .bouton{
+        opacity: 0;
+    }
+    
     .navBar p{
     font-size: 4vw;
     }
