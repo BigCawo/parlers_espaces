@@ -1131,6 +1131,10 @@ p{
     padding: 0.5dvh;
 }
 
+#popup{
+    display: none;
+}
+
 
 
 
