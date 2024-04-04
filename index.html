@@ -11,12 +11,16 @@
 
 </head>
 <body id ="corps" onresize="loadValues()" onload="loadValues()">
+
+    
+
+
     <div id="header">
  
             <ul id="categories" class="categories">
        
                 
-                <li><button id="buttonObjet" class="button" onclick="bonsoir()" value ="off" >Objet</button></li>
+                <li><button id="buttonObjet" class="button" onclick="projectSort(1)" value ="off" >Objet</button></li>
                 <li><button id="buttonMediation" class="button" onclick="projectSort(2)" value ="off" >médiation</button></li>
                 <li><button id="buttonIllustration" class="button" onclick="projectSort(0)" value ="off" >illustration</button></li>
                 <li><button id="buttonMultimedia" class="button" onclick="projectSort(3)" value ="off" >multimédia</button></li>
@@ -50,11 +54,18 @@
 
 
     <div id="center">
-
+        <div id="popup" style="position: fixed; z-index: 50; width: auto; visibility: hidden;
+        background-color: rgba(255, 255, 255, 0.856);
+        border: 2px solid black ;
+        border-radius: 5px;"
+        
+        
+        
+        > <h2 style="font-family: Fababrac; display: inline-block; padding: 0 5px 0 5px ; font-size: 150%;">bonjour</h2></div>
 
         <div id="maison">
 
-
+            
 
                 
 

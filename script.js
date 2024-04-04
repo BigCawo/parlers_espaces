@@ -1085,13 +1085,40 @@ function projectHilight(x){
 
 
 
+window.addEventListener("mousemove",function(e){
+
+        x=e.clientX;
+        y=e.clientY;})
+
+    
+
+
+
+
+const graboum = document.getElementsByClassName("buttonProject")
+
+for (let i = 0; i<graboum.length; i++){
+    graboum[i].addEventListener("mousemove",function(e){
+
+        document.getElementById("popup").style.visibility = "visible"
+        document.getElementById("popup").style.left = (x+10) + "px"
+        document.getElementById("popup").style.top = (y+10) + "px"
+    })
+    graboum[i].addEventListener("mouseout",function(e){
+        document.getElementById("popup").style.visibility = "hidden"
+
+        
+    }
+    )
+}
+
 
 // CHAISEATTACHE
 
 let buttonChaiseAttache = document.getElementById("buttonChaiseAttache")
 buttonChaiseAttache.addEventListener("mouseover", function(){
 
-
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Chaise Pol"
     // document.getElementById("chaiseAttache").style.zIndex = 10
     document.getElementById("chaiseAttache").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
@@ -1113,7 +1140,7 @@ buttonChaiseAttache.addEventListener("mouseout", function(){
 let buttonNasa = document.getElementById("buttonNasa")
 buttonNasa.addEventListener("mouseover", function(){
 
-
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Nasa"
     // document.getElementById("nasa").style.zIndex = 10
     document.getElementById("nasa").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
@@ -1121,7 +1148,7 @@ buttonNasa.addEventListener("mouseover", function(){
 })
 
 buttonNasa.addEventListener("mouseout", function(){
-
+    
     // document.getElementById("nasa").style.zIndex = "initial"
     document.getElementById("nasa").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
 
@@ -1134,7 +1161,7 @@ buttonNasa.addEventListener("mouseout", function(){
 let buttonMeubleBazar = document.getElementById("buttonMeubleBazar")
 buttonMeubleBazar.addEventListener("mouseover", function(){
 
-
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Meuble à bazar"
     document.getElementById("meubleBazar").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1153,7 +1180,7 @@ buttonMeubleBazar.addEventListener("mouseout", function(){
 let buttonPol = document.getElementById("buttonPol")
 buttonPol.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Pol"
     document.getElementById("Pol").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1172,7 +1199,7 @@ buttonPol.addEventListener("mouseout", function(){
 let buttonVaseSuspendu = document.getElementById("buttonVaseSuspendu")
 buttonVaseSuspendu.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Vase Suspendu"
     document.getElementById("VaseSuspendu").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1191,7 +1218,7 @@ buttonVaseSuspendu.addEventListener("mouseout", function(){
 let buttonAPropos = document.getElementById("buttonAPropos")
 buttonAPropos.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "A propos"
     const non = document.getElementById("APropos").getElementsByClassName("backgroundColor");
     for (let i = 0; i < non.length; i++) {
         non[i].style.opacity = 1;
@@ -1216,7 +1243,7 @@ buttonAPropos.addEventListener("mouseout", function(){
 let buttonTableBasse = document.getElementById("buttonTableBasse")
 buttonTableBasse.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Table basse"
     document.getElementById("TableBasse").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1235,7 +1262,7 @@ buttonTableBasse.addEventListener("mouseout", function(){
 let buttonMobilierGrillage = document.getElementById("buttonMobilierGrillage")
 buttonMobilierGrillage.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Mobilier grillagé"
     document.getElementById("MobilierGrillage").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1254,7 +1281,7 @@ buttonMobilierGrillage.addEventListener("mouseout", function(){
 let buttonLampeColette = document.getElementById("buttonLampeColette")
 buttonLampeColette.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Lampe Colette"
     document.getElementById("LampeColette").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1271,11 +1298,10 @@ buttonLampeColette.addEventListener("mouseout", function(){
 // LampeIcosaedre
 
 let buttonLampeIcosaedre = document.getElementById("buttonLampeIcosaedre")
-buttonLampeIcosaedre.addEventListener("mouseover", function(){
+buttonLampeIcosaedre.addEventListener("mousemove", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Lampe Icosaèdre"
     document.getElementById("LampeIcosaedre").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
-
 
 
 })
@@ -1287,12 +1313,14 @@ buttonLampeIcosaedre.addEventListener("mouseout", function(){
 
 })
 
+
+
 // LampeRessort
 
 let buttonLampeRessort = document.getElementById("buttonLampeRessort")
 buttonLampeRessort.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Lampe Ressort"
     document.getElementById("LampeRessort").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1311,7 +1339,7 @@ buttonLampeRessort.addEventListener("mouseout", function(){
 let buttonOllas = document.getElementById("buttonOllas")
 buttonOllas.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Ollas"
     document.getElementById("Ollas").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1330,7 +1358,7 @@ buttonOllas.addEventListener("mouseout", function(){
 let buttonTerresLointaines = document.getElementById("buttonTerresLointaines")
 buttonTerresLointaines.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Terres Lointaines"
     document.getElementById("TerresLointaines").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1349,7 +1377,7 @@ buttonTerresLointaines.addEventListener("mouseout", function(){
 let buttonFabriqueABrac = document.getElementById("buttonFabriqueABrac")
 buttonFabriqueABrac.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "La Fabrique à brac"
     document.getElementById("FabriqueABrac").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1368,7 +1396,7 @@ buttonFabriqueABrac.addEventListener("mouseout", function(){
 let buttonChmupTheDog = document.getElementById("buttonChmupTheDog")
 buttonChmupTheDog.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Chmup The Dog"
     document.getElementById("ChmupTheDog").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1387,7 +1415,7 @@ buttonChmupTheDog.addEventListener("mouseout", function(){
 let buttonParlersEspace = document.getElementById("buttonParlersEspace")
 buttonParlersEspace.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Parlers Espace"
     document.getElementById("ParlersEspace").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1406,7 +1434,7 @@ buttonParlersEspace.addEventListener("mouseout", function(){
 let buttonPommeDeTerre = document.getElementById("buttonPommeDeTerre")
 buttonPommeDeTerre.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Pomme de terre"
     document.getElementById("PommeDeTerre").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1425,7 +1453,7 @@ buttonPommeDeTerre.addEventListener("mouseout", function(){
 let buttonCarnets = document.getElementById("buttonCarnets")
 buttonCarnets.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Carnets"
     document.getElementById("Carnets").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1444,7 +1472,7 @@ buttonCarnets.addEventListener("mouseout", function(){
 let buttonIllustrations = document.getElementById("buttonIllustrations")
 buttonIllustrations.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Illustrations"
     document.getElementById("Illustrations").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1463,7 +1491,7 @@ buttonIllustrations.addEventListener("mouseout", function(){
 let buttonStellarium = document.getElementById("buttonStellarium")
 buttonStellarium.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Stellarium"
     document.getElementById("Stellarium").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
@@ -1482,7 +1510,7 @@ buttonStellarium.addEventListener("mouseout", function(){
 let buttonCharlette = document.getElementById("buttonCharlette")
 buttonCharlette.addEventListener("mouseover", function(){
 
-    
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Charlette"
     document.getElementById("Charlette").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
 
 
