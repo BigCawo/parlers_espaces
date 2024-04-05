@@ -14,154 +14,82 @@
 </head>
 <body>
     <div id = sidebar>
-
-        <h1> <a href="../../">ELIOT&nbsp;BERNAUD</a> </h1>
-
-        <ul>
-            <li><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></li>        
-        </ul>
+        <div id="categories">
+            <p> <a href="../../">Accueil</a> </p>
+            <p><a href="../../qui-suis-je/">Qui&nbsp;suis-je&nbsp;?</a></p>   
+        </div>
     </div>
 
     <div id = main>
 
         <div id="intro" class="flexcontainer">
             <div class="carton">
-                <h1>Pol</h1>
-                <h2>2019</h2> <p class="typeProjet"> <i>- Projet d'études </i></p>
-                <p><b>Peut-on imaginer des scénographies temporaires qui ne soient pas génératrices de grandes quantités de déchets ?</b></p>
-                <p>Issu d’un partenariat avec la galerie d’art Bertrand Grimont, ce projet est une tentative de contrepied à la tendance actuelle des scénographies jetables.</p>
+                <h1>Stellarium</h1>
+                <h2>2016</h2> <p class="typeProjet"> <i>- TPE de première </i></p>
+                <p><b>/!\ Ancien projet ! indulgence sur les visuels s'il vous plait :D /!\</b></p>
+                <p>Ce planétarium stellaire propose au visiteur une excursion audiovisuelle de l'espace et des principales exoplanètes connues à l'époque.</p>
             </div>
-            <img loading="lazy" style="margin : auto; max-height: 90vh; max-width: 100%;" src="../../assets/pol.jpg" alt="e">
+            <img loading="lazy" style="margin : auto; max-height: 75vh; max-width: 75dvh;" src="../../assets/stellarium.png" alt="e">
             <!--<iframe src="https://itch.io/embed-upload/6541577?color=FFFFFF" max-width="1200" height="720" style="border: none;" frameborder="0"><a href="https://bigcawo.itch.io/chmup">Play Chmup on itch.io</a></iframe>-->
         </div>
         
         <div class="espaceIntro"></div>        
 
         <div class="flexcontainer">
-
-            <p class="texta">Pol est un ensemble de structures réutilisables, pouvant être modulé pour créer un grand nombre de dispositions possibles.</p>
-            <img loading="lazy"  class ="d imgscreen" style="max-width: 50%" src="../../assets/pol-sceno3b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno3.jpg" alt="e">
-
-        </div>
-        <div class="espaceImg"></div>
-        <div class="flexcontainer">
-
-            <img loading="lazy"  class ="d imgscreen" src="../../assets/pol-sceno2b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno2.jpg" alt="e">
-            <div class="espaceImg"></div>
-            <img loading="lazy"  class ="d imgscreen" src="../../assets/pol-sceno1b.jpg" alt="e"> 
-            <img loading="lazy"  class ="d imgmobile" src="../../assets/pol-sceno1.jpg" alt="e">
-
-        </div>
-
-
-        <div class="espace"></div>
-
-
-
-        <div class="espace"></div>
-
-        <p class="texta"> Une plaque d’acier de 4mm d’épaisseur est découpée, pliée puis soudée pour former l’attache. Celle-ci, par une simple logique d’encastrement et de vissage, vient servir de pièce de liaison aux tasseaux de bois. </p>
-
-        <div class="flexcontainer triptique">
-            <img loading="lazy" src="../../assets/pol-tript1.jpg" alt="e"> 
-            <div class="espaceImg"></div>
-            <img loading="lazy" src="../../assets/pol-tript2.jpg" alt="e"> 
-            <div class="espaceImg"></div>
-            <img loading="lazy" src="../../assets/pol-tript3.jpg" alt="e"> 
-        </div>
-
-        <div class="espace"></div>
-
-        
-
-        <div id="carousel">
-            <div id="carouselContainer">
+            <div style="position: relative;">
+            <p style="position: absolute; top: -5px; padding-top: 0; padding-left: 6px; color: rgb(0, 0, 0);"> <i> schémas de construction</i></p>
+            <img loading="lazy" src="../../assets/stellarium_schema-01.png" alt="">
             </div>
 
-            <img loading="lazy" style="width: auto; height: auto;" src="../../assets/bouton.png" alt="" class="bouton" id="r">
-            <img loading="lazy" style="width: auto; height: auto;" src="../../assets/bouton.png" alt="" class="bouton" id="l">
+            <div class="espaceImg"></div>
+
+            <div>
+            
+            <img loading="lazy" src="../../assets/stellarium_schema-02.png" alt="">
+            </div>
 
         </div>
-    
-        <img loading="lazy" style="visibility: hidden;" src="../../assets/pol-dossiertechnique/dossier technique-01.svg" alt="">    
-    
-        <script>
-    
-            window.onresize=function(){
-                resize();
-    
-            }
-    
-            function resize(){
-                sw = document.getElementById('main').clientWidth
-                factor = sw/420
-                carousselWidth = document.getElementById("carousel")
-                carousselWidth.style.transform = "scale("+factor+")"
-    
-            }
-    
-    
-    
-    
-    
-            document.body.onload=function(){
-                resize();
-                nbr = 8;
-                p = 0;
-    
-    
-    
-                carouselContainer = document.getElementById("carouselContainer")
-                l = document.getElementById("l")
-                r = document.getElementById("r")
-                carouselContainer.style.width = (420*nbr)+"px";
-                for( i = 1 ; i <= nbr; i++){
-                    div = document.createElement("div");
-                    div.className="carouselPhoto"
-                    div.style.backgroundImage="url('../../assets/pol-dossiertechnique/dossier technique-0"+i+".svg')";
-                    carouselContainer.appendChild(div);
-                }
-                affichermasquer();
-            }
-    
-            r.onclick=function(){
-                if(p>-nbr+1)
-                    p--;
-                carouselContainer.style.transform="translate("+p*420+"px)";
-                carouselContainer.style.transition="all 0.5s ease"
-                affichermasquer();
-    
-            }
-    
-            l.onclick=function(){
-                if(p<0)
-                    p++;
-                carouselContainer.style.transform="translate("+p*420+"px)";
-                carouselContainer.style.transition="all 0.5s ease"
-                affichermasquer();
-            }
-    
-            function affichermasquer(){
-                if(p==-nbr+1)
-                    r.style.visibility = "hidden";
-                else
-                    r.style.visibility = "visible";
-    
-                if(p==0)
-                    l.style.visibility = "hidden";
-                else
-                    l.style.visibility = "visible";
-    
-            }
-        </script>
 
-        <p class="copyright">@ All right reserved @</p>
+        <div class="espace"></div>
+
+        <div class="flexcontainer">
+            <div>
+            <img loading="lazy" src="../../assets/stellarium_schema-03.png" alt="">
+            </div>
+
+            <div class="espaceImg"></div>
+
+            <div>
+            
+            <img loading="lazy" src="../../assets/stellarium_schema-04.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="espace"></div>
+
+        <div class="flexcontainer">
+            <div>
+            <p style="position: absolute; padding-top: 0; padding-left: 6px; color: white;"> <i> ajout des étoile à la peinture phosphorescente</i></p>
+            <img loading="lazy" src="../../assets/stellarium_peinture-01.jpg" alt="">
+            </div>
+
+            <div class="espaceImg"></div>
+
+            <div>
+            
+            <img loading="lazy" src="../../assets/stellarium_peinture-02.jpg" alt="">
+            </div>
+
+        </div>
+        <div class="espace"></div>
 
 
 
-
-    </div>
 </body>
+
+    <script src="../../script.js"> </script>
+    <script src="../../scriptSidebar.js"></script>
+    <script src="../../scriptIntro.js"> </script>
+    
 </html>
