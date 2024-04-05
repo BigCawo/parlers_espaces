@@ -493,8 +493,7 @@ function projectSelect(x){
         }
 
         if (projectValue == 20){
-            null
-            // window.location.href = "objet/stellarium/"
+            window.location.href = "objet/stellarium/"
         }
 
         if (projectValue == 21){
