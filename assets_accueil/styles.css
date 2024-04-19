@@ -35,7 +35,7 @@
     /* projects dimensions */
     --scaleFactor : 1;
 
-    --p-Ollas : calc((6846 - 1826)*var(--scaleFactor));
+    --p-Ollas : calc((250)*var(--scaleFactor));
     --w-Ollas : calc(288*var(--scaleFactor));
     --h-Ollas : calc(115*var(--scaleFactor));
     --o-Ollas : calc(287*var(--scaleFactor));
@@ -53,7 +53,7 @@
     --w-MeubleBazar : calc(420*var(--scaleFactor));
     --h-MeubleBazar : calc(395*var(--scaleFactor));
 
-    --p-Pol : calc((6787 - 1826)*var(--scaleFactor));
+    --p-Pol : calc((200)*var(--scaleFactor));
     --w-Pol : calc(401*var(--scaleFactor));
     --h-Pol : calc(294*var(--scaleFactor));
 
@@ -96,7 +96,7 @@
     --p-TerresLointaines : calc((1926 - 1826)*var(--scaleFactor));
     --w-TerresLointaines : calc(707*var(--scaleFactor));
     --h-TerresLointaines : calc(208*var(--scaleFactor));
-    --o-TerresLointaines : calc(400*var(--scaleFactor));
+    --o-TerresLointaines : calc(430*var(--scaleFactor));
 
     --p-FabriqueABrac : calc((3081 - 1826)*var(--scaleFactor));
     --w-FabriqueABrac : calc(652*var(--scaleFactor));
@@ -118,7 +118,7 @@
     --h-Carnets : calc(335*var(--scaleFactor));
     --o-Carnets : calc(370*var(--scaleFactor));
 
-    --p-Illustrations : calc((6813  - 1826)*var(--scaleFactor));
+    --p-Illustrations : calc((7350  - 1826)*var(--scaleFactor));
     --w-Illustrations : calc(657*var(--scaleFactor));
     --h-Illustrations : calc(442*var(--scaleFactor));
     --o-Illustrations : calc(450*var(--scaleFactor));
@@ -133,7 +133,10 @@
     --h-Charlette : calc(589*var(--scaleFactor));
     --o-Charlette : calc(0*var(--scaleFactor));
 
-
+    --p-PoleImage : calc((6800 - 1826)*var(--scaleFactor));
+    --w-PoleImage : calc(445*var(--scaleFactor));
+    --h-PoleImage : calc(589*var(--scaleFactor));
+    --o-PoleImage : calc(-3*var(--scaleFactor));
 
 
 }
@@ -513,6 +516,12 @@ h3{
 
     bottom: calc((var(--o-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
     left: calc((var(--p-Charlette)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+}
+
+#PoleImage{
+
+    bottom: calc((var(--o-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+    left: calc((var(--p-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
 }
 
 
@@ -1014,6 +1023,17 @@ h3{
 
 
 }
+
+#buttonPoleImage{
+
+    width: calc((var(--w-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); 
+    height: calc((var(--h-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    bottom: calc((var(--o-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center))); ; 
+    left: calc((var(--p-PoleImage)/var(--w-projAbs))*((var(--projRatio))*var(--h-center)));
+
+
+}
+
 
 
 
