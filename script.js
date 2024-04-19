@@ -1097,7 +1097,7 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Qu'est ce qu'un Pôle Image ?"
-        document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype."
+        document.getElementById("ProjectText").innerHTML = "Cette pastille mixant plusieurs types d'animation est une réponse de l'entreprise Cinémagraphic à un appel à projet lancé par les Pôles Images.<br><br>J'y ai été assistant à la réalisation, à l'animation et à la prise de vue. "
         document.getElementById("ProjectType").innerHTML = ""
         //projectImg.src=""
 
