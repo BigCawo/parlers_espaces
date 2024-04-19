@@ -152,6 +152,12 @@ function loadValues() {
     wCharlette = Number(document.getElementById("buttonCharlette").offsetWidth);
     hCharlette = Number(document.getElementById("buttonCharlette").offsetHeight);
 
+    pPoleImage = Number(document.getElementById("buttonPoleImage").offsetLeft);
+    wPoleImage = Number(document.getElementById("buttonPoleImage").offsetWidth);
+    hPoleImage = Number(document.getElementById("buttonPoleImage").offsetHeight);
+
+    
+
 
 
 
@@ -239,7 +245,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
 
   
         w = Math.max(projectValue +  Math.sign(evt.deltaY),0)
-        if(0 < w && w < 22){
+        if(0 < w && w < 23){
             scrollContainer.style.scrollBehavior = "initial"
             projectSelect(w)
             }
@@ -501,6 +507,9 @@ function projectSelect(x){
             window.open('https://veloma.org/2024/02/16/charlette-charrette-palette/', '_blank');
         }
 
+        if (projectValue == 22){
+            window.location.href = "mediation/pole-image/"
+        }
 
         ;
 
@@ -625,6 +634,12 @@ function scrollTo(x){
         center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pCharlette+0.5*wCharlette), 0)
     }
 
+    if(x == 22){
+        center.scrollTo(WindowWidth+projectCenter*WindowWidth+(pPoleImage+0.5*wPoleImage), 0)
+    }
+    
+    
+    
 
 
 
@@ -1062,6 +1077,26 @@ function projectHilight(x){
         document.getElementById("spotMiddle").style.width = a+"px"
 
         document.getElementById("ProjectName").innerHTML = "Charlette"
+        document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype."
+        document.getElementById("ProjectType").innerHTML = ""
+        //projectImg.src=""
+
+
+        // document.getElementById("buttonOut").style.height = b+"px"
+    }
+
+    if(x == 22){
+        a = wPoleImage;
+        b = hPoleImage;
+        document.getElementById("PoleImage").getElementsByClassName("backgroundColor2")[0].style.opacity = 1;
+        document.getElementById("PoleImage").style.zIndex = 10
+    
+        document.getElementById("spotRight").style.left = (-projectCenter*WindowWidth)+a/2+"px"
+        document.getElementById("spotLeft").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.left = (-projectCenter*WindowWidth)-a/2+"px"
+        document.getElementById("spotMiddle").style.width = a+"px"
+
+        document.getElementById("ProjectName").innerHTML = "Qu'est ce qu'un Pôle Image ?"
         document.getElementById("ProjectText").innerHTML = "Cette remorque permet de transporter facilement une palette aux normes européennes avec n'importe quel vélo.<br><br> Ce projet est à l'initiative de l'association Veloma, que j'ai eu le plaisir d'assister dans la conception et la réalisation de ce premier prototype."
         document.getElementById("ProjectType").innerHTML = ""
         //projectImg.src=""
@@ -1519,6 +1554,25 @@ buttonCharlette.addEventListener("mouseover", function(){
 buttonCharlette.addEventListener("mouseout", function(){
 
     document.getElementById("Charlette").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
+
+
+})
+
+// PoleImage
+
+let buttonPoleImage = document.getElementById("buttonPoleImage")
+buttonPoleImage.addEventListener("mouseover", function(){
+
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Qu'est ce qu'un Pôle Image ?"
+    document.getElementById("PoleImage").getElementsByClassName("backgroundColor")[0].style.opacity = 1;
+
+
+
+})
+
+buttonPoleImage.addEventListener("mouseout", function(){
+
+    document.getElementById("PoleImage").getElementsByClassName("backgroundColor")[0].style.opacity = 0;
 
 
 })
