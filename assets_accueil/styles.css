@@ -196,6 +196,7 @@ h3{
 
 #flecheProjet{
     position: absolute;
+    z-index: 50;
     right: 5dvh; 
     display: flex; 
     align-items: center;
