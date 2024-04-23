@@ -1,0 +1,100 @@
+
+:root{
+    --Wcarnet : 595px; 
+    --Hcarnet : 842px; 
+    --WcarnetAbs : 595; 
+    --HcarnetAbs : 842; 
+}
+
+
+#navBar{
+    
+    position: absolute; 
+    height: var(--Hcarnet);
+    width: 100dvw;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    touch-action: none;
+}
+
+.bouton{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 5dvh;
+    height: var(--Hcarnet);
+    cursor: pointer;    
+}
+
+.slider{
+    min-width: 100%;
+}
+
+#main2{
+
+    height: var(--Hcarnet);
+}
+
+
+
+
+
+/*carnet A*/
+
+#carnetContainerA{
+    max-height: 10dvh;
+}
+
+#carouselA{
+    position: absolute;
+    width: var(--Wcarnet);
+    height: var(--Hcarnet);
+
+    /*border: solid 1px black;*/
+    overflow: scroll;
+    
+    transform-origin: top left ;
+    z-index: -10;
+    
+    
+    
+}
+
+#carouselContainerA{
+    overflow: scroll;
+    z-index: -10;
+    position: relative;
+    height: var(--Hcarnet);
+    
+}
+
+
+
+
+
+#lA:hover{
+    opacity : 0.5;
+    transition: all 0.3s ease;
+}
+
+#rA:hover{
+    opacity : 0.5;
+    transition: all 0.3s ease;
+}
+
+.carouselPhotoA{
+    /* display: block; */
+    display: inline-block;
+    /* transform: rotate(-90deg); */
+    width: var(--Wcarnet);
+    height: var(--Hcarnet);
+
+
+    
+}
+
+.bouton{
+    opacity: 1;
+}
+   
