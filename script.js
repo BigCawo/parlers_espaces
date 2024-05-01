@@ -1252,7 +1252,7 @@ buttonVaseSuspendu.addEventListener("mouseout", function(){
 let buttonAPropos = document.getElementById("buttonAPropos")
 buttonAPropos.addEventListener("mouseover", function(){
 
-    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "A propos"
+    document.getElementById("popup").getElementsByTagName("h2")[0].innerHTML = "Qui suis-je ?"
     const non = document.getElementById("APropos").getElementsByClassName("backgroundColor");
     for (let i = 0; i < non.length; i++) {
         non[i].style.opacity = 1;
