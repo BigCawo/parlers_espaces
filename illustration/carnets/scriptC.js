@@ -5,7 +5,7 @@ var SliderDetector = document.getElementById("myRangeC");
 
 let wC = 1920
 let hC = 1390
-let nbr = 59;
+let nbr = 124;
 
 
 
